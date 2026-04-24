@@ -46,8 +46,8 @@ import tachiyomi.presentation.core.util.selectedBackground
 import tachiyomi.domain.manga.model.MangaCover as MangaCoverModel
 
 object CommonMangaItemDefaults {
-    val GridHorizontalSpacer = 4.dp
-    val GridVerticalSpacer = 4.dp
+    val GridHorizontalSpacer = 10.dp
+    val GridVerticalSpacer = 10.dp
 
     @Suppress("ConstPropertyName")
     const val BrowseFavoriteCoverAlpha = 0.34f
@@ -127,34 +127,41 @@ private fun BoxScope.CoverTextOverlay(
 ) {
     Box(
         modifier = Modifier
-            .clip(RoundedCornerShape(bottomStart = 4.dp, bottomEnd = 4.dp))
+            .clip(RoundedCornerShape(bottomStart = 12.dp, bottomEnd = 12.dp))
             .background(
                 Brush.verticalGradient(
-                    0f to Color.Transparent,
-                    1f to Color(0xAA000000),
+                    0.0f to Color.Transparent,
+                    0.5f to Color(0x77000000),
+                    1.0f to Color(0xEE000000),
                 ),
             )
-            .fillMaxHeight(0.33f)
+            .fillMaxHeight(0.40f)
             .fillMaxWidth()
             .align(Alignment.BottomCenter),
     )
     Row(
-        modifier = Modifier.align(Alignment.BottomStart),
+        modifier = Modifier
+            .align(Alignment.BottomStart)
+            .padding(bottom = 4.dp),
         verticalAlignment = Alignment.Bottom,
     ) {
         GridItemTitle(
             modifier = Modifier
                 .weight(1f)
-                .padding(8.dp),
+                .padding(horizontal = 8.dp, vertical = 6.dp),
             title = title,
             style = MaterialTheme.typography.titleSmall.copy(
                 color = Color.White,
+                fontWeight = androidx.compose.ui.text.font.FontWeight.SemiBold,
+                letterSpacing = 0.2.sp,
                 shadow = Shadow(
-                    color = Color.Black,
-                    blurRadius = 4f,
+                    color = Color(0x80000000),
+                    blurRadius = 6f,
+                    offset = androidx.compose.ui.geometry.Offset(0f, 2f)
                 ),
             ),
             minLines = 1,
+            maxLines = 2,
         )
         if (onClickContinueReading != null) {
             ContinueReadingButton(
@@ -241,6 +248,7 @@ private fun MangaGridCover(
     Box(
         modifier = modifier
             .fillMaxWidth()
+            .clip(RoundedCornerShape(12.dp))
             .aspectRatio(MangaCover.Book.ratio),
     ) {
         cover()
@@ -248,7 +256,7 @@ private fun MangaGridCover(
         if (badgesStart != null) {
             BadgeGroup(
                 modifier = Modifier
-                    .padding(4.dp)
+                    .padding(6.dp)
                     .align(Alignment.TopStart),
                 content = badgesStart,
             )
@@ -257,7 +265,7 @@ private fun MangaGridCover(
         if (badgesEnd != null) {
             BadgeGroup(
                 modifier = Modifier
-                    .padding(4.dp)
+                    .padding(6.dp)
                     .align(Alignment.TopEnd),
                 content = badgesEnd,
             )
@@ -298,7 +306,7 @@ private fun GridItemSelectable(
 ) {
     Box(
         modifier = modifier
-            .clip(MaterialTheme.shapes.small)
+            .clip(RoundedCornerShape(12.dp))
             .combinedClickable(
                 onClick = onClick,
                 onLongClick = onLongClick,

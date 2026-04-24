@@ -26,7 +26,7 @@ import kotlinx.collections.immutable.persistentMapOf
 @Composable
 fun BadgeGroup(
     modifier: Modifier = Modifier,
-    shape: Shape = MaterialTheme.shapes.extraSmall,
+    shape: Shape = androidx.compose.foundation.shape.CircleShape,
     content: @Composable RowScope.() -> Unit,
 ) {
     Row(modifier = modifier.clip(shape)) {
@@ -47,7 +47,7 @@ fun Badge(
         modifier = modifier
             .clip(shape)
             .background(color)
-            .padding(horizontal = 3.dp, vertical = 1.dp),
+            .padding(horizontal = 6.dp, vertical = 2.dp),
         color = textColor,
         fontWeight = FontWeight.Medium,
         maxLines = 1,
@@ -92,7 +92,7 @@ fun Badge(
         modifier = modifier
             .clip(shape)
             .background(color)
-            .padding(horizontal = 3.dp, vertical = 1.dp),
+            .padding(horizontal = 6.dp, vertical = 2.dp),
         color = iconColor,
         fontWeight = FontWeight.Medium,
         maxLines = 1,
