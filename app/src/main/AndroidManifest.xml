@@ -68,15 +68,20 @@
         android:theme="@style/Theme.Tachiyomi">
 
         <activity
+            android:name=".ui.splash.SplashActivity"
+            android:exported="true"
+            android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
             android:name=".ui.main.MainActivity"
             android:exported="true"
             android:launchMode="singleTop"
             android:theme="@style/Theme.Tachiyomi.SplashScreen">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
 
             <!-- Deep link to add repos -->
             <intent-filter android:label="@string/action_add_repo">

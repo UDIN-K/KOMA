@@ -1,10 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
 
-    <item
-        android:maxHeight="200dp"
-        android:maxWidth="200dp"
-        android:drawable="@drawable/ic_koma_transparent"
-        android:gravity="center" />
+    <aapt:attr name="android:drawable">
+        <vector
+            android:width="200dp"
+            android:height="50dp"
+            android:viewportWidth="400"
+            android:viewportHeight="100">
+            <path
+                android:name="letter_k1"
+                android:pathData="M 45,20 L 45,80"
+                android:strokeColor="#FFFFFF"
+                android:strokeWidth="12"
+                android:strokeLineCap="round"
+                android:strokeLineJoin="round"
+                android:trimPathEnd="0" />
+            <path
+                android:name="letter_k2"
+                android:pathData="M 85,20 L 45,50 L 85,80"
+                android:strokeColor="#FFFFFF"
+                android:strokeWidth="12"
+                android:strokeLineCap="round"
+                android:strokeLineJoin="round"
+                android:trimPathEnd="0" />
+            <path
+                android:name="letter_o"
+                android:pathData="M 145,20 A 30,30 0 1,0 145,80 A 30,30 0 1,0 145,20"
+                android:strokeColor="#FFFFFF"
+                android:strokeWidth="12"
+                android:strokeLineCap="round"
+                android:strokeLineJoin="round"
+                android:trimPathEnd="0" />
+            <path
+                android:name="letter_m"
+                android:pathData="M 205,80 L 205,20 L 235,55 L 265,20 L 265,80"
+                android:strokeColor="#FFFFFF"
+                android:strokeWidth="12"
+                android:strokeLineCap="round"
+                android:strokeLineJoin="round"
+                android:trimPathEnd="0" />
+            <path
+                android:name="letter_a1"
+                android:pathData="M 295,80 L 325,20 L 355,80"
+                android:strokeColor="#FFFFFF"
+                android:strokeWidth="12"
+                android:strokeLineCap="round"
+                android:strokeLineJoin="round"
+                android:trimPathEnd="0" />
+            <path
+                android:name="letter_a2"
+                android:pathData="M 305,60 L 345,60"
+                android:strokeColor="#FFFFFF"
+                android:strokeWidth="12"
+                android:strokeLineCap="round"
+                android:strokeLineJoin="round"
+                android:trimPathEnd="0" />
+        </vector>
+    </aapt:attr>
 
-</layer-list>
+    <!-- Animators -->
+    <target android:name="letter_k1">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="trimPathEnd"
+                android:valueFrom="0.0"
+                android:valueTo="1.0"
+                android:duration="400"
+                android:interpolator="@android:interpolator/fast_out_slow_in" />
+        </aapt:attr>
+    </target>
+    <target android:name="letter_k2">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="trimPathEnd"
+                android:valueFrom="0.0"
+                android:valueTo="1.0"
+                android:startOffset="300"
+                android:duration="400"
+                android:interpolator="@android:interpolator/fast_out_slow_in" />
+        </aapt:attr>
+    </target>
+    <target android:name="letter_o">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="trimPathEnd"
+                android:valueFrom="0.0"
+                android:valueTo="1.0"
+                android:startOffset="600"
+                android:duration="500"
+                android:interpolator="@android:interpolator/fast_out_slow_in" />
+        </aapt:attr>
+    </target>
+    <target android:name="letter_m">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="trimPathEnd"
+                android:valueFrom="0.0"
+                android:valueTo="1.0"
+                android:startOffset="1000"
+                android:duration="500"
+                android:interpolator="@android:interpolator/fast_out_slow_in" />
+        </aapt:attr>
+    </target>
+    <target android:name="letter_a1">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="trimPathEnd"
+                android:valueFrom="0.0"
+                android:valueTo="1.0"
+                android:startOffset="1400"
+                android:duration="500"
+                android:interpolator="@android:interpolator/fast_out_slow_in" />
+        </aapt:attr>
+    </target>
+    <target android:name="letter_a2">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="trimPathEnd"
+                android:valueFrom="0.0"
+                android:valueTo="1.0"
+                android:startOffset="1700"
+                android:duration="300"
+                android:interpolator="@android:interpolator/fast_out_slow_in" />
+        </aapt:attr>
+    </target>
+
+</animated-vector>

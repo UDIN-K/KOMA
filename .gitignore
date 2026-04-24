@@ -64,3 +64,6 @@ Thumbs.db
 
 # Node modules (if any tooling)
 node_modules/
+
+# Kotlin internal
+.kotlin/

@@ -170,11 +170,7 @@ class MainActivity : BaseActivity() {
             false
         }
 
-        // Do not let the launcher create a new activity http://stackoverflow.com/questions/16283079
-        if (!isTaskRoot) {
-            finish()
-            return
-        }
+        // SplashActivity handles task root routing now.
 
         // SY -->
         @Suppress("KotlinConstantConditions", "SimplifyBooleanWithConstants")
