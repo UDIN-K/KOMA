@@ -89,6 +89,7 @@ private fun getThemeColorScheme(
 
 private val colorSchemes: Map<AppTheme, BaseColorScheme> = mapOf(
     AppTheme.DEFAULT to TachiyomiColorScheme,
+    AppTheme.KOMA to KomaColorScheme,
     AppTheme.CATPPUCCIN to CatppuccinColorScheme,
     AppTheme.GREEN_APPLE to GreenAppleColorScheme,
     AppTheme.LAVENDER to LavenderColorScheme,

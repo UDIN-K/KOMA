@@ -1,0 +1,18 @@
+Task 1: Rebranding & Personalisasi (Level: Mudah)
+Sebelum masuk ke fitur berat, buat aplikasi ini terasa seperti "milikmu" sendiri.
+Ganti App Name & Package ID: Ubah agar aplikasi kamu bisa diinstal berdampingan dengan Antigravity aslinya.
+Custom Theme: Antigravity punya keunggulan di kustomisasi. Coba buat satu preset tema warna baru (misal: "Midnight Deep" atau "Cyberpunk") dan jadikan itu tema default di aplikasimu.
+Ganti Splash Screen: Buat animasi loading atau logo baru yang muncul saat aplikasi pertama kali dibuka.
+Task 2: UI/UX Refinement (Level: Menengah)
+Fokus pada kenyamanan pengguna saat membaca.
+Quick Action Menu: Tambahkan tombol melayang (Floating Action Button) atau menu long-press di Library untuk langsung "Mark as Read" tanpa harus masuk ke detail manga.
+Integrasi Font Kustom: Tambahkan fitur agar pengguna bisa mengunggah file .ttf mereka sendiri untuk digunakan di dalam reader (biasanya berguna untuk komik lokal/scanlation).
+Redesign Tab "Recent": Buat tampilan history jadi lebih bersih, misalnya dengan pengelompokan berdasarkan tanggal (Hari ini, Kemarin, Minggu lalu).
+Task 3: Fitur Eksperimental (Level: Menantang)
+Manfaatkan kebebasan forking untuk fitur yang belum ada di versi resmi.
+Smart Source Search: Buat fitur "Global Search" yang secara otomatis memprioritaskan sumber yang paling sering digunakan pengguna atau yang punya kualitas gambar tertinggi.
+Integrasi AI Translator (API): Ini sangat menantang! Coba tambahkan tombol di dalam reader yang bisa mengambil screenshot halaman, mengirimnya ke API penerjemah (seperti Google Vision atau DeepL), dan menampilkan hasilnya secara overlay.
+Cloud Sync selain Google Drive: Antigravity biasanya sudah punya sinkronisasi. Coba tambahkan opsi sinkronisasi baru menggunakan Dropbox atau OneDrive.
+Task 4: Performa & Clean-up (Level: Teknis)
+Database Optimization: Pelajari bagaimana Antigravity menyimpan data manga. Coba buat skrip clean-up otomatis untuk menghapus cache gambar yang sudah tidak dibaca lebih dari 30 hari.
+Update Kotlin & Gradle: Pastikan semua library pendukung di build.gradle.kts sudah menggunakan versi terbaru yang stabil untuk memastikan aplikasi kamu paling ngebut.

@@ -5,6 +5,12 @@ plugins {
     `java-gradle-plugin`
 }
 
+java {
+    sourceCompatibility = JavaVersion.toVersion("25")
+    targetCompatibility = JavaVersion.toVersion("25")
+}
+
+
 // Configuration should be synced with [/gradle/build-logic/src/main/kotlin/PluginSpotless.kt]
 val ktlintVersion = libs.ktlint.bom.get().version
 val editorConfigFile = rootProject.file("../../.editorconfig")
