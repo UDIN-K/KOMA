@@ -13,16 +13,14 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.PlayArrow
-import androidx.compose.material3.FilledIconButton
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButtonDefaults
 import androidx.compose.material3.LocalContentColor
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
-import androidx.compose.material3.contentColorFor
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Alignment
@@ -34,6 +32,7 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shadow
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
@@ -53,13 +52,13 @@ object CommonMangaItemDefaults {
     const val BrowseFavoriteCoverAlpha = 0.34f
 }
 
-private val ContinueReadingButtonSizeSmall = 28.dp
-private val ContinueReadingButtonSizeLarge = 32.dp
+private val ContinueReadingButtonSizeSmall = 30.dp
+private val ContinueReadingButtonSizeLarge = 34.dp
 
 private val ContinueReadingButtonIconSizeSmall = 16.dp
 private val ContinueReadingButtonIconSizeLarge = 20.dp
 
-private val ContinueReadingButtonGridPadding = 6.dp
+private val ContinueReadingButtonGridPadding = 8.dp
 private val ContinueReadingButtonListSpacing = 8.dp
 
 private const val GRID_SELECTED_COVER_ALPHA = 0.76f
@@ -131,11 +130,12 @@ private fun BoxScope.CoverTextOverlay(
             .background(
                 Brush.verticalGradient(
                     0.0f to Color.Transparent,
-                    0.5f to Color(0x77000000),
-                    1.0f to Color(0xEE000000),
+                    // Gradient lebih dalam supaya teks lebih mudah dibaca
+                    0.35f to Color(0x55000000),
+                    1.0f to Color(0xF2000000),
                 ),
             )
-            .fillMaxHeight(0.40f)
+            .fillMaxHeight(0.45f)
             .fillMaxWidth()
             .align(Alignment.BottomCenter),
     )
@@ -148,16 +148,17 @@ private fun BoxScope.CoverTextOverlay(
         GridItemTitle(
             modifier = Modifier
                 .weight(1f)
-                .padding(horizontal = 8.dp, vertical = 6.dp),
+                // Horizontal lebih lega
+                .padding(horizontal = 10.dp, vertical = 7.dp),
             title = title,
             style = MaterialTheme.typography.titleSmall.copy(
                 color = Color.White,
-                fontWeight = androidx.compose.ui.text.font.FontWeight.SemiBold,
-                letterSpacing = 0.2.sp,
+                fontWeight = FontWeight.SemiBold,
+                letterSpacing = 0.1.sp,
                 shadow = Shadow(
-                    color = Color(0x80000000),
-                    blurRadius = 6f,
-                    offset = androidx.compose.ui.geometry.Offset(0f, 2f)
+                    color = Color(0x99000000),
+                    blurRadius = 8f,
+                    offset = androidx.compose.ui.geometry.Offset(0f, 2f),
                 ),
             ),
             minLines = 1,
@@ -224,9 +225,13 @@ fun MangaComfortableGridItem(
                 },
             )
             GridItemTitle(
-                modifier = Modifier.padding(4.dp),
+                // Padding lebih lega dan simetris
+                modifier = Modifier.padding(horizontal = 6.dp, vertical = 5.dp),
                 title = title,
-                style = MaterialTheme.typography.titleSmall,
+                style = MaterialTheme.typography.bodySmall.copy(
+                    fontWeight = FontWeight.Medium,
+                    letterSpacing = 0.1.sp,
+                ),
                 minLines = 2,
                 maxLines = titleMaxLines,
             )
@@ -285,7 +290,7 @@ private fun GridItemTitle(
         modifier = modifier,
         text = title,
         fontSize = 12.sp,
-        lineHeight = 18.sp,
+        lineHeight = 17.sp,
         minLines = minLines,
         maxLines = maxLines,
         overflow = TextOverflow.Ellipsis,
@@ -350,7 +355,8 @@ fun MangaListItem(
     Row(
         modifier = Modifier
             .selectedBackground(isSelected)
-            .height(56.dp)
+            // Sedikit lebih tinggi supaya cover dan teks punya ruang napas
+            .height(64.dp)
             .combinedClickable(
                 onClick = onClick,
                 onLongClick = onLongClick,
@@ -367,11 +373,15 @@ fun MangaListItem(
         Text(
             text = title,
             modifier = Modifier
-                .padding(horizontal = 16.dp)
+                // Spacing sedikit lebih lega
+                .padding(horizontal = 14.dp)
                 .weight(1f),
             maxLines = 2,
             overflow = TextOverflow.Ellipsis,
-            style = MaterialTheme.typography.bodyMedium,
+            style = MaterialTheme.typography.bodyMedium.copy(
+                fontWeight = FontWeight.Medium,
+                letterSpacing = 0.1.sp,
+            ),
         )
         BadgeGroup(content = badge)
         if (onClickContinueReading != null) {
@@ -392,21 +402,21 @@ private fun ContinueReadingButton(
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
-    Box(modifier = modifier) {
-        FilledIconButton(
-            onClick = onClick,
-            shape = MaterialTheme.shapes.small,
-            colors = IconButtonDefaults.filledIconButtonColors(
-                containerColor = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.9f),
-                contentColor = contentColorFor(MaterialTheme.colorScheme.primaryContainer),
-            ),
-            modifier = Modifier.size(size),
-        ) {
-            Icon(
-                imageVector = Icons.Filled.PlayArrow,
-                contentDescription = stringResource(MR.strings.action_resume),
-                modifier = Modifier.size(iconSize),
-            )
-        }
+    Box(
+        modifier = modifier
+            .size(size)
+            .clip(CircleShape)
+            // Warna dark semi-transparent universal — cocok di atas cover warna apapun
+            // primaryContainer terlalu Material You dan bentrok di cover terang/gelap
+            .background(Color(0xCC000000))
+            .combinedClickable(onClick = onClick),
+        contentAlignment = Alignment.Center,
+    ) {
+        Icon(
+            imageVector = Icons.Filled.PlayArrow,
+            contentDescription = stringResource(MR.strings.action_resume),
+            tint = Color.White,
+            modifier = Modifier.size(iconSize),
+        )
     }
 }

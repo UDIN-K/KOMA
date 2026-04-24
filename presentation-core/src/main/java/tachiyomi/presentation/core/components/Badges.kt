@@ -1,9 +1,11 @@
 package tachiyomi.presentation.core.components
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.InlineTextContent
 import androidx.compose.foundation.text.appendInlineContent
 import androidx.compose.material3.Icon
@@ -26,10 +28,15 @@ import kotlinx.collections.immutable.persistentMapOf
 @Composable
 fun BadgeGroup(
     modifier: Modifier = Modifier,
-    shape: Shape = androidx.compose.foundation.shape.CircleShape,
+    // CircleShape diganti — terlalu agresif untuk badge yang lebih tinggi dari lebar
+    shape: Shape = RoundedCornerShape(6.dp),
     content: @Composable RowScope.() -> Unit,
 ) {
-    Row(modifier = modifier.clip(shape)) {
+    Row(
+        modifier = modifier.clip(shape),
+        // Pisah antar badge dengan 1dp supaya ada visual separation
+        horizontalArrangement = Arrangement.spacedBy(1.dp),
+    ) {
         content()
     }
 }
@@ -46,12 +53,14 @@ fun Badge(
         text = text,
         modifier = modifier
             .clip(shape)
-            .background(color)
-            .padding(horizontal = 6.dp, vertical = 2.dp),
+            .background(color.copy(alpha = 0.92f))
+            // Horizontal lebih lega, vertical dikurangi supaya badge tidak terlalu tinggi
+            .padding(horizontal = 7.dp, vertical = 2.5.dp),
         color = textColor,
-        fontWeight = FontWeight.Medium,
+        fontWeight = FontWeight.SemiBold,
         maxLines = 1,
-        style = MaterialTheme.typography.bodySmall,
+        // Sedikit lebih kecil dari default bodySmall supaya tidak terlalu mencolok
+        style = MaterialTheme.typography.labelSmall,
     )
 }
 
@@ -72,8 +81,8 @@ fun Badge(
             iconContentPlaceholder,
             InlineTextContent(
                 Placeholder(
-                    width = MaterialTheme.typography.bodySmall.fontSize,
-                    height = MaterialTheme.typography.bodySmall.fontSize,
+                    width = MaterialTheme.typography.labelSmall.fontSize,
+                    height = MaterialTheme.typography.labelSmall.fontSize,
                     placeholderVerticalAlign = PlaceholderVerticalAlign.Center,
                 ),
             ) {
@@ -91,11 +100,11 @@ fun Badge(
         inlineContent = inlineContent,
         modifier = modifier
             .clip(shape)
-            .background(color)
-            .padding(horizontal = 6.dp, vertical = 2.dp),
+            .background(color.copy(alpha = 0.92f))
+            .padding(horizontal = 7.dp, vertical = 2.5.dp),
         color = iconColor,
-        fontWeight = FontWeight.Medium,
+        fontWeight = FontWeight.SemiBold,
         maxLines = 1,
-        style = MaterialTheme.typography.bodySmall,
+        style = MaterialTheme.typography.labelSmall,
     )
 }
