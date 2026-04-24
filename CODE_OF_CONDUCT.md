@@ -59,8 +59,7 @@ representative at an online or offline event.
 ## Enforcement
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be
-reported to the community moderators responsible for enforcement at
-the [Mihon Discord server](https://discord.gg/mihon).
+reported to the Koma development team.
 All complaints will be reviewed and investigated promptly and fairly.
 
 All community moderators are obligated to respect the privacy and security of the
@@ -106,7 +105,7 @@ Violating these terms may lead to a permanent ban.
 ### 4. Permanent Ban
 
 **Community Impact**: Demonstrating a pattern of violation of community
-standards, including sustained inappropriate behavior,  harassment of an
+standards, including sustained inappropriate behavior, harassment of an
 individual, or aggression toward or disparagement of classes of individuals.
 
 **Consequence**: A permanent ban from any sort of public interaction within
