@@ -1,10 +1,6 @@
 <div align="center">
 
-  <img src="assets/banner.png" alt="Koma Banner" width="100%">
-
-  <br>
-
-  <img src="app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" width="80" alt="Koma Logo">
+  <img src="app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" width="150" alt="Koma Logo">
 
   <h1>Koma (コマ)</h1>
 
