@@ -10,9 +10,9 @@
 
   <p><em>A premium, open-source manga reader for Android</em></p>
 
-  <a href="https://github.com/user/KOMA/releases"><img src="https://img.shields.io/github/v/release/user/KOMA?style=for-the-badge&color=0D1B2A&labelColor=1B2838" alt="Release"></a>
-  <a href="https://github.com/user/KOMA/blob/main/LICENSE"><img src="https://img.shields.io/github/license/user/KOMA?style=for-the-badge&color=0D1B2A&labelColor=1B2838" alt="License"></a>
-  <a href="https://github.com/user/KOMA/stargazers"><img src="https://img.shields.io/github/stars/user/KOMA?style=for-the-badge&color=0D1B2A&labelColor=1B2838" alt="Stars"></a>
+  <a href="https://github.com/UDIN-K/KOMA/releases"><img src="https://img.shields.io/github/v/release/UDIN-K/KOMA?style=for-the-badge&color=0D1B2A&labelColor=1B2838" alt="Release"></a>
+  <a href="https://github.com/UDIN-K/KOMA/blob/main/LICENSE"><img src="https://img.shields.io/github/license/UDIN-K/KOMA?style=for-the-badge&color=0D1B2A&labelColor=1B2838" alt="License"></a>
+  <a href="https://github.com/UDIN-K/KOMA/stargazers"><img src="https://img.shields.io/github/stars/UDIN-K/KOMA?style=for-the-badge&color=0D1B2A&labelColor=1B2838" alt="Stars"></a>
 
 </div>
 
