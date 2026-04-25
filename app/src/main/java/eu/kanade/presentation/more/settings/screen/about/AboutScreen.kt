@@ -141,15 +141,13 @@ object AboutScreen : Screen() {
                     }
                 }
 
-                if (!BuildConfig.DEBUG) {
-                    item {
-                        TextPreferenceWidget(
-                            title = stringResource(MR.strings.whats_new),
-                            // SY -->
-                            onPreferenceClick = { showWhatsNewDialog = true },
-                            // SY <--
-                        )
-                    }
+                item {
+                    TextPreferenceWidget(
+                        title = stringResource(MR.strings.whats_new),
+                        // SY -->
+                        onPreferenceClick = { showWhatsNewDialog = true },
+                        // SY <--
+                    )
                 }
 
                 // item {
