@@ -56,7 +56,7 @@ fun MoreScreen(
 
     Scaffold { contentPadding ->
         ScrollbarLazyColumn(
-            modifier = Modifier.padding(contentPadding),
+            contentPadding = contentPadding, // ← FIX: was Modifier.padding(contentPadding)
         ) {
             item {
                 LogoHeader()
