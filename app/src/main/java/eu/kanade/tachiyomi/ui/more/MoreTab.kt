@@ -38,6 +38,8 @@ import kotlinx.coroutines.flow.combine
 import tachiyomi.core.common.util.lang.launchIO
 import tachiyomi.i18n.MR
 import tachiyomi.presentation.core.i18n.stringResource
+import logcat.LogPriority
+import tachiyomi.core.common.util.system.logcat
 import uy.kohesive.injekt.Injekt
 import uy.kohesive.injekt.api.get
 
@@ -75,12 +77,12 @@ data object MoreTab : Tab {
             showNavUpdates = screenModel.showNavUpdates,
             showNavHistory = screenModel.showNavHistory,
             // SY <--
-            onClickDownloadQueue = { navigator.push(DownloadQueueScreen) },
-            onClickCategories = { navigator.push(CategoryScreen()) },
-            onClickStats = { navigator.push(StatsScreen()) },
-            onClickDataAndStorage = { navigator.push(SettingsScreen(SettingsScreen.Destination.DataAndStorage)) },
-            onClickSettings = { navigator.push(SettingsScreen()) },
-            onClickAbout = { navigator.push(SettingsScreen(SettingsScreen.Destination.About)) },
+            onClickDownloadQueue = { logcat(LogPriority.DEBUG) { "MoreTab: onClickDownloadQueue" }; navigator.push(DownloadQueueScreen) },
+            onClickCategories = { logcat(LogPriority.DEBUG) { "MoreTab: onClickCategories" }; navigator.push(CategoryScreen()) },
+            onClickStats = { logcat(LogPriority.DEBUG) { "MoreTab: onClickStats" }; navigator.push(StatsScreen()) },
+            onClickDataAndStorage = { logcat(LogPriority.DEBUG) { "MoreTab: onClickDataAndStorage" }; navigator.push(SettingsScreen(SettingsScreen.Destination.DataAndStorage)) },
+            onClickSettings = { logcat(LogPriority.DEBUG) { "MoreTab: onClickSettings" }; navigator.push(SettingsScreen()) },
+            onClickAbout = { logcat(LogPriority.DEBUG) { "MoreTab: onClickAbout" }; navigator.push(SettingsScreen(SettingsScreen.Destination.About)) },
             // SY -->
             onClickBatchAdd = { navigator.push(BatchAddScreen()) },
             onClickUpdates = { navigator.push(UpdatesTab) },

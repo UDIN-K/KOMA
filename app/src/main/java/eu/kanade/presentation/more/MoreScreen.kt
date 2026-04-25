@@ -1,11 +1,7 @@
 package eu.kanade.presentation.more
 
-import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.WindowInsets
-import androidx.compose.foundation.layout.asPaddingValues
-import androidx.compose.foundation.layout.calculateEndPadding
-import androidx.compose.foundation.layout.calculateStartPadding
-import androidx.compose.foundation.layout.navigationBars
+import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.LocalOverscrollConfiguration
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.outlined.HelpOutline
 import androidx.compose.material.icons.automirrored.outlined.Label
@@ -20,8 +16,8 @@ import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.material.icons.outlined.Storage
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.res.vectorResource
 import eu.kanade.presentation.more.settings.widget.SwitchPreferenceWidget
@@ -36,6 +32,7 @@ import tachiyomi.presentation.core.components.material.Scaffold
 import tachiyomi.presentation.core.i18n.pluralStringResource
 import tachiyomi.presentation.core.i18n.stringResource
 
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun MoreScreen(
     downloadQueueStateProvider: () -> DownloadQueueState,
@@ -58,21 +55,14 @@ fun MoreScreen(
     onClickHistory: () -> Unit,
 ) {
     val uriHandler = LocalUriHandler.current
-    val layoutDirection = LocalLayoutDirection.current
-
-    // Ambil insets navigation bar secara langsung — ini yang paling akurat
-    val navBarPadding = WindowInsets.navigationBars.asPaddingValues()
 
     Scaffold { contentPadding ->
-        ScrollbarLazyColumn(
-            contentPadding = PaddingValues(
-                top = contentPadding.calculateTopPadding(),
-                start = contentPadding.calculateStartPadding(layoutDirection),
-                end = contentPadding.calculateEndPadding(layoutDirection),
-                // Gabungkan padding dari Scaffold + navigation bar insets yang sebenarnya
-                bottom = contentPadding.calculateBottomPadding() + navBarPadding.calculateBottomPadding(),
-            ),
-        ) {
+        // Disable overscroll stretch effect to prevent touch target misalignment
+        // after overscrolling at top/bottom boundaries
+        CompositionLocalProvider(LocalOverscrollConfiguration provides null) {
+            ScrollbarLazyColumn(
+                contentPadding = contentPadding,
+            ) {
             item {
                 LogoHeader()
             }
@@ -200,6 +190,7 @@ fun MoreScreen(
                     icon = Icons.AutoMirrored.Outlined.HelpOutline,
                     onPreferenceClick = { uriHandler.openUri(Constants.URL_HELP) },
                 )
+            }
             }
         }
     }
