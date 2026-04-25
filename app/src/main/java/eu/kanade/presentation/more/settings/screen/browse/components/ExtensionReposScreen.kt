@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.outlined.Explore
 import androidx.compose.material.icons.outlined.Refresh
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -31,6 +32,7 @@ fun ExtensionReposScreen(
     onOpenWebsite: (ExtensionRepo) -> Unit,
     onClickDelete: (String) -> Unit,
     onClickRefresh: () -> Unit,
+    onClickFinder: () -> Unit,
     navigateUp: () -> Unit,
 ) {
     val lazyListState = rememberLazyListState()
@@ -41,6 +43,12 @@ fun ExtensionReposScreen(
                 title = stringResource(MR.strings.label_extension_repos),
                 scrollBehavior = scrollBehavior,
                 actions = {
+                    IconButton(onClick = onClickFinder) {
+                        Icon(
+                            imageVector = Icons.Outlined.Explore,
+                            contentDescription = stringResource(resource = MR.strings.label_repo_finder),
+                        )
+                    }
                     IconButton(onClick = onClickRefresh) {
                         Icon(
                             imageVector = Icons.Outlined.Refresh,

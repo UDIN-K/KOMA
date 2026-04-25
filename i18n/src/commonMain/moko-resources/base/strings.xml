@@ -378,6 +378,19 @@
     <string name="action_replace_repo_title">Signing Key Fingerprint Already Exists</string>
     <string name="action_replace_repo_message">Repository %1$s has the same Signing Key Fingerprint as %2$s.\nIf this is expected, %2$s will be replaced, otherwise contact your repo maintainer.</string>
 
+    <!-- Repository Finder -->
+    <string name="label_repo_finder">Repository Finder</string>
+    <string name="repo_finder_subtitle">Discover and add extension repositories with one tap.</string>
+    <string name="repo_finder_loading">Loading repositories…</string>
+    <string name="repo_finder_error">Failed to load repositories</string>
+    <string name="repo_finder_empty">No repositories available</string>
+    <string name="repo_finder_added">Repository added successfully</string>
+    <string name="repo_finder_already_added">Already added</string>
+    <string name="repo_finder_type_manga">Manga</string>
+    <string name="repo_finder_type_anime">Anime</string>
+    <string name="repo_finder_official">Official</string>
+
+
       <!-- Reader section -->
     <string name="pref_fullscreen">Fullscreen</string>
     <string name="pref_show_navigation_mode">Show tap zones overlay</string>
