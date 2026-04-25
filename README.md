@@ -1,6 +1,19 @@
 <div align="center">
-  <img src="app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" width="150" alt="Koma Logo">
+
+  <img src="assets/banner.png" alt="Koma Banner" width="100%">
+
+  <br>
+
+  <img src="app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" width="80" alt="Koma Logo">
+
   <h1>Koma (コマ)</h1>
+
+  <p><em>A premium, open-source manga reader for Android</em></p>
+
+  <a href="https://github.com/user/KOMA/releases"><img src="https://img.shields.io/github/v/release/user/KOMA?style=for-the-badge&color=0D1B2A&labelColor=1B2838" alt="Release"></a>
+  <a href="https://github.com/user/KOMA/blob/main/LICENSE"><img src="https://img.shields.io/github/license/user/KOMA?style=for-the-badge&color=0D1B2A&labelColor=1B2838" alt="License"></a>
+  <a href="https://github.com/user/KOMA/stargazers"><img src="https://img.shields.io/github/stars/user/KOMA?style=for-the-badge&color=0D1B2A&labelColor=1B2838" alt="Stars"></a>
+
 </div>
 
 **Koma** is a free, open-source, and premium manga reader for Android 6.0 and above. Built upon the robust foundations of Mihon and TachiyomiSY, Koma aims to deliver an unparalleled reading experience. We strive to push the boundaries of usability, bringing together the best features from the community while maintaining a sleek, modern, and highly customizable interface.
