@@ -5,31 +5,36 @@
         <changelogtext>Fix overscroll stretch causing items to become untappable on the More screen</changelogtext>
         <changelogtext>Fix bottom navigation bar clipping content on the More screen</changelogtext>
         <changelogtext>Add debug build variant support for Google Services</changelogtext>
+        <changelogtext>Show What's New button in all build types</changelogtext>
         <changelogtext>[b]Improvements[/b]</changelogtext>
         <changelogtext>Improved touch target accuracy after scroll boundary interactions</changelogtext>
         <changelogtext>Proper contentPadding handling for ScrollbarLazyColumn</changelogtext>
+        <changelogtext>Updated changelog to reflect KOMA release history</changelogtext>
     </changelogversion>
     <changelogversion versionName="1.0.1" changeDate="Apr 24,2026">
-        <changelogtext>[b]UI Enhancements[/b]</changelogtext>
-        <changelogtext>Custom floating island navigation bar with bouncy animations</changelogtext>
-        <changelogtext>Enhanced library grid items with deeper gradients and refined typography</changelogtext>
-        <changelogtext>Adjusted badge styling for a premium aesthetic</changelogtext>
-        <changelogtext>[b]Build[/b]</changelogtext>
-        <changelogtext>Enable debug signing configuration for release build variants</changelogtext>
-        <changelogtext>Fix navigation bar height (80dp) Android display issue</changelogtext>
+        <changelogtext>[b]Complete Rebrand &amp; Redesign[/b]</changelogtext>
+        <changelogtext>Transitioned from the legacy Tachiyomi/Mihon base into a fresh, standalone premium experience</changelogtext>
+        <changelogtext>[b]Modern "Floating Island" Navigation[/b]</changelogtext>
+        <changelogtext>Swapped the old edge-to-edge bottom bar with a sleek, translucent floating pill that lets your library content glide beautifully underneath</changelogtext>
+        <changelogtext>[b]Premium Library Grid[/b]</changelogtext>
+        <changelogtext>Replaced sharp UI elements with smooth rounded corners, spacious padding, and deep glassmorphism text-gradients for a high-end visual experience</changelogtext>
+        <changelogtext>[b]Refined Typography &amp; Badges[/b]</changelogtext>
+        <changelogtext>Perfected cover badges and text weights to ensure maximum readability and a clean, modern aesthetic</changelogtext>
+        <changelogtext>[b]Midnight Deep Theme[/b]</changelogtext>
+        <changelogtext>A brand new, sleek dark theme with vibrant cyan accents for comfortable reading</changelogtext>
+        <changelogtext>[b]Optimized Build[/b]</changelogtext>
+        <changelogtext>Removed old legacy assets, fixed crash loops on missing icons, and streamlined the app repository</changelogtext>
+        <changelogtext>APKs are now natively signed and ready to install — no manual signing required</changelogtext>
     </changelogversion>
     <changelogversion versionName="1.0.0" changeDate="Apr 24,2026">
         <changelogtext>[b]Welcome to KOMA (コマ)![/b]</changelogtext>
-        <changelogtext>A free, open-source manga reader based on Mihon and TachiyomiSY</changelogtext>
-        <changelogtext>[b]Rebranding[/b]</changelogtext>
-        <changelogtext>New KOMA app identity with custom splash screen and logo</changelogtext>
-        <changelogtext>Midnight Deep color theme implementation</changelogtext>
-        <changelogtext>Custom app icons and branding assets</changelogtext>
-        <changelogtext>[b]Features[/b]</changelogtext>
-        <changelogtext>Full Mihon/TachiyomiSY feature set included</changelogtext>
+        <changelogtext>Your new premium manga, comic, and webtoon reader</changelogtext>
+        <changelogtext>[b]Core Features[/b]</changelogtext>
+        <changelogtext>Advanced library management with custom categories</changelogtext>
+        <changelogtext>Custom extensions support for unlimited sources</changelogtext>
+        <changelogtext>Automatic webtoon detection for optimal reading</changelogtext>
+        <changelogtext>Built-in tracking support (MAL, AniList, and more)</changelogtext>
         <changelogtext>Cross-device sync support</changelogtext>
-        <changelogtext>Extension management and source browsing</changelogtext>
-        <changelogtext>Advanced library search and filtering</changelogtext>
         <changelogtext>Every chapter. Everywhere.</changelogtext>
     </changelogversion>
 </changelog>
