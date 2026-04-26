@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog bulletedList="true">
+    <changelogversion versionName="1.0.3" changeDate="Apr 26,2026">
+        <changelogtext>[b]New: Extension Repo Shortcut[/b]</changelogtext>
+        <changelogtext>Added a Floating Action Button to the Extensions tab for quick and easy access to repository management</changelogtext>
+        <changelogtext>[b]UI Polish[/b]</changelogtext>
+        <changelogtext>Integrated the new FAB with responsive padding to avoid overlap with library content</changelogtext>
+        <changelogtext>Enhanced navigation flow for adding and managing extension sources</changelogtext>
+    </changelogversion>
     <changelogversion versionName="1.0.2" changeDate="Apr 25,2026">
         <changelogtext>[b]Bug Fixes[/b]</changelogtext>
         <changelogtext>Fix overscroll stretch causing items to become untappable on the More screen</changelogtext>

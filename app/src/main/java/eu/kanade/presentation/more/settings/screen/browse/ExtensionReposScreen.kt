@@ -50,6 +50,7 @@ class ExtensionReposScreen(
             onClickDelete = { screenModel.showDialog(RepoDialog.Delete(it)) },
             onClickRefresh = { screenModel.refreshRepos() },
             onClickFinder = { navigator.push(RepoFinderScreen()) },
+            onClickTroubleshoot = { context.openInBrowser("https://udink.me/koma/troubleshooting") },
             navigateUp = navigator::pop,
         )
 

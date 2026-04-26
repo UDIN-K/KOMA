@@ -1,7 +1,15 @@
 package eu.kanade.tachiyomi.ui.browse.extension
 
 import androidx.activity.compose.BackHandler
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.outlined.Add
 import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.SmallFloatingActionButton
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
@@ -10,7 +18,10 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.unit.dp
 import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.currentOrThrow
 import eu.kanade.presentation.browse.ExtensionScreen
@@ -54,42 +65,62 @@ fun extensionsTab(
                 extensionsScreenModel.search(null)
             }
 
-            ExtensionScreen(
-                state = state,
-                contentPadding = contentPadding,
-                searchQuery = state.searchQuery,
-                onLongClickItem = { extension ->
-                    when (extension) {
-                        is Extension.Available -> extensionsScreenModel.installExtension(extension)
-                        else -> {
-                            if (context.isPackageInstalled(extension.pkgName)) {
-                                extensionsScreenModel.uninstallExtension(extension)
-                            } else {
-                                privateExtensionToUninstall = extension
+            Box(modifier = Modifier.fillMaxSize()) {
+                ExtensionScreen(
+                    state = state,
+                    contentPadding = contentPadding,
+                    searchQuery = state.searchQuery,
+                    onLongClickItem = { extension ->
+                        when (extension) {
+                            is Extension.Available -> extensionsScreenModel.installExtension(extension)
+                            else -> {
+                                if (context.isPackageInstalled(extension.pkgName)) {
+                                    extensionsScreenModel.uninstallExtension(extension)
+                                } else {
+                                    privateExtensionToUninstall = extension
+                                }
                             }
                         }
-                    }
-                },
-                onClickItemCancel = extensionsScreenModel::cancelInstallUpdateExtension,
-                onClickUpdateAll = extensionsScreenModel::updateAllExtensions,
-                onOpenWebView = { extension ->
-                    extension.sources.getOrNull(0)?.let {
-                        navigator.push(
-                            WebViewScreen(
-                                url = it.baseUrl,
-                                initialTitle = it.name,
-                                sourceId = it.id,
-                            ),
-                        )
-                    }
-                },
-                onInstallExtension = extensionsScreenModel::installExtension,
-                onOpenExtension = { navigator.push(ExtensionDetailsScreen(it.pkgName)) },
-                onTrustExtension = { extensionsScreenModel.trustExtension(it) },
-                onUninstallExtension = { extensionsScreenModel.uninstallExtension(it) },
-                onUpdateExtension = extensionsScreenModel::updateExtension,
-                onRefresh = extensionsScreenModel::findAvailableExtensions,
-            )
+                    },
+                    onClickItemCancel = extensionsScreenModel::cancelInstallUpdateExtension,
+                    onClickUpdateAll = extensionsScreenModel::updateAllExtensions,
+                    onOpenWebView = { extension ->
+                        extension.sources.getOrNull(0)?.let {
+                            navigator.push(
+                                WebViewScreen(
+                                    url = it.baseUrl,
+                                    initialTitle = it.name,
+                                    sourceId = it.id,
+                                ),
+                            )
+                        }
+                    },
+                    onInstallExtension = extensionsScreenModel::installExtension,
+                    onOpenExtension = { navigator.push(ExtensionDetailsScreen(it.pkgName)) },
+                    onTrustExtension = { extensionsScreenModel.trustExtension(it) },
+                    onUninstallExtension = { extensionsScreenModel.uninstallExtension(it) },
+                    onUpdateExtension = extensionsScreenModel::updateExtension,
+                    onRefresh = extensionsScreenModel::findAvailableExtensions,
+                )
+
+                // FAB shortcut to Extension Repos
+                SmallFloatingActionButton(
+                    onClick = { navigator.push(ExtensionReposScreen()) },
+                    modifier = Modifier
+                        .align(Alignment.BottomEnd)
+                        .padding(
+                            end = 16.dp,
+                            bottom = contentPadding.calculateBottomPadding() + 16.dp,
+                        ),
+                    containerColor = MaterialTheme.colorScheme.primaryContainer,
+                    contentColor = MaterialTheme.colorScheme.onPrimaryContainer,
+                ) {
+                    Icon(
+                        imageVector = Icons.Outlined.Add,
+                        contentDescription = stringResource(MR.strings.label_extension_repos),
+                    )
+                }
+            }
 
             privateExtensionToUninstall?.let { extension ->
                 ExtensionUninstallConfirmation(

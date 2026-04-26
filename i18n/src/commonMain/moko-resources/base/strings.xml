@@ -389,6 +389,8 @@
     <string name="repo_finder_type_manga">Manga</string>
     <string name="repo_finder_type_anime">Anime</string>
     <string name="repo_finder_official">Official</string>
+    <string name="action_troubleshoot">Troubleshoot</string>
+    <string name="action_add_repo_manual">Add manually</string>
 
 
       <!-- Reader section -->
