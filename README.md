@@ -1,89 +1,134 @@
 <div align="center">
 
-<a href="https://github.com/UDIN-K/KOMA">
-    <img src="app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" alt="Koma logo" title="Koma logo" width="80"/>
-</a>
+  <img src="app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" width="150" alt="Koma Logo">
 
-# Koma (コマ) [App](#)
+  <h1>Koma (コマ)</h1>
 
-### Full-featured reader
-Discover and read manga, manhwa, manhua, novels and more – easier than ever on your Android device.
+  <p><em>A premium, open-source manga reader for Android — discover and read manga, manhwa, manhua, novels and more – easier than ever on your Android device.</em></p>
 
-[![Discord server](https://img.shields.io/discord/1475219284551536653.svg?label=&labelColor=6A7EC2&color=7389D8&logo=discord&logoColor=FFFFFF)](https://discord.gg/YOUR_INVITE)
-[![GitHub downloads](https://img.shields.io/github/downloads/UDIN-K/KOMA/total?label=downloads&labelColor=27303D&color=0D1117&logo=github&logoColor=FFFFFF&style=flat)](https://github.com/UDIN-K/KOMA/releases)
+  <br>
 
-[![CI](https://img.shields.io/github/actions/workflow/status/UDIN-K/KOMA/build_push.yml?labelColor=27303D)](https://github.com/UDIN-K/KOMA/actions/workflows/build_push.yml)
-[![License: Apache-2.0](https://img.shields.io/github/license/UDIN-K/KOMA?labelColor=27303D&color=0877d2)](/LICENSE)
-[![Translation status](https://img.shields.io/weblate/progress/tachiyomi?labelColor=27303D&color=946300)](https://hosted.weblate.org/engage/tachiyomi/)
+  <!-- Status Badges -->
+  <a href="https://github.com/UDIN-K/KOMA/releases"><img src="https://img.shields.io/github/downloads/UDIN-K/KOMA/total?style=flat-square&label=downloads&labelColor=1B2838&color=0D1B2A&logo=github" alt="Downloads"></a>
 
-Upstream Weblate:  
-[![Translation status](https://img.shields.io/weblate/progress/mihon?labelColor=27303D&color=946300)](https://hosted.weblate.org/engage/mihon/)
+  <br>
 
-## Download
+  <a href="https://github.com/UDIN-K/KOMA/actions"><img src="https://img.shields.io/github/actions/workflow/status/UDIN-K/KOMA/build_push.yml?label=build&labelColor=555&style=flat-square" alt="Build Status"></a>
+  <a href="https://github.com/UDIN-K/KOMA/blob/main/LICENSE"><img src="https://img.shields.io/github/license/UDIN-K/KOMA?label=license&labelColor=555&color=blue&style=flat-square" alt="License"></a>
+  <a href="https://hosted.weblate.org/engage/tachiyomi/"><img src="https://img.shields.io/weblate/progress/tachiyomi?style=flat-square&label=translated&labelColor=555" alt="Translation"></a>
 
-[![Koma Stable](https://img.shields.io/github/release/UDIN-K/KOMA.svg?maxAge=3600&label=Stable&labelColor=06599d&color=043b69)](https://github.com/UDIN-K/KOMA/releases/latest)
-[![Koma Preview](https://img.shields.io/github/v/release/UDIN-K/KOMA.svg?maxAge=3600&label=Preview&labelColor=2c2c47&color=1c1c39&include_prereleases)](https://github.com/UDIN-K/KOMA/releases)
+  <br><br>
 
-*Requires Android 6.0 or higher.*
+  <!-- Download Button -->
+  <a href="https://github.com/UDIN-K/KOMA/releases/latest">
+    <img src="https://img.shields.io/badge/⬇_DOWNLOAD_KOMA-v1.0.3-0D1B2A?style=for-the-badge&labelColor=1B2838&logo=android&logoColor=3DDC84" alt="Download Koma">
+  </a>
 
-## Features
+  <br>
 
-<div align="left">
+  <sub>
+    <a href="https://github.com/UDIN-K/KOMA/releases">All Releases</a> •
+    <a href="https://github.com/UDIN-K/KOMA/releases">Preview Builds</a>
+  </sub>
 
-* Online reading from a variety of sources via extensions.
-* Local reading of downloaded content.
-* A configurable reader with multiple viewers, reading directions and other settings.
-* Tracker support: [MyAnimeList](https://myanimelist.net/), [AniList](https://anilist.co/), [Kitsu](https://kitsu.app/), [MangaUpdates](https://mangaupdates.com), [Shikimori](https://shikimori.one), and [Bangumi](https://bgm.tv/) support.
-* Categories to organize your library.
-* Light and dark themes, including the signature *Midnight Deep* theme.
-* Floating island navigation with bouncy animations.
-* Schedule updating your library for new chapters.
-* Create backups locally to read offline or to your desired cloud service.
-* Enhanced source integrations for E-Hentai/ExHentai, Mangadex, NHentai, and more.
-* Smart backgrounds that adapt based on page content.
-* Advanced library with drag-and-drop sorting and dynamic categories.
-* Manga recommendations via MAL, AniList, and similar titles.
-* Global search with quotes, exclusions, and saved searches.
-* Source migration and batch operations.
-* Plus much more...
+  <br><br>
 
 </div>
 
-## Contributing
+---
 
-[Code of conduct](./CODE_OF_CONDUCT.md) · [Contributing guide](./CONTRIBUTING.md)
+## ✨ Features
 
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+Koma inherits the core strengths of **Mihon** and **TachiyomiSY** and expands upon them with a massive suite of enhancements:
 
-Before reporting a new issue, take a look at the already opened [issues](https://github.com/UDIN-K/KOMA/issues); if you got any questions, join our [Discord server](https://discord.gg/YOUR_INVITE).
+<table>
+  <tr>
+    <td width="50%" valign="top">
 
-### Credits
+### 📖 Reading & Library
+- **Multiple Reading Modes** — Continuous, paged, webtoon, auto-scroll
+- **Smart Backgrounds** — Dynamic colors that adapt to page content
+- **Advanced Library** — Drag-and-drop, dynamic & custom categories
+- **Webtoon Optimization** — Auto detection, forced zoom control
+- **Offline Reading** — Download chapters with custom caching
+- **Manga Recommendations** — via MAL, AniList, and similar titles
 
-Built upon the incredible work of:
+  </td>
+  <td width="50%" valign="top">
+
+### 🎨 Usability & Design
+- **Sleek Theming** — Including the signature *Midnight Deep* theme
+- **Floating Island Nav** — Bouncy animated bottom navigation
+- **Global Search** — With quotes, exclusions, and saved searches
+- **Content Control** — Built-in lewd filters & toggleable settings
+- **Source Migration** — Seamlessly move between sources
+- **Batch Operations** — Clean titles, merge duplicates, batch import
+
+  </td>
+  </tr>
+</table>
+
+### 🔗 Tracking Integration
+
+Sync your reading progress with:
+
+> **MyAnimeList** · **AniList** · **Kitsu** · **MangaUpdates** · **Shikimori** · **Bangumi**
+
+### 🧩 Enhanced Source Support
+
+Koma includes built-in enhancements for popular sources:
+
+`E-Hentai / ExHentai` · `Mangadex` · `8Muses` · `NHentai` · `HBrowse` · `Puruin` · `LANraragi`
+
+---
+
+## 📥 Download
+
+<div align="center">
+
+| Channel | Description | Link |
+|---------|-------------|------|
+| 🟢 **Stable** | Latest stable release | [**Download v1.0.3**](https://github.com/UDIN-K/KOMA/releases/latest) |
+| 🟡 **Preview** | Bleeding-edge features | [**Preview Builds**](https://github.com/UDIN-K/KOMA/releases) |
+
+</div>
+
+> **Requirements:** Android 6.0 (Marshmallow) or above
+
+---
+
+
+## 🤝 Contributing & Support
+
+Before opening issues or pull requests, please read our guidelines carefully:
+
+- 📜 [**Contributing Guidelines**](CONTRIBUTING.md)
+- 📋 [**Code of Conduct**](CODE_OF_CONDUCT.md)
+- 🐛 **Bug Reports** — [Submit via GitHub Issues](https://github.com/UDIN-K/KOMA/issues)
+- 💡 **Feature Requests** — [Submit via GitHub Issues](https://github.com/UDIN-K/KOMA/issues)
+
+---
+
+## 🏗️ Credits
+
+<div align="center">
+
+Koma is built upon the incredible work of the open-source community:
 
 [**Mihon**](https://github.com/mihonapp/mihon) · [**TachiyomiSY**](https://github.com/jobobby04/TachiyomiSY) · [**Tachiyomi**](https://github.com/tachiyomiorg/tachiyomi)
 
-### Disclaimer
+<br>
 
-The developer(s) of this application does not have any affiliation with the content providers available, and this application hosts zero content.
+<sub>Made with Rawrrr XD by <a href="https://github.com/UDIN-K">UDIN-K</a></sub>
 
-### License
+</div>
 
-<pre>
-Copyright © 2015 Javier Tomás
-Copyright © 2024 Mihon Open Source Project
+---
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+<div align="center">
 
-http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-</pre>
+  <a href="https://github.com/UDIN-K/KOMA/blob/main/LICENSE"><img src="https://img.shields.io/github/license/UDIN-K/KOMA?style=flat-square&label=license&color=0D1B2A&labelColor=1B2838" alt="License"></a>
+  <a href="https://github.com/UDIN-K/KOMA/releases"><img src="https://img.shields.io/github/v/release/UDIN-K/KOMA?style=flat-square&label=latest&color=0D1B2A&labelColor=1B2838" alt="Latest Release"></a>
+  <a href="https://github.com/UDIN-K/KOMA/stargazers"><img src="https://img.shields.io/github/stars/UDIN-K/KOMA?style=flat-square&color=0D1B2A&labelColor=1B2838" alt="Stars"></a>
 
 </div>
