@@ -10,15 +10,7 @@
 
   <!-- Status Badges -->
   <a href="https://github.com/UDIN-K/KOMA/releases"><img src="https://img.shields.io/github/downloads/UDIN-K/KOMA/total?style=flat-square&label=downloads&labelColor=1B2838&color=0D1B2A&logo=github" alt="Downloads"></a>
-
-  <br>
-
-  <a href="https://github.com/UDIN-K/KOMA/actions"><img src="https://img.shields.io/github/actions/workflow/status/UDIN-K/KOMA/build_push.yml?label=build&labelColor=555&style=flat-square" alt="Build Status"></a>
   <a href="https://github.com/UDIN-K/KOMA/blob/main/LICENSE"><img src="https://img.shields.io/github/license/UDIN-K/KOMA?label=license&labelColor=555&color=blue&style=flat-square" alt="License"></a>
-  <a href="https://hosted.weblate.org/engage/tachiyomi/"><img src="https://img.shields.io/weblate/progress/tachiyomi?style=flat-square&label=translated&labelColor=555" alt="Translation"></a>
-
-  <br><br>
-
   <!-- Download Button -->
   <a href="https://github.com/UDIN-K/KOMA/releases/latest">
     <img src="https://img.shields.io/badge/⬇_DOWNLOAD_KOMA-v1.0.3-0D1B2A?style=for-the-badge&labelColor=1B2838&logo=android&logoColor=3DDC84" alt="Download Koma">
