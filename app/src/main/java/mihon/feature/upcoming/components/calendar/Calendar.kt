@@ -32,6 +32,7 @@ import java.time.temporal.WeekFields
 import java.util.Locale
 
 private val FontSize = 16.sp
+private val CompactFontSize = 12.sp
 private const val DAYS_OF_WEEK = 7
 
 @Composable
@@ -41,11 +42,12 @@ fun Calendar(
     setSelectedYearMonth: (YearMonth) -> Unit,
     onClickDay: (day: LocalDate) -> Unit,
     modifier: Modifier = Modifier,
+    compact: Boolean = false,
 ) {
     Column(
         modifier = modifier.fillMaxWidth(),
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(4.dp),
+        verticalArrangement = Arrangement.spacedBy(if (compact) 2.dp else 4.dp),
     ) {
         CalenderHeader(
             yearMonth = selectedYearMonth,
@@ -53,13 +55,15 @@ fun Calendar(
             onNextClick = { setSelectedYearMonth(selectedYearMonth.plusMonths(1L)) },
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(vertical = MaterialTheme.padding.small)
-                .padding(start = MaterialTheme.padding.medium),
+                .padding(vertical = if (compact) 2.dp else MaterialTheme.padding.small)
+                .padding(start = if (compact) MaterialTheme.padding.small else MaterialTheme.padding.medium),
+            compact = compact,
         )
         CalendarGrid(
             selectedYearMonth = selectedYearMonth,
             events = events,
             onClickDay = onClickDay,
+            compact = compact,
         )
     }
 }
@@ -69,6 +73,7 @@ private fun CalendarGrid(
     selectedYearMonth: YearMonth,
     events: ImmutableMap<LocalDate, Int>,
     onClickDay: (day: LocalDate) -> Unit,
+    compact: Boolean = false,
 ) {
     val localeFirstDayOfWeek = WeekFields.of(Locale.getDefault()).firstDayOfWeek.value
     val weekDays = remember {
@@ -96,7 +101,7 @@ private fun CalendarGrid(
                 ),
                 textAlign = TextAlign.Center,
                 fontWeight = FontWeight.SemiBold,
-                fontSize = FontSize,
+                fontSize = if (compact) CompactFontSize else FontSize,
             )
         }
         repeat(emptyFieldCount) { Box { } }
@@ -106,6 +111,7 @@ private fun CalendarGrid(
                 date = localDate,
                 onDayClick = { onClickDay(localDate) },
                 events = events[localDate] ?: 0,
+                compact = compact,
             )
         }
     }

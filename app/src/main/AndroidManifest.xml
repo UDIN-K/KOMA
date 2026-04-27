@@ -81,7 +81,7 @@
             android:name=".ui.main.MainActivity"
             android:exported="true"
             android:launchMode="singleTop"
-            android:theme="@style/Theme.Tachiyomi.SplashScreen">
+            android:theme="@style/Theme.Tachiyomi">
 
             <!-- Deep link to add repos -->
             <intent-filter android:label="@string/action_add_repo">

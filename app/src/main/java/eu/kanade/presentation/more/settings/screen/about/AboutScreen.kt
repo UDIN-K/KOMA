@@ -30,7 +30,7 @@ import eu.kanade.presentation.util.LocalBackPress
 import eu.kanade.presentation.util.Screen
 import eu.kanade.tachiyomi.BuildConfig
 import eu.kanade.tachiyomi.data.updater.AppUpdateChecker
-import eu.kanade.tachiyomi.ui.more.NewUpdateScreen
+import eu.kanade.tachiyomi.ui.more.UpdateDownloadScreen
 import eu.kanade.tachiyomi.util.CrashLogUtil
 import eu.kanade.tachiyomi.util.lang.toDateTimestampString
 import eu.kanade.tachiyomi.util.system.copyToClipboard
@@ -70,6 +70,11 @@ object AboutScreen : Screen() {
         val handleBack = LocalBackPress.current
         val navigator = LocalNavigator.currentOrThrow
         var isCheckingUpdates by remember { mutableStateOf(false) }
+
+        // Update dialog state
+        var updateResult by remember {
+            mutableStateOf<GetApplicationRelease.Result.NewUpdate?>(null)
+        }
 
         // SY -->
         var showWhatsNewDialog by remember { mutableStateOf(false) }
@@ -122,13 +127,7 @@ object AboutScreen : Screen() {
                                         checkVersion(
                                             context = context,
                                             onAvailableUpdate = { result ->
-                                                val updateScreen = NewUpdateScreen(
-                                                    versionName = result.release.version,
-                                                    changelogInfo = result.release.info,
-                                                    releaseLink = result.release.releaseLink,
-                                                    downloadLink = result.release.getDownloadLink(),
-                                                )
-                                                navigator.push(updateScreen)
+                                                updateResult = result
                                             },
                                             onFinish = {
                                                 isCheckingUpdates = false
@@ -193,6 +192,27 @@ object AboutScreen : Screen() {
             WhatsNewDialog(onDismissRequest = { showWhatsNewDialog = false })
         }
         // SY <--
+
+        // Update changelog dialog
+        updateResult?.let { result ->
+            val changelogInfoNoChecksum = remember(result) {
+                result.release.info.replace("""---(\R|.)*Checksums(\R|.)*""".toRegex(), "")
+            }
+            UpdateChangelogDialog(
+                versionName = result.release.version,
+                changelogInfo = changelogInfoNoChecksum,
+                onDismissRequest = { updateResult = null },
+                onDownloadClick = {
+                    updateResult = null
+                    navigator.push(
+                        UpdateDownloadScreen(
+                            versionName = result.release.version,
+                            downloadLink = result.release.getDownloadLink(),
+                        ),
+                    )
+                },
+            )
+        }
     }
 
     /**

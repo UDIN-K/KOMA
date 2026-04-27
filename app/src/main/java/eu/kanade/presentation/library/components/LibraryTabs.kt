@@ -2,7 +2,6 @@ package eu.kanade.presentation.library.components
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.pager.PagerState
-import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.PrimaryScrollableTabRow
 import androidx.compose.material3.Tab
@@ -25,7 +24,9 @@ internal fun LibraryTabs(
     Column(modifier = Modifier.zIndex(2f)) {
         PrimaryScrollableTabRow(
             selectedTabIndex = currentPageIndex,
-            edgePadding = 0.dp,
+            edgePadding = 12.dp,
+            containerColor = MaterialTheme.colorScheme.surface,
+            contentColor = MaterialTheme.colorScheme.onSurface,
             // TODO: use default when width is fixed upstream
             // https://issuetracker.google.com/issues/242879624
             divider = {},
@@ -40,11 +41,10 @@ internal fun LibraryTabs(
                             badgeCount = getItemCountForCategory(category),
                         )
                     },
-                    unselectedContentColor = MaterialTheme.colorScheme.onSurface,
+                    selectedContentColor = MaterialTheme.colorScheme.primary,
+                    unselectedContentColor = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.6f),
                 )
             }
         }
-
-        HorizontalDivider()
     }
 }

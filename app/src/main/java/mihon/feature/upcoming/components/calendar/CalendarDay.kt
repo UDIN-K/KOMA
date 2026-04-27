@@ -30,8 +30,12 @@ fun CalendarDay(
     events: Int,
     onDayClick: () -> Unit,
     modifier: Modifier = Modifier,
+    compact: Boolean = false,
 ) {
     val today = remember { LocalDate.now() }
+    val fontSize = if (compact) 12.sp else 16.sp
+    val indicatorOffset = if (compact) 9.dp else 12.dp
+    val indicatorSize = if (compact) 40.dp else 56.dp
 
     Box(
         modifier = modifier
@@ -56,7 +60,7 @@ fun CalendarDay(
         Text(
             text = date.dayOfMonth.toString(),
             textAlign = TextAlign.Center,
-            fontSize = 16.sp,
+            fontSize = fontSize,
             color = if (date.isBefore(today)) {
                 MaterialTheme.colorScheme.onBackground.copy(alpha = DISABLED_ALPHA)
             } else {
@@ -64,12 +68,12 @@ fun CalendarDay(
             },
             fontWeight = FontWeight.SemiBold,
         )
-        Row(Modifier.offset(y = 12.dp)) {
+        Row(Modifier.offset(y = indicatorOffset)) {
             val size = events.coerceAtMost(MAX_EVENTS)
             for (index in 0 until size) {
                 CalendarIndicator(
                     index = index,
-                    size = 56.dp,
+                    size = indicatorSize,
                     color = MaterialTheme.colorScheme.primary,
                 )
             }

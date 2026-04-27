@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog bulletedList="true">
+    <changelogversion versionName="1.0.4" changeDate="Apr 27,2026">
+        <changelogtext>[b]New: Library Updates Carousel[/b]</changelogtext>
+        <changelogtext>Recent chapter updates now appear directly in the Library tab with a quick "See More" shortcut</changelogtext>
+        <changelogtext>[b]New: Updates Calendar[/b]</changelogtext>
+        <changelogtext>Added an inline compact calendar to the Updates screen showing upcoming releases at a glance</changelogtext>
+        <changelogtext>[b]Improved: Compact Calendar Layout[/b]</changelogtext>
+        <changelogtext>Reduced calendar size with smaller fonts and tighter spacing so updates list stays visible</changelogtext>
+        <changelogtext>[b]Fixed: Double Splash Screen[/b]</changelogtext>
+        <changelogtext>Eliminated the old splash icon that would briefly flash after the branded KOMA splash animation</changelogtext>
+        <changelogtext>[b]Improved: Navigation Bar[/b]</changelogtext>
+        <changelogtext>Redesigned bottom navigation bar with cleaner styling and better visual balance for a more comfortable experience</changelogtext>
+        <changelogtext>[b]Updated: Help &amp; Support[/b]</changelogtext>
+        <changelogtext>Help tab now directs to the official KOMA repository at udink.me/koma/</changelogtext>
+        <changelogtext>[b]Build &amp; Stability[/b]</changelogtext>
+        <changelogtext>Fixed force close on some Android versions caused by conflicting splash screen initialization</changelogtext>
+        <changelogtext>Fixed duplicate import compilation errors in LibraryTab</changelogtext>
+        <changelogtext>Cleaned up deprecated and conflicting import references</changelogtext>
+    </changelogversion>
     <changelogversion versionName="1.0.3" changeDate="Apr 26,2026">
         <changelogtext>[b]New: Extension Repo Shortcut[/b]</changelogtext>
         <changelogtext>Added a Floating Action Button to the Extensions tab for quick and easy access to repository management</changelogtext>

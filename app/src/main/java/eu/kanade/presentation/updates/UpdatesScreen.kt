@@ -42,11 +42,16 @@ import tachiyomi.presentation.core.screens.EmptyScreen
 import tachiyomi.presentation.core.screens.LoadingScreen
 import tachiyomi.presentation.core.theme.active
 import java.time.LocalDate
+import java.time.YearMonth
 import kotlin.time.Duration.Companion.seconds
+import mihon.feature.upcoming.UpcomingScreenModel
+import mihon.feature.upcoming.components.calendar.Calendar
 
 @Composable
 fun UpdateScreen(
     state: UpdatesScreenModel.State,
+    upcomingState: UpcomingScreenModel.State,
+    onUpcomingSetSelectedYearMonth: (YearMonth) -> Unit,
     snackbarHostState: SnackbarHostState,
     lastUpdated: Long,
     // SY -->
@@ -123,6 +128,16 @@ fun UpdateScreen(
                     FastScrollLazyColumn(
                         contentPadding = contentPadding,
                     ) {
+                        item(key = "upcoming-calendar") {
+                            Calendar(
+                                selectedYearMonth = upcomingState.selectedYearMonth,
+                                events = upcomingState.events,
+                                setSelectedYearMonth = onUpcomingSetSelectedYearMonth,
+                                onClickDay = { _ -> onCalendarClicked() },
+                                compact = true,
+                            )
+                        }
+
                         updatesLastUpdatedItem(lastUpdated)
 
                         updatesUiItems(

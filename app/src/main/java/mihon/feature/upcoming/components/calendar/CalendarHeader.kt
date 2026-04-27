@@ -12,6 +12,7 @@ import androidx.compose.animation.slideOutVertically
 import androidx.compose.animation.togetherWith
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.KeyboardArrowLeft
 import androidx.compose.material.icons.filled.KeyboardArrowRight
@@ -24,6 +25,7 @@ import androidx.compose.runtime.ReadOnlyComposable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import tachiyomi.i18n.MR
 import tachiyomi.presentation.core.i18n.stringResource
 import java.time.YearMonth
@@ -36,6 +38,7 @@ fun CalenderHeader(
     onPreviousClick: () -> Unit,
     onNextClick: () -> Unit,
     modifier: Modifier = Modifier,
+    compact: Boolean = false,
 ) {
     Row(
         modifier = modifier,
@@ -49,15 +52,21 @@ fun CalenderHeader(
         ) { monthYear ->
             Text(
                 text = getTitleText(monthYear),
-                style = MaterialTheme.typography.titleLarge,
+                style = if (compact) MaterialTheme.typography.titleMedium else MaterialTheme.typography.titleLarge,
             )
         }
         Row {
-            IconButton(onClick = onPreviousClick) {
+            IconButton(
+                onClick = onPreviousClick,
+                modifier = if (compact) Modifier.size(36.dp) else Modifier,
+            ) {
                 @Suppress("DEPRECATION")
                 Icon(Icons.Default.KeyboardArrowLeft, stringResource(MR.strings.upcoming_calendar_prev))
             }
-            IconButton(onClick = onNextClick) {
+            IconButton(
+                onClick = onNextClick,
+                modifier = if (compact) Modifier.size(36.dp) else Modifier,
+            ) {
                 @Suppress("DEPRECATION")
                 Icon(Icons.Default.KeyboardArrowRight, stringResource(MR.strings.upcoming_calendar_next))
             }

@@ -2,6 +2,7 @@ package eu.kanade.presentation.library.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.combinedClickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxScope
 import androidx.compose.foundation.layout.Column
@@ -45,8 +46,8 @@ import tachiyomi.presentation.core.util.selectedBackground
 import tachiyomi.domain.manga.model.MangaCover as MangaCoverModel
 
 object CommonMangaItemDefaults {
-    val GridHorizontalSpacer = 10.dp
-    val GridVerticalSpacer = 10.dp
+    val GridHorizontalSpacer = 12.dp
+    val GridVerticalSpacer = 12.dp
 
     @Suppress("ConstPropertyName")
     const val BrowseFavoriteCoverAlpha = 0.34f
@@ -339,7 +340,7 @@ private fun Modifier.selectedOutline(
 ) = drawBehind { if (isSelected) drawRect(color = color) }
 
 /**
- * Layout of list item.
+ * Layout of list item — premium dark card style.
  */
 @Composable
 fun MangaListItem(
@@ -355,8 +356,7 @@ fun MangaListItem(
     Row(
         modifier = Modifier
             .selectedBackground(isSelected)
-            // Sedikit lebih tinggi supaya cover dan teks punya ruang napas
-            .height(64.dp)
+            .height(72.dp)
             .combinedClickable(
                 onClick = onClick,
                 onLongClick = onLongClick,
@@ -367,22 +367,26 @@ fun MangaListItem(
         MangaCover.Square(
             modifier = Modifier
                 .fillMaxHeight()
+                .clip(RoundedCornerShape(8.dp))
                 .alpha(coverAlpha),
             data = coverData,
         )
-        Text(
-            text = title,
+        Column(
             modifier = Modifier
-                // Spacing sedikit lebih lega
                 .padding(horizontal = 14.dp)
                 .weight(1f),
-            maxLines = 2,
-            overflow = TextOverflow.Ellipsis,
-            style = MaterialTheme.typography.bodyMedium.copy(
-                fontWeight = FontWeight.Medium,
-                letterSpacing = 0.1.sp,
-            ),
-        )
+            verticalArrangement = Arrangement.Center,
+        ) {
+            Text(
+                text = title,
+                maxLines = 2,
+                overflow = TextOverflow.Ellipsis,
+                style = MaterialTheme.typography.bodyMedium.copy(
+                    fontWeight = FontWeight.SemiBold,
+                    letterSpacing = 0.1.sp,
+                ),
+            )
+        }
         BadgeGroup(content = badge)
         if (onClickContinueReading != null) {
             ContinueReadingButton(

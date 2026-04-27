@@ -32,6 +32,7 @@ import eu.kanade.tachiyomi.ui.reader.ReaderActivity
 import eu.kanade.tachiyomi.ui.updates.UpdatesScreenModel.Event
 import kotlinx.coroutines.flow.collectLatest
 import mihon.feature.upcoming.UpcomingScreen
+import mihon.feature.upcoming.UpcomingScreenModel
 import tachiyomi.core.common.i18n.stringResource
 import tachiyomi.i18n.MR
 import tachiyomi.presentation.core.i18n.stringResource
@@ -74,8 +75,13 @@ data object UpdatesTab : Tab {
         val settingsScreenModel = rememberScreenModel { UpdatesSettingsScreenModel() }
         val state by screenModel.state.collectAsState()
 
+        val upcomingScreenModel = rememberScreenModel { UpcomingScreenModel() }
+        val upcomingState by upcomingScreenModel.state.collectAsState()
+
         UpdateScreen(
             state = state,
+            upcomingState = upcomingState,
+            onUpcomingSetSelectedYearMonth = upcomingScreenModel::setSelectedYearMonth,
             snackbarHostState = screenModel.snackbarHostState,
             lastUpdated = screenModel.lastUpdated,
             // SY -->

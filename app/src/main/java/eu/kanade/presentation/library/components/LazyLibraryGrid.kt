@@ -28,6 +28,21 @@ internal fun LazyLibraryGrid(
     )
 }
 
+internal fun LazyGridScope.libraryUpdatesItem() {
+    item(
+        span = { GridItemSpan(maxLineSpan) },
+        contentType = { "library_updates_carousel_item" },
+    ) {
+        val updates = LocalLibraryUpdates.current
+        if (updates.isNotEmpty()) {
+            LibraryUpdatesCarousel(
+                updates = updates,
+                onClickAll = LocalLibraryUpdatesOnClickAll.current
+            )
+        }
+    }
+}
+
 internal fun LazyGridScope.globalSearchItem(
     searchQuery: String?,
     onGlobalSearchClicked: () -> Unit,

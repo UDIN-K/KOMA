@@ -77,7 +77,8 @@ import eu.kanade.tachiyomi.ui.browse.source.globalsearch.GlobalSearchScreen
 import eu.kanade.tachiyomi.ui.deeplink.DeepLinkScreen
 import eu.kanade.tachiyomi.ui.home.HomeScreen
 import eu.kanade.tachiyomi.ui.manga.MangaScreen
-import eu.kanade.tachiyomi.ui.more.NewUpdateScreen
+import eu.kanade.presentation.more.settings.screen.about.UpdateChangelogDialog
+import eu.kanade.tachiyomi.ui.more.UpdateDownloadScreen
 import eu.kanade.tachiyomi.ui.more.OnboardingScreen
 import eu.kanade.tachiyomi.util.system.dpToPx
 import eu.kanade.tachiyomi.util.system.isNavigationBarNeedsScrim
@@ -158,8 +159,8 @@ class MainActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         val isLaunch = savedInstanceState == null
 
-        // Prevent splash screen showing up on configuration changes
-        val splashScreen = if (isLaunch) installSplashScreen() else null
+        // SplashActivity handles the branded splash — skip AndroidX SplashScreen
+        val splashScreen: SplashScreen? = null
 
         super.onCreate(savedInstanceState)
 
@@ -317,12 +318,15 @@ class MainActivity : BaseActivity() {
             // SY <--
         }
 
-        val startTime = System.currentTimeMillis()
-        splashScreen?.setKeepOnScreenCondition {
-            val elapsed = System.currentTimeMillis() - startTime
-            elapsed <= SPLASH_MIN_DURATION || (!ready && elapsed <= SPLASH_MAX_DURATION)
+        // SplashActivity handles splash — no keep-on-screen or exit animation needed
+        if (splashScreen != null) {
+            val startTime = System.currentTimeMillis()
+            splashScreen.setKeepOnScreenCondition {
+                val elapsed = System.currentTimeMillis() - startTime
+                elapsed <= SPLASH_MIN_DURATION || (!ready && elapsed <= SPLASH_MAX_DURATION)
+            }
+            setSplashScreenExitAnimation(splashScreen)
         }
-        setSplashScreenExitAnimation(splashScreen)
 
         if (isLaunch && libraryPreferences.autoClearChapterCache.get()) {
             lifecycleScope.launchIO {
@@ -366,23 +370,40 @@ class MainActivity : BaseActivity() {
         val navigator = LocalNavigator.currentOrThrow
 
         // App updates
+        var updateRelease by remember {
+            mutableStateOf<GetApplicationRelease.Result.NewUpdate?>(null)
+        }
         LaunchedEffect(Unit) {
             if (BuildConfig.INCLUDE_UPDATER) {
                 try {
                     val result = AppUpdateChecker().checkForUpdate(context)
                     if (result is GetApplicationRelease.Result.NewUpdate) {
-                        val updateScreen = NewUpdateScreen(
-                            versionName = result.release.version,
-                            changelogInfo = result.release.info,
-                            releaseLink = result.release.releaseLink,
-                            downloadLink = result.release.getDownloadLink(),
-                        )
-                        navigator.push(updateScreen)
+                        updateRelease = result
                     }
                 } catch (e: Exception) {
                     logcat(LogPriority.ERROR, e)
                 }
             }
+        }
+
+        updateRelease?.let { result ->
+            val changelogInfoNoChecksum = remember(result) {
+                result.release.info.replace("""---(\R|.)*Checksums(\R|.)*""".toRegex(), "")
+            }
+            UpdateChangelogDialog(
+                versionName = result.release.version,
+                changelogInfo = changelogInfoNoChecksum,
+                onDismissRequest = { updateRelease = null },
+                onDownloadClick = {
+                    updateRelease = null
+                    navigator.push(
+                        UpdateDownloadScreen(
+                            versionName = result.release.version,
+                            downloadLink = result.release.getDownloadLink(),
+                        ),
+                    )
+                },
+            )
         }
 
         // Extensions updates

@@ -28,6 +28,7 @@ internal fun LibraryCompactGrid(
         contentPadding = contentPadding,
     ) {
         globalSearchItem(searchQuery, onGlobalSearchClicked)
+        libraryUpdatesItem()
 
         items(
             items = items,

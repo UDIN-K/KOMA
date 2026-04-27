@@ -25,7 +25,7 @@ enum class MangaCover(val ratio: Float) {
         data: Any?,
         modifier: Modifier = Modifier,
         contentDescription: String = "",
-        shape: Shape = MaterialTheme.shapes.extraSmall,
+        shape: Shape = MaterialTheme.shapes.small,
         onClick: (() -> Unit)? = null,
     ) {
         AsyncImage(

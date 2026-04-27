@@ -16,6 +16,7 @@ import androidx.compose.material3.BadgedBox
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.NavigationBarItem
+import androidx.compose.material3.NavigationBarItemDefaults
 import androidx.compose.material3.NavigationRailItem
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -220,12 +221,24 @@ object HomeScreen : Screen() {
             label = {
                 Text(
                     text = tab.options.title,
-                    style = MaterialTheme.typography.labelLarge,
+                    style = MaterialTheme.typography.labelSmall,
+                    fontWeight = if (selected) {
+                        androidx.compose.ui.text.font.FontWeight.Bold
+                    } else {
+                        androidx.compose.ui.text.font.FontWeight.Normal
+                    },
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis,
                 )
             },
             alwaysShowLabel = /* SY --> */alwaysShowLabel, /* SY <-- */
+            colors = NavigationBarItemDefaults.colors(
+                selectedIconColor = MaterialTheme.colorScheme.primary,
+                selectedTextColor = MaterialTheme.colorScheme.primary,
+                unselectedIconColor = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.6f),
+                unselectedTextColor = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.6f),
+                indicatorColor = MaterialTheme.colorScheme.primary.copy(alpha = 0.12f),
+            ),
         )
     }
 

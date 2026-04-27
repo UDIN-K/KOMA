@@ -27,6 +27,7 @@ internal fun LibraryComfortableGrid(
         contentPadding = contentPadding,
     ) {
         globalSearchItem(searchQuery, onGlobalSearchClicked)
+        libraryUpdatesItem()
 
         items(
             items = items,

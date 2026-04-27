@@ -55,11 +55,17 @@ import exh.recs.batch.RecommendationSearchBottomSheetDialog
 import exh.recs.batch.RecommendationSearchProgressDialog
 import exh.recs.batch.SearchStatus
 import exh.source.MERGED_SOURCE_ID
+import exh.source.MERGED_SOURCE_ID
 import kotlinx.collections.immutable.persistentListOf
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
+import eu.kanade.presentation.library.components.LocalLibraryUpdates
+import eu.kanade.presentation.library.components.LocalLibraryUpdatesOnClickAll
+import eu.kanade.presentation.updates.UpdatesUiModel
+import eu.kanade.tachiyomi.ui.updates.UpdatesScreenModel
+import eu.kanade.tachiyomi.ui.updates.UpdatesTab
 import mihon.feature.migration.config.MigrationConfigScreen
 import tachiyomi.core.common.i18n.stringResource
 import tachiyomi.core.common.util.lang.launchIO
@@ -132,7 +138,15 @@ data object LibraryTab : Tab {
             started
         }
 
-        Scaffold(
+        val updatesScreenModel = rememberScreenModel { UpdatesScreenModel() }
+        val updatesState by updatesScreenModel.state.collectAsState()
+        val updatesList = updatesState.items.filterIsInstance<UpdatesUiModel.Item>().map { it.item }
+
+        androidx.compose.runtime.CompositionLocalProvider(
+            LocalLibraryUpdates provides updatesList.take(6),
+            LocalLibraryUpdatesOnClickAll provides { navigator.push(UpdatesTab) }
+        ) {
+            Scaffold(
             topBar = { scrollBehavior ->
                 val title = state.getToolbarTitle(
                     defaultTitle = stringResource(MR.strings.label_library),
@@ -347,6 +361,7 @@ data object LibraryTab : Tab {
             // SY <--
             null -> {}
         }
+        } // End of CompositionLocalProvider
 
         // SY -->
         SyncFavoritesProgressDialog(

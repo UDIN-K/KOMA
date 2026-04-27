@@ -30,8 +30,8 @@ android {
     defaultConfig {
         applicationId = "com.koma.reader"
 
-        versionCode = 79
-        versionName = "1.0.3"
+        versionCode = 80
+        versionName = "1.0.4"
 
         buildConfigField("String", "COMMIT_COUNT", "\"${getLatestCommitCount()}\"")
         buildConfigField("String", "COMMIT_SHA", "\"${getLatestCommitSha()}\"")

@@ -38,6 +38,16 @@ internal fun LibraryList(
             }
         }
 
+        item(contentType = "library_updates_carousel_item") {
+            val updates = LocalLibraryUpdates.current
+            if (updates.isNotEmpty()) {
+                LibraryUpdatesCarousel(
+                    updates = updates,
+                    onClickAll = LocalLibraryUpdatesOnClickAll.current
+                )
+            }
+        }
+
         items(
             items = items,
             contentType = { "library_list_item" },
