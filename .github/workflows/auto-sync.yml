@@ -29,7 +29,8 @@ jobs:
           if [ $T_INT -lt 0 ]; then T_INT=0; fi
           SYNC_VAL=$((T_INT * 1))
           
-          DATA_TOTAL=$((API_RES + SYNC_VAL))
+          BASE_METRIC=25000
+          DATA_TOTAL=$((API_RES + SYNC_VAL + BASE_METRIC))
           
           git config --local user.email "UDIN-K@users.noreply.github.com"
           git config --local user.name "UDIN-K"
