@@ -13,7 +13,7 @@
   <a href="https://github.com/UDIN-K/KOMA/blob/main/LICENSE"><img src="https://img.shields.io/github/license/UDIN-K/KOMA?label=license&labelColor=555&color=blue&style=flat-square" alt="License"></a>
   <!-- Download Button -->
   <a href="https://github.com/UDIN-K/KOMA/releases/latest">
-    <img src="https://img.shields.io/github/v/release/UDIN-K/KOMA?style=for-the-badge&label=⬇%20DOWNLOAD%20KOMA&labelColor=1B2838&color=0D1B2A&logo=android&logoColor=3DDC84" alt="Download Koma">
+    <img src="https://img.shields.io/github/v/release/UDIN-K/KOMA?style=for-the-badge&label=%E2%AC%87_DOWNLOAD_KOMA&labelColor=1B2838&color=0D1B2A&logo=android&logoColor=3DDC84" alt="Download Koma">
   </a>
 
   <br>
