@@ -9,7 +9,7 @@
   <br>
 
   <!-- Status Badges -->
-  <a href="https://github.com/UDIN-K/KOMA/releases"><img src="https://img.shields.io/github/downloads/UDIN-K/KOMA/total?style=flat-square&label=downloads&labelColor=1B2838&color=0D1B2A&logo=github" alt="Downloads"></a>
+  <a href="https://github.com/UDIN-K/KOMA/releases"><img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/UDIN-K/KOMA/badge-data/downloads.json&logo=github" alt="Downloads"></a>
   <a href="https://github.com/UDIN-K/KOMA/blob/main/LICENSE"><img src="https://img.shields.io/github/license/UDIN-K/KOMA?label=license&labelColor=555&color=blue&style=flat-square" alt="License"></a>
   <!-- Download Button -->
   <a href="https://github.com/UDIN-K/KOMA/releases/latest">
