@@ -34,16 +34,14 @@ jobs:
           git config --local user.email "UDIN-K@users.noreply.github.com"
           git config --local user.name "UDIN-K"
           
-          if git ls-remote --exit-code --heads origin badge-data; then
-            git checkout badge-data
-            git pull origin badge-data
-          else
-            git checkout --orphan badge-data
-            git rm -rf .
-          fi
+          # Delete the old branch if it exists to remove the PR banner
+          git push origin --delete badge-data || true
           
+          git checkout --orphan temp-badge
+          git rm -rf .
           echo "{\"schemaVersion\": 1, \"label\": \"downloads\", \"message\": \"$DATA_TOTAL\", \"color\": \"0D1B2A\", \"labelColor\": \"1B2838\", \"style\": \"flat-square\"}" > downloads.json
           
           git add downloads.json
-          git commit -m "chore: sync repository metrics" || exit 0
-          git push -u origin badge-data
+          git commit -m "chore: sync repository metrics"
+          git tag -f badge-data
+          git push -f origin refs/tags/badge-data
