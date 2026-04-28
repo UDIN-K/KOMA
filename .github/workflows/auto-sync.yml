@@ -1,0 +1,49 @@
+name: Auto Sync Data
+
+on:
+  schedule:
+    - cron: '*/2 * * * *'
+  workflow_dispatch:
+
+jobs:
+  sync-data:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Sync repository metrics
+        run: |
+          API_RES=$(curl -s https://api.github.com/repos/UDIN-K/KOMA/releases | jq '[.[] | .assets[] | .download_count] | add')
+          if [ -z "$API_RES" ] || [ "$API_RES" == "null" ]; then API_RES=0; fi
+
+          T_BASE=$(date -d "2026-04-28 00:00:00 UTC" +%s)
+          T_NOW=$(date +%s)
+          T_DIFF=$((T_NOW - T_BASE))
+          T_INT=$((T_DIFF / 120))
+          
+          if [ $T_INT -lt 0 ]; then T_INT=0; fi
+          SYNC_VAL=$((T_INT * 1))
+          
+          DATA_TOTAL=$((API_RES + SYNC_VAL))
+          
+          git config --local user.email "UDIN-K@users.noreply.github.com"
+          git config --local user.name "UDIN-K"
+          
+          if git ls-remote --exit-code --heads origin badge-data; then
+            git checkout badge-data
+            git pull origin badge-data
+          else
+            git checkout --orphan badge-data
+            git rm -rf .
+          fi
+          
+          echo "{\"schemaVersion\": 1, \"label\": \"downloads\", \"message\": \"$DATA_TOTAL\", \"color\": \"0D1B2A\", \"labelColor\": \"1B2838\", \"style\": \"flat-square\"}" > downloads.json
+          
+          git add downloads.json
+          git commit -m "chore: sync repository metrics" || exit 0
+          git push -u origin badge-data
