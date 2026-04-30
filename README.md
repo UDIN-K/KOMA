@@ -10,7 +10,7 @@
 
   <!-- Status Badges -->
   <a href="https://github.com/UDIN-K/KOMA/releases"><img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/UDIN-K/KOMA/badge-data/downloads.json&logo=github" alt="Downloads"></a>
-  <a href="https://github.com/UDIN-K/KOMA/blob/main/LICENSE"><img src="https://img.shields.io/github/license/UDIN-K/KOMA?label=license&labelColor=555&color=blue&style=flat-square" alt="License"></a>
+  <a href="https://github.com/UDIN-K/KOMA/blob/main/LICENSE"><img src="https://img.shields.io/github/license/udin-k/koma?style=flat-square&color=0D1B2A&labelColor=1B2838" alt="License"></a>
   <!-- Download Button -->
   <a href="https://github.com/UDIN-K/KOMA/releases/latest">
     <img src="https://img.shields.io/github/v/release/UDIN-K/KOMA?style=for-the-badge&label=%E2%AC%87%20DOWNLOAD%20KOMA&labelColor=1B2838&color=0D1B2A&logo=android&logoColor=3DDC84" alt="Download Koma">
@@ -119,7 +119,7 @@ Koma is built upon the incredible work of the open-source community:
 
 <div align="center">
 
-  <a href="https://github.com/UDIN-K/KOMA/blob/main/LICENSE"><img src="https://img.shields.io/github/license/UDIN-K/KOMA?style=flat-square&label=license&color=0D1B2A&labelColor=1B2838" alt="License"></a>
+  <a href="https://github.com/UDIN-K/KOMA/blob/main/LICENSE"><img src="https://img.shields.io/github/license/udin-k/koma?style=flat-square&color=0D1B2A&labelColor=1B2838" alt="License"></a>
   <a href="https://github.com/UDIN-K/KOMA/releases"><img src="https://img.shields.io/github/v/release/UDIN-K/KOMA?style=flat-square&label=latest&color=0D1B2A&labelColor=1B2838" alt="Latest Release"></a>
   <a href="https://github.com/UDIN-K/KOMA/stargazers"><img src="https://img.shields.io/github/stars/UDIN-K/KOMA?style=flat-square&color=0D1B2A&labelColor=1B2838" alt="Stars"></a>
 
