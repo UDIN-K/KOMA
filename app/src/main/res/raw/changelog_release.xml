@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog bulletedList="true">
     <changelogversion versionName="1.0.5" changeDate="Apr 30,2026">
+        <changelogtext>[b]New: Custom Library Header[/b]</changelogtext>
+        <changelogtext>Redesigned Library top UI with a large header and total entries count</changelogtext>
+        <changelogtext>[b]Improved: Library Categories[/b]</changelogtext>
+        <changelogtext>Category tabs have been completely revamped into sleek, pill-shaped chips with checkmark indicators</changelogtext>
+        <changelogtext>[b]Improved: Default Grid Size[/b]</changelogtext>
+        <changelogtext>Changed the default portrait library grid size from 2 to 3 columns for better content density</changelogtext>
+        <changelogtext>[b]Fixed: Updates Carousel Localization[/b]</changelogtext>
+        <changelogtext>Fixed an issue where "Updates" and "See More" texts in the Library Carousel were hardcoded and ignored language settings</changelogtext>
+        <changelogtext>[b]Under the Hood[/b]</changelogtext>
+        <changelogtext>Configured APK generation naming convention to automatically include version and ABI architecture</changelogtext>
         <changelogtext>[b]Documentation Migration[/b]</changelogtext>
         <changelogtext>Replaced all external mihon.app help and docs URLs with native udink.me/koma documentation links</changelogtext>
     </changelogversion>
