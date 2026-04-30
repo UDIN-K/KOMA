@@ -289,6 +289,24 @@ private fun DiscoverableRepoCard(
                         },
                     )
                 }
+
+                if (item.repo.status == "maintenance") {
+                    Spacer(modifier = Modifier.width(6.dp))
+                    Surface(
+                        shape = RoundedCornerShape(4.dp),
+                        color = MaterialTheme.colorScheme.errorContainer,
+                    ) {
+                        Text(
+                            text = "MAINTENANCE",
+                            modifier = Modifier.padding(
+                                horizontal = 8.dp,
+                                vertical = 4.dp,
+                            ),
+                            style = MaterialTheme.typography.labelSmall,
+                            color = MaterialTheme.colorScheme.onErrorContainer,
+                        )
+                    }
+                }
             }
 
             // Description
@@ -310,6 +328,8 @@ private fun DiscoverableRepoCard(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.End,
             ) {
+                val isMaintenance = item.repo.status == "maintenance"
+
                 AnimatedVisibility(
                     visible = !item.isAdded,
                     enter = fadeIn(),
@@ -317,7 +337,7 @@ private fun DiscoverableRepoCard(
                 ) {
                     FilledTonalButton(
                         onClick = onAdd,
-                        enabled = !item.isAdding && !item.isAdded,
+                        enabled = !item.isAdding && !item.isAdded && !isMaintenance,
                     ) {
                         if (item.isAdding) {
                             CircularProgressIndicator(
@@ -325,7 +345,7 @@ private fun DiscoverableRepoCard(
                                 strokeWidth = 2.dp,
                             )
                             Spacer(modifier = Modifier.width(8.dp))
-                        } else {
+                        } else if (!isMaintenance) {
                             Icon(
                                 imageVector = Icons.Outlined.Add,
                                 contentDescription = null,
@@ -333,7 +353,7 @@ private fun DiscoverableRepoCard(
                             )
                             Spacer(modifier = Modifier.width(4.dp))
                         }
-                        Text(text = stringResource(MR.strings.action_add))
+                        Text(text = if (isMaintenance) "OFFLINE" else stringResource(MR.strings.action_add))
                     }
                 }
 

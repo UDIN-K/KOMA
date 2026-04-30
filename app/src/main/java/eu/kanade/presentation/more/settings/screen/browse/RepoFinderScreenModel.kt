@@ -27,7 +27,7 @@ class RepoFinderScreenModel(
 ) : StateScreenModel<RepoFinderState>(RepoFinderState.Loading) {
 
     companion object {
-        private const val REPOS_URL = "https://udink.me/koma/repos.json"
+        private const val REPOS_URL = "https://udink.me/repos.json"
     }
 
     init {
@@ -115,6 +115,7 @@ data class DiscoverableRepo(
     val type: String = "manga",
     val description: String = "",
     val official: Boolean = false,
+    val status: String = "online",
 )
 
 @Immutable
