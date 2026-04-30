@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog bulletedList="true">
+    <changelogversion versionName="1.0.5" changeDate="Apr 30,2026">
+        <changelogtext>[b]Documentation Migration[/b]</changelogtext>
+        <changelogtext>Replaced all external mihon.app help and docs URLs with native udink.me/koma documentation links</changelogtext>
+    </changelogversion>
     <changelogversion versionName="1.0.4" changeDate="Apr 27,2026">
         <changelogtext>[b]New: Library Updates Carousel[/b]</changelogtext>
         <changelogtext>Recent chapter updates now appear directly in the Library tab with a quick "See More" shortcut</changelogtext>

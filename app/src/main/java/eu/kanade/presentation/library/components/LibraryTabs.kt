@@ -21,28 +21,27 @@ internal fun LibraryTabs(
     onTabItemClick: (Int) -> Unit,
 ) {
     val currentPageIndex = pagerState.currentPage.coerceAtMost(categories.lastIndex)
-    Column(modifier = Modifier.zIndex(2f)) {
-        PrimaryScrollableTabRow(
-            selectedTabIndex = currentPageIndex,
-            edgePadding = 12.dp,
-            containerColor = MaterialTheme.colorScheme.surface,
-            contentColor = MaterialTheme.colorScheme.onSurface,
-            // TODO: use default when width is fixed upstream
-            // https://issuetracker.google.com/issues/242879624
-            divider = {},
+    androidx.compose.foundation.layout.Column(modifier = Modifier.zIndex(2f)) {
+        androidx.compose.foundation.lazy.LazyRow(
+            modifier = Modifier.fillMaxWidth(),
+            contentPadding = androidx.compose.foundation.layout.PaddingValues(horizontal = 16.dp, vertical = 8.dp),
+            horizontalArrangement = androidx.compose.foundation.layout.Arrangement.spacedBy(8.dp)
         ) {
-            categories.forEachIndexed { index, category ->
-                Tab(
-                    selected = currentPageIndex == index,
+            androidx.compose.foundation.lazy.itemsIndexed(categories) { index, category ->
+                val selected = currentPageIndex == index
+                androidx.compose.material3.FilterChip(
+                    selected = selected,
                     onClick = { onTabItemClick(index) },
-                    text = {
-                        TabText(
-                            text = category.visualName,
-                            badgeCount = getItemCountForCategory(category),
-                        )
+                    label = {
+                        androidx.compose.material3.Text(text = category.visualName)
                     },
-                    selectedContentColor = MaterialTheme.colorScheme.primary,
-                    unselectedContentColor = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.6f),
+                    leadingIcon = if (selected) {
+                        { androidx.compose.material3.Icon(androidx.compose.material.icons.Icons.Filled.Check, contentDescription = null) }
+                    } else null,
+                    colors = androidx.compose.material3.FilterChipDefaults.filterChipColors(
+                        selectedContainerColor = androidx.compose.material3.MaterialTheme.colorScheme.secondaryContainer,
+                        selectedLabelColor = androidx.compose.material3.MaterialTheme.colorScheme.onSecondaryContainer
+                    )
                 )
             }
         }

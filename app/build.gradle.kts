@@ -30,8 +30,8 @@ android {
     defaultConfig {
         applicationId = "com.koma.reader"
 
-        versionCode = 80
-        versionName = "1.0.4"
+        versionCode = 81
+        versionName = "1.0.5"
 
         buildConfigField("String", "COMMIT_COUNT", "\"${getLatestCommitCount()}\"")
         buildConfigField("String", "COMMIT_SHA", "\"${getLatestCommitSha()}\"")
@@ -147,6 +147,24 @@ android {
     lint {
         abortOnError = false
         checkReleaseBuilds = false
+    }
+
+    applicationVariants.all {
+        val variant = this
+        variant.outputs.forEach { output ->
+            val apkOutput = output as? com.android.build.gradle.internal.api.ApkVariantOutputImpl
+            if (apkOutput != null) {
+                val abi = apkOutput.filters.find { it.filterType == "ABI" }?.identifier
+                val abiSuffix = when (abi) {
+                    "arm64-v8a" -> "64bit"
+                    "armeabi-v7a" -> "32bit"
+                    "x86_64" -> "x86_64"
+                    "x86" -> "x86"
+                    else -> "universal"
+                }
+                apkOutput.outputFileName = "koma-${variant.versionName}-${abiSuffix}.apk"
+            }
+        }
     }
 }
 
@@ -343,6 +361,7 @@ androidComponents {
         // Layout Inspector's Compose tree
         it.packaging.resources.excludes.add("META-INF/*.version")
     }
+
 }
 
 buildscript {

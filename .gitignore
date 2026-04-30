@@ -51,6 +51,10 @@ captures/
 
 # Google Services
 google-services.json
+client_secrets.json
+
+# Signing & Secrets
+secrets.properties
 
 # Crash logs
 *_crash_logs.txt

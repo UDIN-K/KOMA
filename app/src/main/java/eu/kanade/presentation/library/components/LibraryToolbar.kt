@@ -91,18 +91,20 @@ private fun LibraryRegularToolbar(
     val pillAlpha = if (isSystemInDarkTheme()) 0.12f else 0.08f
     SearchToolbar(
         titleContent = {
-            Row(verticalAlignment = Alignment.CenterVertically) {
+            androidx.compose.foundation.layout.Column {
                 Text(
                     text = title.text,
                     maxLines = 1,
-                    modifier = Modifier.weight(1f, false),
+                    style = MaterialTheme.typography.headlineMedium,
+                    fontWeight = androidx.compose.ui.text.font.FontWeight.Bold,
                     overflow = TextOverflow.Ellipsis,
                 )
                 if (title.numberOfManga != null) {
-                    Pill(
-                        text = "${title.numberOfManga}",
-                        color = MaterialTheme.colorScheme.onBackground.copy(alpha = pillAlpha),
-                        fontSize = 14.sp,
+                    Text(
+                        text = "${title.numberOfManga} " + stringResource(MR.strings.manga),
+                        maxLines = 1,
+                        style = MaterialTheme.typography.labelMedium,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
                     )
                 }
             }

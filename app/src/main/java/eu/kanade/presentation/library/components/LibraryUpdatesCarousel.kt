@@ -40,11 +40,11 @@ fun LibraryUpdatesCarousel(
             verticalAlignment = Alignment.CenterVertically
         ) {
             Text(
-                text = "Pembaruan",
+                text = tachiyomi.presentation.core.i18n.stringResource(tachiyomi.i18n.MR.strings.label_recent_updates),
                 style = MaterialTheme.typography.titleMedium
             )
             TextButton(onClick = onClickAll) {
-                Text(text = "Selengkapnya")
+                Text(text = tachiyomi.presentation.core.i18n.stringResource(tachiyomi.i18n.MR.strings.label_more))
             }
         }
         
