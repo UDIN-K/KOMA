@@ -152,7 +152,7 @@ object AboutScreen : Screen() {
                 // item {
                 //     TextPreferenceWidget(
                 //         title = stringResource(MR.strings.help_translate),
-                //         onPreferenceClick = { uriHandler.openUri("https://mihon.app/docs/contribute#translation") },
+                //         onPreferenceClick = { uriHandler.openUri("https://udink.me/koma/docs/contribute#translation") },
                 //     )
                 // }
 
@@ -166,7 +166,7 @@ object AboutScreen : Screen() {
                 item {
                     TextPreferenceWidget(
                         title = stringResource(MR.strings.privacy_policy),
-                        onPreferenceClick = { uriHandler.openUri("https://mihon.app/privacy/") },
+                        onPreferenceClick = { uriHandler.openUri("https://udink.me/koma") },
                     )
                 }
 

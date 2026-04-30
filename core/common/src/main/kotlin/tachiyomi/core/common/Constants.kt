@@ -2,7 +2,7 @@ package tachiyomi.core.common
 
 object Constants {
     const val URL_HELP = "https://udink.me/koma"
-    const val URL_HELP_UPCOMING = "https://mihon.app/docs/faq/updates/upcoming"
+    const val URL_HELP_UPCOMING = "https://udink.me/koma/docs/faq/updates/upcoming"
 
     const val MANGA_EXTRA = "manga"
 

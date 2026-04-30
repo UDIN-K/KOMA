@@ -380,7 +380,7 @@ class LibraryUpdateNotifier(
     }
 
     companion object {
-        const val HELP_WARNING_URL = "https://mihon.app/docs/faq/library#why-am-i-warned-about-large-bulk-updates-and-downloads"
+        const val HELP_WARNING_URL = "https://udink.me/koma/docs/faq/library#why-am-i-warned-about-large-bulk-updates-and-downloads"
     }
 }
 
