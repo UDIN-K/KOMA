@@ -52,6 +52,7 @@ captures/
 # Google Services
 google-services.json
 client_secrets.json
+client_secret_*.json
 
 # Signing & Secrets
 secrets.properties
