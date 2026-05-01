@@ -13,6 +13,10 @@
         <changelogtext>Configured APK generation naming convention to automatically include version and ABI architecture</changelogtext>
         <changelogtext>[b]Documentation Migration[/b]</changelogtext>
         <changelogtext>Replaced all external mihon.app help and docs URLs with native udink.me/koma documentation links</changelogtext>
+        <changelogtext>[b]New: Repo Finder Maintenance Mode[/b]</changelogtext>
+        <changelogtext>Repositories in the Repo Finder can now be marked as under maintenance, displaying a badge and preventing installation</changelogtext>
+        <changelogtext>[b]Fixed: Repo Finder Error[/b]</changelogtext>
+        <changelogtext>Resolved a 404 error in the Repo Finder by updating the repository index URL endpoint</changelogtext>
     </changelogversion>
     <changelogversion versionName="1.0.4" changeDate="Apr 27,2026">
         <changelogtext>[b]New: Library Updates Carousel[/b]</changelogtext>
