@@ -4,7 +4,7 @@
 
   <h1>Koma (コマ)</h1>
 
-  <p><em>A premium, open-source manga reader for Android — discover and read manga, manhwa, manhua, novels and more – easier than ever on your Android device.</em></p>
+  <p><em>A open-source manga reader for Android — discover and read manga, manhwa, manhua, novels and more – easier than ever on your Android device.</em></p>
 
   <br>
 
@@ -14,6 +14,9 @@
   <!-- Download Button -->
   <a href="https://github.com/UDIN-K/KOMA/releases/latest">
     <img src="https://img.shields.io/github/v/release/UDIN-K/KOMA?style=for-the-badge&label=%E2%AC%87%20DOWNLOAD%20KOMA&labelColor=1B2838&color=0D1B2A&logo=android&logoColor=3DDC84" alt="Download Koma">
+  </a>
+  <a href="https://apkpure.com/id/koma/com.koma.reader">
+    <img src="https://img.shields.io/badge/OR%20GET%20ON-APKPure-1B2838?style=for-the-badge&logo=android&logoColor=24E98E&color=0D1B2A" alt="Get on APKPure">
   </a>
 
   <br>
@@ -82,6 +85,7 @@ Koma includes built-in enhancements for popular sources:
 |---------|-------------|------|
 | 🟢 **Stable** | Latest stable release | [**Download Latest**](https://github.com/UDIN-K/KOMA/releases/latest) |
 | 🟡 **Preview** | Bleeding-edge features | [**Preview Builds**](https://github.com/UDIN-K/KOMA/releases) |
+| 🟩 **APKPure** | Download via APKPure | [**Get on APKPure**](https://apkpure.com/id/koma/com.koma.reader) |
 
 </div>
 
