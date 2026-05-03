@@ -36,6 +36,9 @@ proguard/
 # Android Studio captures folder
 captures/
 
+# Screenshots
+screenshots/
+
 # IntelliJ
 *.iml
 .idea/
@@ -72,3 +75,9 @@ node_modules/
 
 # Kotlin internal
 .kotlin/
+
+# Release keystore (NEVER commit these)
+koma-release.jks
+keystore.properties
+*.jks
+*.keystore

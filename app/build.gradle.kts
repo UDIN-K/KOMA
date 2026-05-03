@@ -17,6 +17,8 @@ plugins {
     id("com.github.ben-manes.versions")
 }
 
+val isBundleTask = gradle.startParameter.taskNames.any { it.contains("bundle", ignoreCase = true) }
+
 if (gradle.startParameter.taskRequests.toString().contains("Standard")) {
     pluginManager.apply {
         apply(libs.plugins.google.services.get().pluginId)
@@ -80,8 +82,8 @@ android {
 
     splits {
         abi {
-            isEnable = true
-            isUniversalApk = true
+            isEnable = !isBundleTask
+            isUniversalApk = !isBundleTask
             reset()
             include("armeabi-v7a", "arm64-v8a", "x86", "x86_64")
         }

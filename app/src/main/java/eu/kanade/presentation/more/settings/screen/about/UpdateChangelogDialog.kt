@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.material.icons.outlined.Backup
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -39,6 +40,7 @@ fun UpdateChangelogDialog(
     changelogInfo: String,
     onDismissRequest: () -> Unit,
     onDownloadClick: () -> Unit,
+    onBackupClick: (() -> Unit)? = null,
 ) {
     AlertDialog(
         onDismissRequest = onDismissRequest,
@@ -79,6 +81,14 @@ fun UpdateChangelogDialog(
                     content = changelogInfo,
                     flavour = GFMFlavourDescriptor(),
                 )
+                if (onBackupClick != null) {
+                    Spacer(modifier = Modifier.height(12.dp))
+                    Text(
+                        text = "💡 Disarankan backup sebelum update",
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                }
             }
         },
         confirmButton = {
@@ -102,11 +112,30 @@ fun UpdateChangelogDialog(
             }
         },
         dismissButton = {
-            OutlinedButton(
-                onClick = onDismissRequest,
-                shape = RoundedCornerShape(12.dp),
-            ) {
-                Text(text = stringResource(MR.strings.action_not_now))
+            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                if (onBackupClick != null) {
+                    OutlinedButton(
+                        onClick = {
+                            onDismissRequest()
+                            onBackupClick()
+                        },
+                        shape = RoundedCornerShape(12.dp),
+                    ) {
+                        Icon(
+                            imageVector = Icons.Outlined.Backup,
+                            contentDescription = null,
+                            modifier = Modifier.size(18.dp),
+                        )
+                        Spacer(modifier = Modifier.width(4.dp))
+                        Text(text = "Backup")
+                    }
+                }
+                OutlinedButton(
+                    onClick = onDismissRequest,
+                    shape = RoundedCornerShape(12.dp),
+                ) {
+                    Text(text = stringResource(MR.strings.action_not_now))
+                }
             }
         },
     )

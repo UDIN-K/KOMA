@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog bulletedList="true">
+    <changelogversion versionName="1.0.6" changeDate="May 04,2026">
+        <changelogtext>[b]Improved: Release Signing[/b]</changelogtext>
+        <changelogtext>APK is now signed with a dedicated production keystore for app store distribution (APKPure, Uptodown, etc.)</changelogtext>
+        <changelogtext>[b]New: Privacy Policy[/b]</changelogtext>
+        <changelogtext>Added an official Privacy Policy page for app store compliance</changelogtext>
+        <changelogtext>[b]Improved: Build Configuration[/b]</changelogtext>
+        <changelogtext>Smart ABI split detection — automatically disables splits for bundle tasks</changelogtext>
+        <changelogtext>[b]Under the Hood[/b]</changelogtext>
+        <changelogtext>JDK 21 compatibility for more stable builds</changelogtext>
+        <changelogtext>Cleaned up gitignore for keystore and sensitive files</changelogtext>
+        <changelogtext>[b]New: Backup Before Update[/b]</changelogtext>
+        <changelogtext>Added a backup button in the update dialog and update screen so you can safely backup before updating</changelogtext>
+    </changelogversion>
     <changelogversion versionName="1.0.5" changeDate="Apr 30,2026">
         <changelogtext>[b]New: Custom Library Header[/b]</changelogtext>
         <changelogtext>Redesigned Library top UI with a large header and total entries count</changelogtext>

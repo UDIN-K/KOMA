@@ -78,6 +78,7 @@ import eu.kanade.tachiyomi.ui.deeplink.DeepLinkScreen
 import eu.kanade.tachiyomi.ui.home.HomeScreen
 import eu.kanade.tachiyomi.ui.manga.MangaScreen
 import eu.kanade.presentation.more.settings.screen.about.UpdateChangelogDialog
+import eu.kanade.presentation.more.settings.screen.data.CreateBackupScreen
 import eu.kanade.tachiyomi.ui.more.UpdateDownloadScreen
 import eu.kanade.tachiyomi.ui.more.OnboardingScreen
 import eu.kanade.tachiyomi.util.system.dpToPx
@@ -403,6 +404,7 @@ class MainActivity : BaseActivity() {
                         ),
                     )
                 },
+                onBackupClick = { navigator.push(CreateBackupScreen()) },
             )
         }
 

@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.outlined.OpenInNew
+import androidx.compose.material.icons.outlined.Backup
 import androidx.compose.material.icons.outlined.NewReleases
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -28,6 +29,7 @@ fun NewUpdateScreen(
     versionName: String,
     changelogInfo: String,
     onOpenInBrowser: () -> Unit,
+    onBackupClick: (() -> Unit)? = null,
     onRejectUpdate: () -> Unit,
     onAcceptUpdate: () -> Unit,
 ) {
@@ -58,6 +60,20 @@ fun NewUpdateScreen(
                 Spacer(modifier = Modifier.width(MaterialTheme.padding.extraSmall))
                 Icon(imageVector = Icons.AutoMirrored.Outlined.OpenInNew, contentDescription = null)
             }
+
+            if (onBackupClick != null) {
+                TextButton(
+                    onClick = onBackupClick,
+                    modifier = Modifier.padding(top = MaterialTheme.padding.extraSmall),
+                ) {
+                    Icon(
+                        imageVector = Icons.Outlined.Backup,
+                        contentDescription = null,
+                    )
+                    Spacer(modifier = Modifier.width(MaterialTheme.padding.extraSmall))
+                    Text(text = "Backup sebelum update")
+                }
+            }
         }
     }
 }
@@ -77,6 +93,7 @@ private fun NewUpdateScreenPreview() {
                 - World
             """.trimIndent(),
             onOpenInBrowser = {},
+            onBackupClick = {},
             onRejectUpdate = {},
             onAcceptUpdate = {},
         )

@@ -6,6 +6,7 @@ import androidx.compose.ui.platform.LocalContext
 import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.currentOrThrow
 import eu.kanade.presentation.more.NewUpdateScreen
+import eu.kanade.presentation.more.settings.screen.data.CreateBackupScreen
 import eu.kanade.presentation.util.Screen
 import eu.kanade.tachiyomi.data.updater.AppUpdateDownloadJob
 import eu.kanade.tachiyomi.util.system.openInBrowser
@@ -29,6 +30,7 @@ class NewUpdateScreen(
             versionName = versionName,
             changelogInfo = changelogInfoNoChecksum,
             onOpenInBrowser = { context.openInBrowser(releaseLink) },
+            onBackupClick = { navigator.push(CreateBackupScreen()) },
             onRejectUpdate = navigator::pop,
             onAcceptUpdate = {
                 AppUpdateDownloadJob.start(
