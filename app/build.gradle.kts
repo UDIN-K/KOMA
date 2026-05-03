@@ -3,6 +3,8 @@ import mihon.gradle.getBuildTime
 import mihon.gradle.getLatestCommitCount
 import mihon.gradle.getLatestCommitSha
 import mihon.gradle.tasks.ReplaceShortcutsPlaceholderTask
+import java.io.FileInputStream
+import java.util.Properties
 
 plugins {
     alias(mihonx.plugins.android.application)
@@ -46,8 +48,8 @@ android {
     signingConfigs {
         val keystorePropertiesFile = rootProject.file("keystore.properties")
         if (keystorePropertiesFile.exists()) {
-            val keystoreProperties = java.util.Properties()
-            keystoreProperties.load(java.io.FileInputStream(keystorePropertiesFile))
+            val keystoreProperties = Properties()
+            keystoreProperties.load(FileInputStream(keystorePropertiesFile))
 
             create("release") {
                 storeFile = rootProject.file(keystoreProperties.getProperty("storeFile"))
