@@ -114,4 +114,21 @@
         <item quantity="many">Через %1$d днів</item>
         <item quantity="other">Через %1$d днів</item>
     </plurals>
+
+    <plurals name="migrationListScreen.migrateDialog.migrateTitle">
+        <item quantity="one">Мігрувати %1$d запис?</item>
+        <item quantity="other">Мігрувати %1$d записів?</item>
+    </plurals>
+    <plurals name="notification_update_error">
+        <item quantity="one">%1$d оновлення не вдалося</item>
+        <item quantity="other">%1$d оновлень не вдалися</item>
+    </plurals>
+    <plurals name="migrationListScreen.migrateDialog.skipText">
+        <item quantity="one">Один запис було пропущено</item>
+        <item quantity="other">%1$d записів було пропущено</item>
+    </plurals>
+    <plurals name="migrationListScreen.migrateDialog.copyTitle">
+        <item quantity="one">Копіювати %1$d запис?</item>
+        <item quantity="other">Копіювати %1$d записів?</item>
+    </plurals>
 </resources>

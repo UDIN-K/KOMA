@@ -80,4 +80,17 @@
         <item quantity="one">%1$d প্ৰৱেশ প্ৰব্ৰজন কৰক?</item>
         <item quantity="other">%1$d প্ৰবিষ্টসমূহ প্ৰব্ৰজন কৰক?</item>
     </plurals>
+
+    <plurals name="notification_update_error">
+        <item quantity="one">%1$d টা আপডেট বিফল হৈছে</item>
+        <item quantity="other">%1$d টা আপডেট বিফল হৈছে</item>
+    </plurals>
+    <plurals name="migrationListScreen.migrateDialog.skipText">
+        <item quantity="one">এটা এণ্ট্ৰি এৰি দিয়া হৈছে</item>
+        <item quantity="other">%1$d টা এণ্ট্ৰি এৰি দিয়া হৈছে</item>
+    </plurals>
+    <plurals name="migrationListScreen.migrateDialog.copyTitle">
+        <item quantity="one">%1$d টা এণ্ট্ৰি কপি কৰিবনে?</item>
+        <item quantity="other">%1$d টা এণ্ট্ৰি কপি কৰিবনে?</item>
+    </plurals>
 </resources>

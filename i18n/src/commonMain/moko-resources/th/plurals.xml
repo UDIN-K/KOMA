@@ -54,4 +54,29 @@
     <plurals name="num_repos">
         <item quantity="other">%d α╕úα╕╡α╣éα╕₧</item>
     </plurals>
+
+    <plurals name="pref_pages">
+        <item quantity="one">1 หน้า</item>
+        <item quantity="other">%1$s หน้า</item>
+    </plurals>
+    <plurals name="upcoming_relative_time">
+        <item quantity="one">พรุ่งนี้</item>
+        <item quantity="other">ใน %1$d วัน</item>
+    </plurals>
+    <plurals name="migrationListScreen.migrateDialog.migrateTitle">
+        <item quantity="one">โยกย้าย %1$d รายการ?</item>
+        <item quantity="other">โยกย้าย %1$d รายการ?</item>
+    </plurals>
+    <plurals name="notification_update_error">
+        <item quantity="one">อัปเดตล้มเหลว %1$d รายการ</item>
+        <item quantity="other">อัปเดตล้มเหลว %1$d รายการ</item>
+    </plurals>
+    <plurals name="migrationListScreen.migrateDialog.skipText">
+        <item quantity="one">ข้ามไปหนึ่งรายการ</item>
+        <item quantity="other">ข้ามไป %1$d รายการ</item>
+    </plurals>
+    <plurals name="migrationListScreen.migrateDialog.copyTitle">
+        <item quantity="one">คัดลอก %1$d รายการ?</item>
+        <item quantity="other">คัดลอก %1$d รายการ?</item>
+    </plurals>
 </resources>

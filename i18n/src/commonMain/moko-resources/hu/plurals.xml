@@ -76,4 +76,21 @@
         <item quantity="one">1 oldal</item>
         <item quantity="other">%1$s oldal</item>
     </plurals>
+
+    <plurals name="migrationListScreen.migrateDialog.migrateTitle">
+        <item quantity="one">Áttelepít %1$d bejegyzést?</item>
+        <item quantity="other">Áttelepít %1$d bejegyzést?</item>
+    </plurals>
+    <plurals name="notification_update_error">
+        <item quantity="one">%1$d frissítés sikertelen</item>
+        <item quantity="other">%1$d frissítés sikertelen</item>
+    </plurals>
+    <plurals name="migrationListScreen.migrateDialog.skipText">
+        <item quantity="one">Egy bejegyzés kihagyva</item>
+        <item quantity="other">%1$d bejegyzés kihagyva</item>
+    </plurals>
+    <plurals name="migrationListScreen.migrateDialog.copyTitle">
+        <item quantity="one">Másol %1$d bejegyzést?</item>
+        <item quantity="other">Másol %1$d bejegyzést?</item>
+    </plurals>
 </resources>

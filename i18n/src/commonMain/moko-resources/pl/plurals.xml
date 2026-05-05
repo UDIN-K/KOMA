@@ -114,4 +114,21 @@
         <item quantity="many">%1$s stron</item>
         <item quantity="other">%1$s stron</item>
     </plurals>
+
+    <plurals name="migrationListScreen.migrateDialog.migrateTitle">
+        <item quantity="one">Migrować %1$d wpis?</item>
+        <item quantity="other">Migrować %1$d wpisy/ów?</item>
+    </plurals>
+    <plurals name="notification_update_error">
+        <item quantity="one">%1$d aktualizacja nie powiodła się</item>
+        <item quantity="other">%1$d aktualizacje/aktualizacji nie powiodły się</item>
+    </plurals>
+    <plurals name="migrationListScreen.migrateDialog.skipText">
+        <item quantity="one">Pominięto jeden wpis</item>
+        <item quantity="other">Pominięto %1$d wpisów</item>
+    </plurals>
+    <plurals name="migrationListScreen.migrateDialog.copyTitle">
+        <item quantity="one">Skopiować %1$d wpis?</item>
+        <item quantity="other">Skopiować %1$d wpisy/ów?</item>
+    </plurals>
 </resources>
