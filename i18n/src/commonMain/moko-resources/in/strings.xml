@@ -910,4 +910,19 @@
     <string name="pref_download_concurrent_pages_summary">Halaman yang diunduh secara bersamaan per sumber</string>
     <string name="action_webview_close_tab">Tutup tab</string>
     <string name="action_filter_excluded_scanlators">Filter yang mengecualikan pemindai</string>
+
+    <string name="theme_koma">Koma (Midnight Deep)</string>
+    <string name="label_repo_finder">Pencari Repositori</string>
+    <string name="repo_finder_subtitle">Temukan dan tambahkan repositori ekstensi dengan satu ketukan.</string>
+    <string name="repo_finder_loading">Memuat repositori…</string>
+    <string name="repo_finder_error">Gagal memuat repositori</string>
+    <string name="repo_finder_empty">Tidak ada repositori yang tersedia</string>
+    <string name="repo_finder_added">Repositori berhasil ditambahkan</string>
+    <string name="repo_finder_already_added">Sudah ditambahkan</string>
+    <string name="repo_finder_type_manga">Manga</string>
+    <string name="repo_finder_type_anime">Anime</string>
+    <string name="repo_finder_official">Resmi</string>
+    <string name="action_troubleshoot">Pemecahan masalah</string>
+    <string name="action_add_repo_manual">Tambah manual</string>
+    <string name="download_bookmarked">Ditandai</string>
 </resources>

@@ -902,4 +902,18 @@
     <string name="action_webview_close_tab">關閉頁籤</string>
     <string name="action_filter_excluded_scanlators">篩選排除掃譯者</string>
     <string name="download_bookmarked">已新增書籤</string>
+
+    <string name="theme_koma">Koma (Midnight Deep)</string>
+    <string name="label_repo_finder">儲存庫搜尋器</string>
+    <string name="repo_finder_subtitle">一鍵發現並新增擴充套件儲存庫。</string>
+    <string name="repo_finder_loading">正在載入儲存庫…</string>
+    <string name="repo_finder_error">載入儲存庫失敗</string>
+    <string name="repo_finder_empty">沒有可用的儲存庫</string>
+    <string name="repo_finder_added">儲存庫已成功新增</string>
+    <string name="repo_finder_already_added">已新增</string>
+    <string name="repo_finder_type_manga">漫畫</string>
+    <string name="repo_finder_type_anime">動畫</string>
+    <string name="repo_finder_official">官方</string>
+    <string name="action_troubleshoot">疑難排解</string>
+    <string name="action_add_repo_manual">手動新增</string>
 </resources>

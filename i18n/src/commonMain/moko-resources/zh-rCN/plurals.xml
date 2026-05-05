@@ -66,4 +66,9 @@
     <plurals name="migrationListScreen.migrateDialog.skipText">
         <item quantity="other">%1$d 个作品已跳过</item>
     </plurals>
+
+    <plurals name="notification_update_error">
+        <item quantity="one">%1$d 次更新失败</item>
+        <item quantity="other">%1$d 次更新失败</item>
+    </plurals>
 </resources>

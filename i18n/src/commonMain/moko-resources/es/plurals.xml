@@ -110,4 +110,9 @@
         <item quantity="many">¿Migrar estos %1$d elementos?</item>
         <item quantity="other">¿Migrar estos %1$d elementos?</item>
     </plurals>
+
+    <plurals name="notification_update_error">
+        <item quantity="one">%1$d actualización fallida</item>
+        <item quantity="other">%1$d actualizaciones fallidas</item>
+    </plurals>
 </resources>

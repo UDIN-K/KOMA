@@ -911,4 +911,18 @@
     <string name="action_webview_close_tab">关闭标签</string>
     <string name="action_filter_excluded_scanlators">筛选排除翻译组</string>
     <string name="download_bookmarked">已添加书签</string>
+
+    <string name="theme_koma">Koma (Midnight Deep)</string>
+    <string name="label_repo_finder">仓库查找器</string>
+    <string name="repo_finder_subtitle">一键发现并添加扩展仓库。</string>
+    <string name="repo_finder_loading">正在加载仓库…</string>
+    <string name="repo_finder_error">加载仓库失败</string>
+    <string name="repo_finder_empty">没有可用的仓库</string>
+    <string name="repo_finder_added">仓库已成功添加</string>
+    <string name="repo_finder_already_added">已添加</string>
+    <string name="repo_finder_type_manga">漫画</string>
+    <string name="repo_finder_type_anime">动画</string>
+    <string name="repo_finder_official">官方</string>
+    <string name="action_troubleshoot">故障排除</string>
+    <string name="action_add_repo_manual">手动添加</string>
 </resources>

@@ -66,4 +66,9 @@
     <plurals name="migrationListScreen.migrateDialog.skipText">
         <item quantity="other">%1$d entri dilewati</item>
     </plurals>
+
+    <plurals name="notification_update_error">
+        <item quantity="one">%1$d pembaruan gagal</item>
+        <item quantity="other">%1$d pembaruan gagal</item>
+    </plurals>
 </resources>

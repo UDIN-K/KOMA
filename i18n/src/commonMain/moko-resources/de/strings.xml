@@ -911,4 +911,18 @@
     <string name="action_webview_close_tab">Tab schließen</string>
     <string name="action_filter_excluded_scanlators">Ausgeschlossene Scanlationgruppen herausfiltern</string>
     <string name="download_bookmarked">Mit Lesezeichen versehen</string>
+
+    <string name="theme_koma">Koma (Midnight Deep)</string>
+    <string name="label_repo_finder">Repository-Finder</string>
+    <string name="repo_finder_subtitle">Finde und füge Erweiterungs-Repositories mit einem Fingertipp hinzu.</string>
+    <string name="repo_finder_loading">Repositories werden geladen…</string>
+    <string name="repo_finder_error">Repositories konnten nicht geladen werden</string>
+    <string name="repo_finder_empty">Keine Repositories verfügbar</string>
+    <string name="repo_finder_added">Repository erfolgreich hinzugefügt</string>
+    <string name="repo_finder_already_added">Bereits hinzugefügt</string>
+    <string name="repo_finder_type_manga">Manga</string>
+    <string name="repo_finder_type_anime">Anime</string>
+    <string name="repo_finder_official">Offiziell</string>
+    <string name="action_troubleshoot">Fehlerbehebung</string>
+    <string name="action_add_repo_manual">Manuell hinzufügen</string>
 </resources>
