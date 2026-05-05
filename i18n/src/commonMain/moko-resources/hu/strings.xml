@@ -916,4 +916,13 @@
     <string name="migrationListScreen.migrateDialog.cancelLabel">Mégse</string>
     <string name="migrationListScreen.progressDialog.cancelLabel">Mégse</string>
     <string name="migrationListScreen.matchWithoutChapterToast">Nincs található fejezet, ez a bejegyzés nem használható áttelepítéshez</string>
+
+    <string name="pref_flash_duration">Felvillanás időtartama</string>
+    <string name="pref_flash_page_interval">Felvillanás minden</string>
+    <string name="pref_flash_with">Felvillanás ezzel</string>
+    <string name="storage_failed_to_create_directory">Nem sikerült létrehozni a mappát: %s</string>
+    <string name="pref_auto_update_manga_on_mark_read">A haladás frissítése olvasottnak jelöléskor</string>
+    <string name="pref_update_library_manga_titles">A könyvtár manga címeinek frissítése a forráshoz igazítva</string>
+    <string name="pref_update_library_manga_titles_summary">Figyelmeztetés: ha egy manga át lesz nevezve, eltávolításra kerül a letöltési sorból (ha van).</string>
+    <string name="logging_in">Bejelentkezés…</string>
 </resources>

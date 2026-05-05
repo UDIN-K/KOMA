@@ -860,6 +860,9 @@
     <string name="repo_finder_official">চৰকাৰী</string>
     <string name="action_troubleshoot">সমস্যা সমাধান</string>
     <string name="action_add_repo_manual">নিজে যোগ কৰক</string>
+    <string name="pref_always_decode_long_strip_with_ssiv_2">দীঘল strip পঢ়নকাৰীৰ বাবে legacy decoder ব্যৱহাৰ কৰক</string>
+    <string name="storage_failed_to_create_download_directory">ডাউনলোড ফোল্ডাৰ সৃষ্টি কৰিব নোৱাৰি</string>
+    <string name="storage_failed_to_create_directory">ফোল্ডাৰ সৃষ্টি কৰিব নোৱাৰি: %s</string>
     <string name="pref_download_concurrent_sources">একেসময়তে উৎস ডাউনলোডসমূহ</string>
     <string name="pref_download_concurrent_pages">একেসময়তে পৃষ্ঠা ডাউনলোডসমূহ</string>
     <string name="download_bookmarked">বুকমাৰ্ক কৰা হৈছে</string>
@@ -884,4 +887,44 @@
     <string name="migrationListScreen.migrateDialog.migrateLabel">স্থানান্তৰ কৰক</string>
     <string name="migrationListScreen.migrateDialog.cancelLabel">বাতিল কৰক</string>
     <string name="migrationListScreen.progressDialog.cancelLabel">বাতিল কৰক</string>
+
+    <string name="action_display_unread_badge">অপঠিত অধ্যায়</string>
+    <string name="action_notes">টোকা</string>
+    <string name="action_edit_notes">টোকা সম্পাদনা কৰক</string>
+    <string name="pref_disallow_non_ascii_filenames_details">কিছুমান সংৰক্ষণ মাধ্যমৰ সৈতে সামঞ্জস্যতা নিশ্চিত কৰে যি Unicode সমৰ্থন নকৰে। ই সক্ষম থাকিলে, আপুনি উৎস আৰু মাঙ্গা ফোল্ডাৰসমূহক non-ASCII আখৰসমূহ সিহঁতৰ সৰু আকাৰৰ UTF-8 hexadecimal প্ৰতিনিধিত্বৰে সলনি কৰি হাতেৰে পুনৰনামকৰণ কৰিব লাগিব। অধ্যায় ফাইলসমূহ পুনৰনামকৰণ কৰাৰ প্ৰয়োজন নাই।</string>
+    <string name="pref_download_concurrent_pages_summary">প্ৰতি উৎসত একেলগে ডাউনলোড হোৱা পৃষ্ঠাসমূহ</string>
+    <string name="export">ৰপ্তানি কৰক</string>
+    <string name="library_list">গ্ৰন্থাগাৰ তালিকা</string>
+    <string name="library_exported">গ্ৰন্থাগাৰ ৰপ্তানি হ’ল</string>
+    <string name="clear_database_text">আপুনি ডাটাবেচৰ পৰা এন্ট্ৰি আঁতৰাবলৈ গৈ আছেন</string>
+    <string name="clear_database_history_warning">গ্ৰন্থাগাৰৰ বাহিৰৰ এন্ট্ৰিৰ পঢ়া অধ্যায় আৰু প্ৰগতি হেৰুৱাব</string>
+    <string name="pref_update_library_manga_titles">উৎসৰ সৈতে মিলাবলৈ লাইব্ৰেৰীৰ মাঙ্গা শীৰ্ষক আপডেট কৰক</string>
+    <string name="pref_update_library_manga_titles_summary">সতৰ্কবাণী: যদি মাঙ্গা পুনৰনামকৰণ কৰা হয়, তেন্তে ই ডাউনলোড কিউৰ পৰা আঁতৰাই দিয়া হ’ব (যদি থাকে)।</string>
+    <string name="logging_in">লগ ইন হৈ আছে…</string>
+    <string name="possible_duplicates_title">সম্ভাৱ্য নকলসমূহ</string>
+    <string name="possible_duplicates_summary">আপোনাৰ গ্ৰন্থাগাৰত একে নামৰ সদৃশ এন্ট্ৰি আছে।
+
+মাইগ্ৰেট কৰিবলৈ বা তথাপিও যোগ কৰিবলৈ এটা এন্ট্রি বাছক।</string>
+    <string name="tracked_privately">ব্যক্তিগতভাৱে ট্ৰেক কৰা হৈছে</string>
+    <string name="action_toggle_private_on">ব্যক্তিগতভাৱে ট্ৰেক কৰক</string>
+    <string name="action_toggle_private_off">সাৰ্বজনীনভাৱে ট্ৰেক কৰক</string>
+    <string name="notes_placeholder">যিটো অংশ ভাল লাগিল…</string>
+    <string name="migrationConfigScreen.selectedHeader">নিৰ্বাচিত</string>
+    <string name="migrationConfigScreen.availableHeader">উপলব্ধ</string>
+    <string name="migrationConfigScreen.selectAllLabel">সকলো বাছক</string>
+    <string name="migrationConfigScreen.selectNoneLabel">একো বাছিব নালাগে</string>
+    <string name="migrationConfigScreen.selectEnabledLabel">সক্ষম উৎস বাছক</string>
+    <string name="migrationConfigScreen.selectPinnedLabel">পিন কৰা উৎস বাছক</string>
+    <string name="migrationConfigScreen.removeDownloadsTitle">মাইগ্ৰেশনৰ পিছত বৰ্তমান এন্ট্ৰিৰ ডাউনলোড মচি পেলাওক</string>
+    <string name="migrationConfigScreen.additionalSearchQueryLabel">অতিৰিক্ত কীৱৰ্ড (ঐচ্ছিক)</string>
+    <string name="migrationConfigScreen.additionalSearchQuerySupportingText">অতিৰিক্ত কীৱৰ্ড যোগ কৰি সন্ধান ফলাফল সংকীর্ণ কৰাত সহায় কৰে</string>
+    <string name="migrationConfigScreen.hideUnmatchedTitle">মিল নোহোৱা এন্ট্ৰী লুকুৱাওক</string>
+    <string name="migrationConfigScreen.hideWithoutUpdatesTitle">নতুন অধ্যায় নথকা এন্ট্ৰী লুকুৱাওক</string>
+    <string name="migrationConfigScreen.hideWithoutUpdatesSubtitle">মিলত অতিৰিক্ত অধ্যায় থাকিলেহে এন্ট্ৰী দেখুৱাওক</string>
+    <string name="migrationConfigScreen.enhancedOptionsWarning">এই বিকল্পসমূহ লেহেম আৰু বিপজ্জনক, আৰু উৎসৰ পৰা নিষেধাজ্ঞা আহিব পাৰে</string>
+    <string name="migrationConfigScreen.deepSearchModeTitle">উন্নত সন্ধান মোড</string>
+    <string name="migrationConfigScreen.deepSearchModeSubtitle">শীৰ্ষকটোক কীৱৰ্ডত ভাঙি বহল সন্ধান কৰে</string>
+    <string name="migrationConfigScreen.prioritizeByChaptersTitle">অধ্যায় নম্বৰৰ ওপৰত ভিত্তি কৰি মিল</string>
+    <string name="migrationConfigScreen.prioritizeByChaptersSubtitle">সক্ষম কৰিলে, আগত থকা মিলটো বাছি লয়। নহ’লে, উৎস অগ্ৰাধিকাৰৰ প্ৰথম মিল বাছি লয়।</string>
+    <string name="migrationListScreen.matchWithoutChapterToast">কোনো অধ্যায় পোৱা নগ’ল, এই এন্ট্ৰিটো মাইগ্ৰেশনৰ বাবে ব্যৱহাৰ কৰিব নোৱাৰি</string>
 </resources>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="lock_after_mins">
+        <item quantity="one">%1$s မိနစ်အပြီး</item>
+        <item quantity="other">%1$s မိနစ်အပြီး</item>
+    </plurals>
+
+    <plurals name="relative_time">
+        <item quantity="one">မနေ့က</item>
+        <item quantity="other">%1$d ရက်အကြာက</item>
+    </plurals>
+
+    <plurals name="upcoming_relative_time">
+        <item quantity="one">မနက်ဖြန်</item>
+        <item quantity="other">%1$d ရက်အတွင်း</item>
+    </plurals>
+
+    <plurals name="num_categories">
+        <item quantity="one">%d အမျိုးအစား</item>
+        <item quantity="other">%d အမျိုးအစားများ</item>
+    </plurals>
+
+    <plurals name="next_unread_chapters">
+        <item quantity="one">နောက်လာမည့် မဖတ်ရသေးသော အခန်း</item>
+        <item quantity="other">နောက်လာမည့် %d မဖတ်ရသေးသော အခန်းများ</item>
+    </plurals>
+
+    <plurals name="restore_completed_message">
+        <item quantity="one">%1$s အတွင်း %2$s အမှားနှင့် ပြီးဆုံး</item>
+        <item quantity="other">%1$s အတွင်း %2$s အမှားများနှင့် ပြီးဆုံး</item>
+    </plurals>
+
+    <plurals name="download_queue_summary">
+        <item quantity="one">%1$s ကျန်ရှိသည်</item>
+        <item quantity="other">%1$s ကျန်ရှိသည်</item>
+    </plurals>
+
+    <plurals name="day">
+        <item quantity="one">1 ရက်</item>
+        <item quantity="other">%d ရက်</item>
+    </plurals>
+
+    <plurals name="pref_pages">
+        <item quantity="one">1 စာမျက်နှာ</item>
+        <item quantity="other">%1$s စာမျက်နှာများ</item>
+    </plurals>
+
+    <plurals name="missing_chapters">
+        <item quantity="one">ပျောက်ဆုံးနေသော %1$s အခန်း</item>
+        <item quantity="other">ပျောက်ဆုံးနေသော %1$s အခန်းများ</item>
+    </plurals>
+
+    <plurals name="manga_num_chapters">
+        <item quantity="one">%1$s အခန်း</item>
+        <item quantity="other">%1$s အခန်းများ</item>
+    </plurals>
+
+    <plurals name="download_amount">
+        <item quantity="one">နောက်အခန်း</item>
+        <item quantity="other">နောက် %d အခန်းများ</item>
+    </plurals>
+
+    <plurals name="num_trackers">
+        <item quantity="one">%d ချိတ်ဆက်သူ</item>
+        <item quantity="other">%d ချိတ်ဆက်သူများ</item>
+    </plurals>
+
+    <plurals name="missing_chapters_warning">
+        <item quantity="one">%d အခန်းကို ကျော်သွားသည်၊ အရင်းအမြစ်တွင် မရှိပါ သို့မဟုတ် စစ်ထုတ်ထားသည်</item>
+        <item quantity="other">%d အခန်းများကို ကျော်သွားသည်၊ အရင်းအမြစ်တွင် မရှိပါ သို့မဟုတ် စစ်ထုတ်ထားသည်</item>
+    </plurals>
+
+    <plurals name="notification_new_chapters_summary">
+        <item quantity="one">%d မှတ်တမ်းအတွက်</item>
+        <item quantity="other">%d မှတ်တမ်းများအတွက်</item>
+    </plurals>
+
+    <plurals name="notification_chapters_generic">
+        <item quantity="one">%1$d အခန်းအသစ်</item>
+        <item quantity="other">%1$d အခန်းအသစ်များ</item>
+    </plurals>
+
+    <plurals name="notification_chapters_multiple_and_more">
+        <item quantity="one">အခန်းများ %1$s နှင့် အခြား 1 ခု</item>
+        <item quantity="other">အခန်းများ %1$s နှင့် အခြား %2$d ခု</item>
+    </plurals>
+
+    <plurals name="update_check_notification_ext_updates">
+        <item quantity="one">တိုးချဲ့ပစ္စည်း အပ်ဒိတ် ရနိုင်သည်</item>
+        <item quantity="other">%d တိုးချဲ့ပစ္စည်း အပ်ဒိတ်များ ရနိုင်သည်</item>
+    </plurals>
+
+    <plurals name="num_repos">
+        <item quantity="one">%d repo</item>
+        <item quantity="other">%d repoများ</item>
+    </plurals>
+
+    <plurals name="migrationListScreen.migrateDialog.migrateTitle">
+        <item quantity="one">%1$d မှတ်တမ်းကို ပြောင်းရွှေ့မလား?</item>
+        <item quantity="other">%1$d မှတ်တမ်းများကို ပြောင်းရွှေ့မလား?</item>
+    </plurals>
+    <plurals name="migrationListScreen.migrateDialog.copyTitle">
+        <item quantity="one">%1$d မှတ်တမ်းကို ကူးယူမလား?</item>
+        <item quantity="other">%1$d မှတ်တမ်းများကို ကူးယူမလား?</item>
+    </plurals>
+    <plurals name="migrationListScreen.migrateDialog.skipText">
+        <item quantity="one">မှတ်တမ်းတစ်ခုကို ကျော်သွားသည်</item>
+        <item quantity="other">%1$d မှတ်တမ်းများကို ကျော်သွားသည်</item>
+    </plurals>
+
+    <plurals name="notification_update_error">
+        <item quantity="one">%1$d အပ်ဒိတ် မအောင်မြင်ပါ</item>
+        <item quantity="other">%1$d အပ်ဒိတ်များ မအောင်မြင်ပါ</item>
+    </plurals>
+</resources>

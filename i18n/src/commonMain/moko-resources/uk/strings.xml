@@ -914,4 +914,11 @@
     <string name="migrationListScreen.migrateDialog.cancelLabel">Скасувати</string>
     <string name="migrationListScreen.progressDialog.cancelLabel">Скасувати</string>
     <string name="migrationListScreen.matchWithoutChapterToast">Розділів не знайдено, цей елемент неможливо використовувати для міграції</string>
+
+    <string name="storage_failed_to_create_directory">Не вдалося створити теку: %s</string>
+    <string name="clear_database_text">Ви збираєтеся видалити записи з бази даних</string>
+    <string name="clear_database_history_warning">Прочитані розділи та прогрес записів не з бібліотеки буде втрачено</string>
+    <string name="pref_update_library_manga_titles">Оновлювати назви манґи в бібліотеці відповідно до джерела</string>
+    <string name="pref_update_library_manga_titles_summary">Попередження: якщо манґу буде перейменовано, її буде видалено з черги завантажень (якщо вона там є).</string>
+    <string name="logging_in">Вхід…</string>
 </resources>

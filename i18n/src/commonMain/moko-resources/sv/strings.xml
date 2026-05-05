@@ -904,4 +904,27 @@
     <string name="migrationListScreen.migrateDialog.cancelLabel">Avbryt</string>
     <string name="migrationListScreen.progressDialog.cancelLabel">Avbryt</string>
     <string name="migrationListScreen.matchWithoutChapterToast">Inga kapitel hittades, denna post kan inte användas för migrering</string>
+
+    <string name="label_auto">Auto</string>
+    <string name="action_display_unread_badge">Olästa kapitel</string>
+    <string name="action_notes">Anteckningar</string>
+    <string name="action_edit_notes">Redigera anteckningar</string>
+    <string name="pref_behavior">Beteende</string>
+    <string name="pref_mark_duplicate_read_chapter_read">Markera duplikatläst kapitel som läst</string>
+    <string name="pref_mark_duplicate_read_chapter_read_existing">Efter att ett kapitel lästs</string>
+    <string name="pref_mark_duplicate_read_chapter_read_new">Efter att ett nytt kapitel hämtats</string>
+    <string name="pref_always_decode_long_strip_with_ssiv_2">Använd äldre dekoder för långstrip-läsare</string>
+    <string name="storage_failed_to_create_directory">Det gick inte att skapa mappen: %s</string>
+    <string name="pref_download_new_unread_chapters_only">Hoppa över nedladdning av duplikata lästa kapitel</string>
+    <string name="clear_database_text">Du håller på att ta bort poster från databasen</string>
+    <string name="clear_database_history_warning">Lästa kapitel och framsteg för poster utanför biblioteket kommer att förloras</string>
+    <string name="clear_db_exclude_read">Behåll poster med lästa kapitel</string>
+    <string name="pref_update_library_manga_titles">Uppdatera bibliotekets mangatitlar så att de matchar källan</string>
+    <string name="pref_update_library_manga_titles_summary">Varning: om en manga byter namn tas den bort från nedladdningskön (om den finns där).</string>
+    <string name="logging_in">Loggar in…</string>
+    <string name="possible_duplicates_title">Möjliga dubbletter</string>
+    <string name="possible_duplicates_summary">Du har poster i ditt bibliotek med liknande namn.
+
+Välj en post att migrera eller lägg till ändå.</string>
+    <string name="notes_placeholder">Gillade delen där…</string>
 </resources>

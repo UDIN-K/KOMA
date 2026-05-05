@@ -904,4 +904,30 @@
     <string name="migrationListScreen.migrateDialog.cancelLabel">Anuluj</string>
     <string name="migrationListScreen.progressDialog.cancelLabel">Anuluj</string>
     <string name="migrationListScreen.matchWithoutChapterToast">Nie znaleziono rozdziałów, ten wpis nie może zostać użyty do migracji</string>
+
+    <string name="label_auto">Auto</string>
+    <string name="action_display_unread_badge">Nieprzeczytane rozdziały</string>
+    <string name="pref_behavior">Zachowanie</string>
+    <string name="pref_mark_duplicate_read_chapter_read">Oznacz zduplikowany przeczytany rozdział jako przeczytany</string>
+    <string name="pref_mark_duplicate_read_chapter_read_existing">Po przeczytaniu rozdziału</string>
+    <string name="pref_mark_duplicate_read_chapter_read_new">Po pobraniu nowego rozdziału</string>
+    <string name="pref_always_decode_long_strip_with_ssiv_2">Użyj starszego dekodera dla czytnika długich pasków</string>
+    <string name="library_list">Lista biblioteki</string>
+    <string name="library_exported">Biblioteka wyeksportowana</string>
+    <string name="clear_database_text">Zaraz usuniesz wpisy z bazy danych</string>
+    <string name="clear_database_history_warning">Przeczytane rozdziały i postęp wpisów spoza biblioteki zostaną utracone</string>
+    <string name="clear_db_exclude_read">Zachowaj wpisy z przeczytanymi rozdziałami</string>
+    <string name="pref_update_library_manga_titles">Aktualizuj tytuły mang w bibliotece, aby pasowały do źródła</string>
+    <string name="pref_update_library_manga_titles_summary">Uwaga: jeśli manga zostanie przemianowana, zostanie usunięta z kolejki pobierania (jeśli tam jest).</string>
+    <string name="logging_in">Logowanie…</string>
+    <string name="author">Autor</string>
+    <string name="artist">Artysta</string>
+    <string name="possible_duplicates_title">Możliwe duplikaty</string>
+    <string name="possible_duplicates_summary">Masz wpisy w bibliotece o podobnej nazwie.
+
+Wybierz wpis do migracji albo dodaj mimo to.</string>
+    <string name="tracked_privately">Śledzone prywatnie</string>
+    <string name="action_toggle_private_on">Śledź prywatnie</string>
+    <string name="action_toggle_private_off">Śledź publicznie</string>
+    <string name="notes_placeholder">Najbardziej podobał mi się moment, gdy…</string>
 </resources>
