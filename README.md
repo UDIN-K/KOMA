@@ -37,7 +37,7 @@
     height="66"
     loading="lazy"
     decoding="async"
-  />re
+  />
   <img
     class="only-dark"
     src="https://hosted.weblate.org/widget/koma-manga-reader/koma-app/horizontal-auto.svg"
