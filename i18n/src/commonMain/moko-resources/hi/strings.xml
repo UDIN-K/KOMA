@@ -905,4 +905,20 @@
     <string name="pref_download_concurrent_sources">एक साथ स्रोत डाउनलोड</string>
     <string name="pref_download_concurrent_pages">एक साथ पेज डाउनलोड</string>
     <string name="pref_download_concurrent_pages_summary">प्रति स्रोत एक साथ डाउनलोड किए जाने वाले पृष्ठ</string>
+
+    <string name="theme_koma">Koma (Midnight Deep)</string>
+    <string name="label_repo_finder">रिपॉजिटरी खोजक</string>
+    <string name="repo_finder_subtitle">एक टैप में एक्सटेंशन रिपॉजिटरी खोजें और जोड़ें।</string>
+    <string name="repo_finder_loading">रिपॉजिटरी लोड हो रही हैं…</string>
+    <string name="repo_finder_error">रिपॉजिटरी लोड नहीं हो सकीं</string>
+    <string name="repo_finder_empty">कोई रिपॉजिटरी उपलब्ध नहीं</string>
+    <string name="repo_finder_added">रिपॉजिटरी सफलतापूर्वक जोड़ी गई</string>
+    <string name="repo_finder_already_added">पहले से जोड़ा गया</string>
+    <string name="repo_finder_type_manga">मंगा</string>
+    <string name="repo_finder_type_anime">एनीमे</string>
+    <string name="repo_finder_official">आधिकारिक</string>
+    <string name="action_troubleshoot">समस्या निवारण</string>
+    <string name="action_add_repo_manual">मैन्युअल रूप से जोड़ें</string>
+    <string name="download_bookmarked">बुकमार्क किया गया</string>
+    <string name="action_filter_excluded_scanlators">बहिष्कृत स्कैनलेटर फ़िल्टर करें</string>
 </resources>

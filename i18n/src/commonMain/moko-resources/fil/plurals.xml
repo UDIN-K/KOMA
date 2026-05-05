@@ -88,4 +88,9 @@
         <item quantity="one">Isang entry ang nilaktawan</item>
         <item quantity="other">%1$d (na) entry ang nilaktawan</item>
     </plurals>
+
+    <plurals name="notification_update_error">
+        <item quantity="one">Nabigo ang %1$d update</item>
+        <item quantity="other">Nabigo ang %1$d mga update</item>
+    </plurals>
 </resources>

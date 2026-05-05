@@ -911,4 +911,18 @@
     <string name="migrationConfigScreen.prioritizeByChaptersSubtitle">Je-li povoleno, vybere shodu, která je nejdále. V opačném případě vybere první shodu podle priority zdroje.</string>
     <string name="pref_display_images_description">Zobrazovat obrázky v popisu mangy</string>
     <string name="clear_database_history_warning">Přečtené kapitoly a postup u položek mimo knihovnu budou ztraceny</string>
+
+    <string name="theme_koma">Koma (Midnight Deep)</string>
+    <string name="label_repo_finder">Vyhledávač repozitářů</string>
+    <string name="repo_finder_subtitle">Objevujte a přidávejte repozitáře rozšíření jedním klepnutím.</string>
+    <string name="repo_finder_loading">Načítání repozitářů…</string>
+    <string name="repo_finder_error">Nepodařilo se načíst repozitáře</string>
+    <string name="repo_finder_empty">Žádné repozitáře nejsou k dispozici</string>
+    <string name="repo_finder_added">Repozitář byl úspěšně přidán</string>
+    <string name="repo_finder_already_added">Již přidáno</string>
+    <string name="repo_finder_type_manga">Manga</string>
+    <string name="repo_finder_type_anime">Anime</string>
+    <string name="repo_finder_official">Oficiální</string>
+    <string name="action_troubleshoot">Řešení problémů</string>
+    <string name="action_add_repo_manual">Přidat ručně</string>
 </resources>

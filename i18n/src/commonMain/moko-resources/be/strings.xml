@@ -902,4 +902,18 @@
     <string name="migrationListScreen.migrateDialog.copyLabel">Скапіяваць</string>
     <string name="migrationListScreen.migrateDialog.migrateLabel">Міграваць</string>
     <string name="migrationListScreen.matchWithoutChapterToast">Няма раздзелаў, твор не падыходзіць для міграцыі</string>
+
+    <string name="theme_koma">Koma (Midnight Deep)</string>
+    <string name="label_repo_finder">Пошук рэпазіторыяў</string>
+    <string name="repo_finder_subtitle">Знайдзіце і дадавайце рэпазіторыі пашырэнняў адным націскам.</string>
+    <string name="repo_finder_loading">Загрузка рэпазіторыяў…</string>
+    <string name="repo_finder_error">Не ўдалося загрузіць рэпазіторыі</string>
+    <string name="repo_finder_empty">Няма даступных рэпазіторыяў</string>
+    <string name="repo_finder_added">Рэпазіторый паспяхова дададзены</string>
+    <string name="repo_finder_already_added">Ужо дададзена</string>
+    <string name="repo_finder_type_manga">Манга</string>
+    <string name="repo_finder_type_anime">Анімэ</string>
+    <string name="repo_finder_official">Афіцыйны</string>
+    <string name="action_troubleshoot">Вырашэнне праблем</string>
+    <string name="action_add_repo_manual">Дадаць уручную</string>
 </resources>

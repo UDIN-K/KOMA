@@ -902,4 +902,18 @@
     <string name="pref_download_concurrent_pages_summary">Paĝoj elŝutitaj sammomente por fonto</string>
     <string name="action_filter_excluded_scanlators">Filtri ekskluzivitajn skantradukistojn</string>
     <string name="download_bookmarked">Legosignita</string>
+
+    <string name="theme_koma">Koma (Midnight Deep)</string>
+    <string name="label_repo_finder">Deponeja serĉilo</string>
+    <string name="repo_finder_subtitle">Malkovru kaj aldonu etendaĵajn deponejojn per unu frapeto.</string>
+    <string name="repo_finder_loading">Ŝargante deponejojn…</string>
+    <string name="repo_finder_error">Malsukcesis ŝargi deponejojn</string>
+    <string name="repo_finder_empty">Neniuj deponejoj disponeblas</string>
+    <string name="repo_finder_added">Deponejo sukcese aldonita</string>
+    <string name="repo_finder_already_added">Jam aldonita</string>
+    <string name="repo_finder_type_manga">Manga</string>
+    <string name="repo_finder_type_anime">Anime</string>
+    <string name="repo_finder_official">Oficiala</string>
+    <string name="action_troubleshoot">Solvi problemojn</string>
+    <string name="action_add_repo_manual">Aldoni permane</string>
 </resources>

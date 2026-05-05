@@ -76,4 +76,21 @@
         <item quantity="one">1 páxina</item>
         <item quantity="other">%1$s páxinas</item>
     </plurals>
+
+    <plurals name="migrationListScreen.migrateDialog.migrateTitle">
+        <item quantity="one">Migrar %1$d entrada?</item>
+        <item quantity="other">Migrar %1$d entradas?</item>
+    </plurals>
+    <plurals name="migrationListScreen.migrateDialog.copyTitle">
+        <item quantity="one">Copiar %1$d entrada?</item>
+        <item quantity="other">Copiar %1$d entradas?</item>
+    </plurals>
+    <plurals name="migrationListScreen.migrateDialog.skipText">
+        <item quantity="one">Saltouse unha entrada</item>
+        <item quantity="other">Saltáronse %1$d entradas</item>
+    </plurals>
+    <plurals name="notification_update_error">
+        <item quantity="one">%1$d actualización fallou</item>
+        <item quantity="other">%1$d actualizacións fallaron</item>
+    </plurals>
 </resources>

@@ -905,4 +905,24 @@
     <string name="migrationListScreen.matchWithoutChapterToast">Nu s-au găsit capitole, această intrare nu poate fi utilizată pentru migrare</string>
     <string name="pref_disallow_non_ascii_filenames">Nu permiteți nume de fișiere non-ASCII</string>
     <string name="pref_disallow_non_ascii_filenames_details">Asigurți compatibilitatea cu anumite medii de stocare care nu suportă Unicode. Când această opțiune este activată, va trebui să redenumiți manual directoarele sursă și cele de manga, înlocuind caracterele non-ASCII cu reprezentările lor hexadecimale UTF-8 cu litere mici. Fișierele capitolelor nu trebuie redenumite.</string>
+
+    <string name="action_webview_close_tab">Închide fila</string>
+    <string name="theme_koma">Koma (Midnight Deep)</string>
+    <string name="label_repo_finder">Căutător de depozite</string>
+    <string name="repo_finder_subtitle">Descoperiți și adăugați depozite de extensii cu o singură atingere.</string>
+    <string name="repo_finder_loading">Se încarcă depozitele…</string>
+    <string name="repo_finder_error">Nu s-au putut încărca depozitele</string>
+    <string name="repo_finder_empty">Nu există depozite disponibile</string>
+    <string name="repo_finder_added">Depozit adăugat cu succes</string>
+    <string name="repo_finder_already_added">Deja adăugat</string>
+    <string name="repo_finder_type_manga">Manga</string>
+    <string name="repo_finder_type_anime">Anime</string>
+    <string name="repo_finder_official">Oficial</string>
+    <string name="action_troubleshoot">Depanare</string>
+    <string name="action_add_repo_manual">Adăugați manual</string>
+    <string name="pref_download_concurrent_sources">Descărcări simultane pe surse</string>
+    <string name="pref_download_concurrent_pages">Descărcări simultane de pagini</string>
+    <string name="pref_download_concurrent_pages_summary">Pagini descărcate simultan per sursă</string>
+    <string name="download_bookmarked">Marcat</string>
+    <string name="action_filter_excluded_scanlators">Filtrați scanlatorii excluși</string>
 </resources>

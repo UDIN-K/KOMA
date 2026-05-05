@@ -910,4 +910,19 @@
     <string name="pref_download_concurrent_pages">Téléchargements simultanés de pages</string>
     <string name="pref_download_concurrent_pages_summary">Pages téléchargées simultanément par source</string>
     <string name="action_filter_excluded_scanlators">Filtrer les scantrads exclus</string>
+
+    <string name="theme_koma">Koma (Midnight Deep)</string>
+    <string name="label_repo_finder">Recherche de dépôts</string>
+    <string name="repo_finder_subtitle">Découvrez et ajoutez des dépôts d'extensions en un seul appui.</string>
+    <string name="repo_finder_loading">Chargement des dépôts…</string>
+    <string name="repo_finder_error">Échec du chargement des dépôts</string>
+    <string name="repo_finder_empty">Aucun dépôt disponible</string>
+    <string name="repo_finder_added">Dépôt ajouté avec succès</string>
+    <string name="repo_finder_already_added">Déjà ajouté</string>
+    <string name="repo_finder_type_manga">Manga</string>
+    <string name="repo_finder_type_anime">Anime</string>
+    <string name="repo_finder_official">Officiel</string>
+    <string name="action_troubleshoot">Dépannage</string>
+    <string name="action_add_repo_manual">Ajouter manuellement</string>
+    <string name="download_bookmarked">Favoris</string>
 </resources>

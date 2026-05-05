@@ -909,4 +909,20 @@
     <string name="pref_download_concurrent_sources">تنزيل مصادر متعددة في وقت واحد</string>
     <string name="pref_download_concurrent_pages">تنزيل صفحات متعددة في وقت واحد</string>
     <string name="pref_download_concurrent_pages_summary">عدد الصفحات التي يتم تنزيلها في وقت واحد لكل مصدر</string>
+
+    <string name="theme_koma">Koma (Midnight Deep)</string>
+    <string name="label_repo_finder">مستكشف المستودعات</string>
+    <string name="repo_finder_subtitle">اكتشف وأضف مستودعات الإضافات بنقرة واحدة.</string>
+    <string name="repo_finder_loading">جارٍ تحميل المستودعات…</string>
+    <string name="repo_finder_error">فشل تحميل المستودعات</string>
+    <string name="repo_finder_empty">لا توجد مستودعات متاحة</string>
+    <string name="repo_finder_added">تمت إضافة المستودع بنجاح</string>
+    <string name="repo_finder_already_added">تمت الإضافة مسبقًا</string>
+    <string name="repo_finder_type_manga">مانغا</string>
+    <string name="repo_finder_type_anime">أنمي</string>
+    <string name="repo_finder_official">رسمي</string>
+    <string name="action_troubleshoot">استكشاف الأخطاء وإصلاحها</string>
+    <string name="action_add_repo_manual">إضافة يدويًا</string>
+    <string name="download_bookmarked">معلَّم</string>
+    <string name="action_filter_excluded_scanlators">تصفية فرق الترجمة المستبعدة</string>
 </resources>

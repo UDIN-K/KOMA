@@ -88,4 +88,9 @@
         <item quantity="one">एउटा प्रविष्टि छलेको थियो</item>
         <item quantity="other">%1$d वटा प्रविष्टिहरू छलेका थिए</item>
     </plurals>
+
+    <plurals name="notification_update_error">
+        <item quantity="one">%1$d अपडेट असफल भयो</item>
+        <item quantity="other">%1$d अपडेटहरू असफल भए</item>
+    </plurals>
 </resources>

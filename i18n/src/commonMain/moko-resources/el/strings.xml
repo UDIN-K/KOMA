@@ -911,4 +911,18 @@
     <string name="pref_download_concurrent_pages_summary">Σελίδες που λήφθηκαν ταυτόχρονα ανά πηγή</string>
     <string name="download_bookmarked">Προστέθηκε στους σελιδοδείκτες</string>
     <string name="action_filter_excluded_scanlators">Φιλτράρισμα εξαιρούμενων scanlator</string>
+
+    <string name="theme_koma">Koma (Midnight Deep)</string>
+    <string name="label_repo_finder">Εύρεση αποθετηρίων</string>
+    <string name="repo_finder_subtitle">Ανακαλύψτε και προσθέστε αποθετήρια επεκτάσεων με ένα πάτημα.</string>
+    <string name="repo_finder_loading">Φόρτωση αποθετηρίων…</string>
+    <string name="repo_finder_error">Αποτυχία φόρτωσης αποθετηρίων</string>
+    <string name="repo_finder_empty">Δεν υπάρχουν διαθέσιμα αποθετήρια</string>
+    <string name="repo_finder_added">Το αποθετήριο προστέθηκε επιτυχώς</string>
+    <string name="repo_finder_already_added">Έχει ήδη προστεθεί</string>
+    <string name="repo_finder_type_manga">Manga</string>
+    <string name="repo_finder_type_anime">Anime</string>
+    <string name="repo_finder_official">Επίσημο</string>
+    <string name="action_troubleshoot">Αντιμετώπιση προβλημάτων</string>
+    <string name="action_add_repo_manual">Προσθήκη χειροκίνητα</string>
 </resources>

@@ -909,4 +909,20 @@
     <string name="migrationListScreen.migrateDialog.cancelLabel">Annulla</string>
     <string name="migrationListScreen.progressDialog.cancelLabel">Annulla</string>
     <string name="migrationListScreen.matchWithoutChapterToast">Nessun capitolo trovato, questa voce non può essere utilizzata per la migrazione</string>
+
+    <string name="theme_koma">Koma (Midnight Deep)</string>
+    <string name="label_repo_finder">Ricerca repository</string>
+    <string name="repo_finder_subtitle">Scopri e aggiungi repository di estensioni con un tocco.</string>
+    <string name="repo_finder_loading">Caricamento repository…</string>
+    <string name="repo_finder_error">Caricamento dei repository non riuscito</string>
+    <string name="repo_finder_empty">Nessun repository disponibile</string>
+    <string name="repo_finder_added">Repository aggiunto con successo</string>
+    <string name="repo_finder_already_added">Già aggiunto</string>
+    <string name="repo_finder_type_manga">Manga</string>
+    <string name="repo_finder_type_anime">Anime</string>
+    <string name="repo_finder_official">Ufficiale</string>
+    <string name="action_troubleshoot">Risoluzione dei problemi</string>
+    <string name="action_add_repo_manual">Aggiungi manualmente</string>
+    <string name="download_bookmarked">Preferiti</string>
+    <string name="action_filter_excluded_scanlators">Filtra scanlator esclusi</string>
 </resources>

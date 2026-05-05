@@ -911,4 +911,18 @@
     <string name="action_webview_close_tab">Sekmeyi kapat</string>
     <string name="action_filter_excluded_scanlators">Hariç tutulan Çevirenleri filtrele</string>
     <string name="download_bookmarked">Yer imli</string>
+
+    <string name="theme_koma">Koma (Midnight Deep)</string>
+    <string name="label_repo_finder">Depo Bulucu</string>
+    <string name="repo_finder_subtitle">Uzantı depolarını tek dokunuşla keşfedin ve ekleyin.</string>
+    <string name="repo_finder_loading">Depolar yükleniyor…</string>
+    <string name="repo_finder_error">Depolar yüklenemedi</string>
+    <string name="repo_finder_empty">Kullanılabilir depo yok</string>
+    <string name="repo_finder_added">Depo başarıyla eklendi</string>
+    <string name="repo_finder_already_added">Zaten eklendi</string>
+    <string name="repo_finder_type_manga">Manga</string>
+    <string name="repo_finder_type_anime">Anime</string>
+    <string name="repo_finder_official">Resmi</string>
+    <string name="action_troubleshoot">Sorun giderme</string>
+    <string name="action_add_repo_manual">Elle ekle</string>
 </resources>

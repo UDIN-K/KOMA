@@ -76,4 +76,21 @@
         <item quantity="one">1 pàgina</item>
         <item quantity="other">%1$s pàginas</item>
     </plurals>
+
+    <plurals name="migrationListScreen.migrateDialog.migrateTitle">
+        <item quantity="one">Tràmuda %1$d elementu?</item>
+        <item quantity="other">Tràmuda %1$d elementos?</item>
+    </plurals>
+    <plurals name="migrationListScreen.migrateDialog.copyTitle">
+        <item quantity="one">Còpia %1$d elementu?</item>
+        <item quantity="other">Còpia %1$d elementos?</item>
+    </plurals>
+    <plurals name="migrationListScreen.migrateDialog.skipText">
+        <item quantity="one">Un elementu est istadu iscartadu</item>
+        <item quantity="other">%1$d elementos sunt istados iscartados</item>
+    </plurals>
+    <plurals name="notification_update_error">
+        <item quantity="one">%1$d agiornamentu faddidu</item>
+        <item quantity="other">%1$d agiornamentos faddidos</item>
+    </plurals>
 </resources>

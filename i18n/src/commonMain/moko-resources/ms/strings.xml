@@ -908,4 +908,20 @@
     <string name="pref_download_concurrent_pages">Muat turun halaman serentak</string>
     <string name="pref_download_concurrent_pages_summary">Halaman yang dimuat turun secara serentak setiap sumber</string>
     <string name="action_webview_close_tab">Tab Tutup</string>
+
+    <string name="theme_koma">Koma (Midnight Deep)</string>
+    <string name="label_repo_finder">Pencari repositori</string>
+    <string name="repo_finder_subtitle">Temui dan tambah repositori sambungan dengan satu ketikan.</string>
+    <string name="repo_finder_loading">Memuatkan repositori…</string>
+    <string name="repo_finder_error">Gagal memuatkan repositori</string>
+    <string name="repo_finder_empty">Tiada repositori tersedia</string>
+    <string name="repo_finder_added">Repositori berjaya ditambah</string>
+    <string name="repo_finder_already_added">Sudah ditambah</string>
+    <string name="repo_finder_type_manga">Manga</string>
+    <string name="repo_finder_type_anime">Anime</string>
+    <string name="repo_finder_official">Rasmi</string>
+    <string name="action_troubleshoot">Penyelesaian masalah</string>
+    <string name="action_add_repo_manual">Tambah secara manual</string>
+    <string name="download_bookmarked">Ditanda buku</string>
+    <string name="action_filter_excluded_scanlators">Tapis scanlator yang dikecualikan</string>
 </resources>

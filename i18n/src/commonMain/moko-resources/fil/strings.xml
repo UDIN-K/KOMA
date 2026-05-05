@@ -911,4 +911,18 @@
     <string name="migrationConfigScreen.availableHeader">Maaaring Magamit</string>
     <string name="action_filter_excluded_scanlators">I-filter ang na-ibukod na mga scanlator</string>
     <string name="download_bookmarked">Na-bookmark</string>
+
+    <string name="theme_koma">Koma (Midnight Deep)</string>
+    <string name="label_repo_finder">Tagahanap ng repositoryo</string>
+    <string name="repo_finder_subtitle">Tuklasin at idagdag ang mga repositoryo ng extension sa isang tap.</string>
+    <string name="repo_finder_loading">Naglo-load ng mga repositoryo…</string>
+    <string name="repo_finder_error">Hindi na-load ang mga repositoryo</string>
+    <string name="repo_finder_empty">Walang available na mga repositoryo</string>
+    <string name="repo_finder_added">Matagumpay na naidagdag ang repositoryo</string>
+    <string name="repo_finder_already_added">Naidagdag na</string>
+    <string name="repo_finder_type_manga">Manga</string>
+    <string name="repo_finder_type_anime">Anime</string>
+    <string name="repo_finder_official">Opisyal</string>
+    <string name="action_troubleshoot">Pag-troubleshoot</string>
+    <string name="action_add_repo_manual">Idagdag nang manu-mano</string>
 </resources>

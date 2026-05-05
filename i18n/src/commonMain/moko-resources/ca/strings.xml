@@ -901,4 +901,19 @@
     <string name="migrationListScreen.progressDialog.cancelLabel">Cancel·la</string>
     <string name="migrationListScreen.matchWithoutChapterToast">No s’ha trobat cap capítol, aquest element no es pot utilitzar per a migrar</string>
     <string name="action_filter_excluded_scanlators">Filtra els scanlators exclosos</string>
+
+    <string name="theme_koma">Koma (Midnight Deep)</string>
+    <string name="label_repo_finder">Cercador de repositoris</string>
+    <string name="repo_finder_subtitle">Descobreix i afegeix repositoris d'extensions amb un sol toc.</string>
+    <string name="repo_finder_loading">S'estan carregant els repositoris…</string>
+    <string name="repo_finder_error">No s'han pogut carregar els repositoris</string>
+    <string name="repo_finder_empty">No hi ha repositoris disponibles</string>
+    <string name="repo_finder_added">Repositori afegit correctament</string>
+    <string name="repo_finder_already_added">Ja afegit</string>
+    <string name="repo_finder_type_manga">Manga</string>
+    <string name="repo_finder_type_anime">Anime</string>
+    <string name="repo_finder_official">Oficial</string>
+    <string name="action_troubleshoot">Resolució de problemes</string>
+    <string name="action_add_repo_manual">Afegeix manualment</string>
+    <string name="download_bookmarked">Marcat</string>
 </resources>

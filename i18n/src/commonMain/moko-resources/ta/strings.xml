@@ -902,4 +902,18 @@
     <string name="pref_download_concurrent_pages_summary">ஒவ்வொரு மூலத்திற்கும் ஒரே நேரத்தில் பதிவிறக்கம் செய்யப்பட்ட பக்கங்கள்</string>
     <string name="download_bookmarked">புத்தகக்குறி செய்யப்பட்டது</string>
     <string name="action_filter_excluded_scanlators">நீக்கப்பட்ட ச்கேலேட்டர்களை வடிகட்டி</string>
+
+    <string name="theme_koma">Koma (Midnight Deep)</string>
+    <string name="label_repo_finder">களஞ்சிய தேடுபவர்</string>
+    <string name="repo_finder_subtitle">ஒரு தட்டில் நீட்சிக் களஞ்சியங்களை கண்டறிந்து சேர்க்கவும்.</string>
+    <string name="repo_finder_loading">களஞ்சியங்கள் ஏற்றப்படுகின்றன…</string>
+    <string name="repo_finder_error">களஞ்சியங்களை ஏற்ற முடியவில்லை</string>
+    <string name="repo_finder_empty">கிடைக்கக் கூடிய களஞ்சியங்கள் இல்லை</string>
+    <string name="repo_finder_added">களஞ்சியம் வெற்றிகரமாக சேர்க்கப்பட்டது</string>
+    <string name="repo_finder_already_added">ஏற்கனவே சேர்க்கப்பட்டது</string>
+    <string name="repo_finder_type_manga">மங்கா</string>
+    <string name="repo_finder_type_anime">அனிமே</string>
+    <string name="repo_finder_official">அதிகாரப்பூர்வ</string>
+    <string name="action_troubleshoot">சிக்கல் தீர்வு</string>
+    <string name="action_add_repo_manual">கையால் சேர்க்க</string>
 </resources>

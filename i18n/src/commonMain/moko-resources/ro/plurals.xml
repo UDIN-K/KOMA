@@ -110,4 +110,9 @@
         <item quantity="few">%1$d intrări au fost omise</item>
         <item quantity="other">%1$d de intrări au fost omise</item>
     </plurals>
+
+    <plurals name="notification_update_error">
+        <item quantity="one">A eșuat %1$d actualizare</item>
+        <item quantity="other">Au eșuat %1$d actualizări</item>
+    </plurals>
 </resources>

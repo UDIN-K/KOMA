@@ -110,4 +110,9 @@
         <item quantity="many">S’han omès %1$d elements</item>
         <item quantity="other">S’han omès %1$d elements</item>
     </plurals>
+
+    <plurals name="notification_update_error">
+        <item quantity="one">%1$d actualització ha fallat</item>
+        <item quantity="other">%1$d actualitzacions han fallat</item>
+    </plurals>
 </resources>

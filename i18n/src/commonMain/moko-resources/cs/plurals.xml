@@ -113,4 +113,9 @@
         <item quantity="many">%1$d položek bylo přeskočeno</item>
         <item quantity="other">%1$d položek bylo přeskočeno</item>
     </plurals>
+
+    <plurals name="notification_update_error">
+        <item quantity="one">%1$d aktualizace se nezdařila</item>
+        <item quantity="other">%1$d aktualizací se nezdařilo</item>
+    </plurals>
 </resources>

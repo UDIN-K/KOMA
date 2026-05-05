@@ -900,4 +900,27 @@
     <string name="migrationListScreen.exitDialog.cancelLabel">रद्द गर्नुहोस्</string>
     <string name="migrationListScreen.migrateDialog.copyLabel">प्रतिलिपि गर्नुहोस्</string>
     <string name="migrationListScreen.matchWithoutChapterToast">कुनै अध्यायहरू फेला परेनन्, यो इन्ट्री स्थानान्तरणका लागि प्रयोग गर्न सकिँदैन</string>
+
+    <string name="theme_koma">Koma (Midnight Deep)</string>
+    <string name="pref_disallow_non_ascii_filenames_details">Unicode समर्थन नगर्ने केही भण्डारण माध्यमसँग मिल्दोजुल्दो सुनिश्चित गर्छ। यो सक्षम हुँदा, तपाईंले स्रोत र मंगा फोल्डरहरूलाई non-ASCII अक्षरहरूलाई तिनका साना अक्षरका UTF-8 हेक्स प्रतिनिधित्वले प्रतिस्थापन गरेर म्यानुअल रूपमा पुन: नामाकरण गर्नुपर्नेछ। अध्याय फाइलहरू पुन: नामाकरण गर्न आवश्यक छैन।</string>
+    <string name="label_repo_finder">रिपोजिटोरी खोजक</string>
+    <string name="repo_finder_subtitle">एक ट्यापमा एक्सटेन्सन रिपोजिटोरीहरू खोज्नुहोस् र थप्नुहोस्।</string>
+    <string name="repo_finder_loading">रिपोजिटोरीहरू लोड हुँदैछ…</string>
+    <string name="repo_finder_error">रिपोजिटोरीहरू लोड गर्न असफल</string>
+    <string name="repo_finder_empty">कुनै रिपोजिटोरी उपलब्ध छैन</string>
+    <string name="repo_finder_added">रिपोजिटोरी सफलतापूर्वक थपियो</string>
+    <string name="repo_finder_already_added">पहिले नै थपिएको</string>
+    <string name="repo_finder_type_manga">मंगा</string>
+    <string name="repo_finder_type_anime">एनिमे</string>
+    <string name="repo_finder_official">आधिकारिक</string>
+    <string name="action_troubleshoot">समस्या समाधान</string>
+    <string name="action_add_repo_manual">हातले थप्नुहोस्</string>
+    <string name="download_bookmarked">बुकमार्क गरिएको</string>
+    <string name="action_filter_excluded_scanlators">बहिष्कृत स्क्यानलेटर फिल्टर गर्नुहोस्</string>
+    <string name="migrationConfigScreen.enhancedOptionsWarning">यी विकल्पहरू ढिलो र जोखिमपूर्ण छन् र स्रोतहरूबाट प्रतिबन्ध हुन सक्छ।</string>
+    <string name="migrationConfigScreen.prioritizeByChaptersTitle">अध्याय नम्बरमा आधारित मिलान</string>
+    <string name="migrationConfigScreen.prioritizeByChaptersSubtitle">सक्षम हुँदा, सबैभन्दा अघि पुगेको मिलान रोज्छ। अन्यथा, स्रोत प्राथमिकतामा आधारित पहिलो मिलान रोज्छ।</string>
+    <string name="migrationListScreen.migrateDialog.migrateLabel">माइग्रेट</string>
+    <string name="migrationListScreen.migrateDialog.cancelLabel">रद्द</string>
+    <string name="migrationListScreen.progressDialog.cancelLabel">रद्द</string>
 </resources>

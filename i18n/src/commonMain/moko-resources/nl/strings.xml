@@ -903,4 +903,18 @@
     <string name="upcoming_guide">Toekomstige Updatesgids</string>
     <string name="file_picker_uri_permission_unsupported">Kon geen permanente toegang tot map vergijken. De app kan zich onverwacht gedragen.</string>
     <string name="onboarding_action_finish">Beginnen</string>
+
+    <string name="theme_koma">Koma (Midnight Deep)</string>
+    <string name="label_repo_finder">Repositoryzoeker</string>
+    <string name="repo_finder_subtitle">Ontdek en voeg extensierepositories toe met een tik.</string>
+    <string name="repo_finder_loading">Repositories laden…</string>
+    <string name="repo_finder_error">Laden van repositories mislukt</string>
+    <string name="repo_finder_empty">Geen repositories beschikbaar</string>
+    <string name="repo_finder_added">Repository succesvol toegevoegd</string>
+    <string name="repo_finder_already_added">Al toegevoegd</string>
+    <string name="repo_finder_type_manga">Manga</string>
+    <string name="repo_finder_type_anime">Anime</string>
+    <string name="repo_finder_official">Officieel</string>
+    <string name="action_troubleshoot">Problemen oplossen</string>
+    <string name="action_add_repo_manual">Handmatig toevoegen</string>
 </resources>

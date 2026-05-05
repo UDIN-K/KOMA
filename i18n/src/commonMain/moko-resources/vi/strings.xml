@@ -911,4 +911,18 @@
     <string name="action_webview_close_tab">Đóng thẻ</string>
     <string name="action_filter_excluded_scanlators">Lọc nhóm dịch bị loại trừ</string>
     <string name="download_bookmarked">Đã đánh dấu</string>
+
+    <string name="theme_koma">Koma (Midnight Deep)</string>
+    <string name="label_repo_finder">Trình tìm kho</string>
+    <string name="repo_finder_subtitle">Khám phá và thêm kho tiện ích chỉ với một chạm.</string>
+    <string name="repo_finder_loading">Đang tải kho…</string>
+    <string name="repo_finder_error">Tải kho thất bại</string>
+    <string name="repo_finder_empty">Không có kho khả dụng</string>
+    <string name="repo_finder_added">Đã thêm kho thành công</string>
+    <string name="repo_finder_already_added">Đã thêm</string>
+    <string name="repo_finder_type_manga">Manga</string>
+    <string name="repo_finder_type_anime">Anime</string>
+    <string name="repo_finder_official">Chính thức</string>
+    <string name="action_troubleshoot">Khắc phục sự cố</string>
+    <string name="action_add_repo_manual">Thêm thủ công</string>
 </resources>

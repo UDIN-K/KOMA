@@ -110,4 +110,9 @@
         <item quantity="few">%1$d unosa su preskočena</item>
         <item quantity="other">%1$d unosa je preskočeno</item>
     </plurals>
+
+    <plurals name="notification_update_error">
+        <item quantity="one">Neuspjelo je %1$d ažuriranje</item>
+        <item quantity="other">Neuspjela su %1$d ažuriranja</item>
+    </plurals>
 </resources>

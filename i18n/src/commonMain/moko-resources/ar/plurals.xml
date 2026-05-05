@@ -176,4 +176,9 @@
         <item quantity="many">%1$d مدخل ثم تجاوزه</item>
         <item quantity="other">%1$d مدخل ثم تجاوزه</item>
     </plurals>
+
+    <plurals name="notification_update_error">
+        <item quantity="one">فشل %1$d تحديث</item>
+        <item quantity="other">فشل %1$d تحديثات</item>
+    </plurals>
 </resources>

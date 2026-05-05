@@ -132,4 +132,9 @@
         <item quantity="many">Копировать %1$d серий?</item>
         <item quantity="other">Копировать %1$d серий?</item>
     </plurals>
+
+    <plurals name="notification_update_error">
+        <item quantity="one">Сбой %1$d обновления</item>
+        <item quantity="other">Сбой %1$d обновлений</item>
+    </plurals>
 </resources>

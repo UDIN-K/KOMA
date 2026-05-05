@@ -906,4 +906,23 @@
     <string name="pref_display_images_description">Renderizar imagens em descrições de mangá</string>
     <string name="pref_disallow_non_ascii_filenames">Não permitir nomes de arquivos não ASCII</string>
     <string name="pref_disallow_non_ascii_filenames_details">Garante a compatibilidade com determinadas mídias de armazenamento que não suportam Unicode. Quando esta opção estiver ativada, você precisará renomear manualmente as pastas de origem e de mangá, substituindo os caracteres não ASCII por suas representações hexadecimais UTF-8 em minúsculas. Os arquivos de capítulos não precisam ser renomeados.</string>
+
+    <string name="theme_koma">Koma (Midnight Deep)</string>
+    <string name="label_repo_finder">Localizador de repositórios</string>
+    <string name="repo_finder_subtitle">Descubra e adicione repositórios de extensões com um toque.</string>
+    <string name="repo_finder_loading">Carregando repositórios…</string>
+    <string name="repo_finder_error">Falha ao carregar repositórios</string>
+    <string name="repo_finder_empty">Nenhum repositório disponível</string>
+    <string name="repo_finder_added">Repositório adicionado com sucesso</string>
+    <string name="repo_finder_already_added">Já adicionado</string>
+    <string name="repo_finder_type_manga">Manga</string>
+    <string name="repo_finder_type_anime">Anime</string>
+    <string name="repo_finder_official">Oficial</string>
+    <string name="action_troubleshoot">Solucionar problemas</string>
+    <string name="action_add_repo_manual">Adicionar manualmente</string>
+    <string name="pref_download_concurrent_sources">Downloads simultâneos de fontes</string>
+    <string name="pref_download_concurrent_pages">Downloads simultâneos de páginas</string>
+    <string name="pref_download_concurrent_pages_summary">Páginas baixadas simultaneamente por fonte</string>
+    <string name="download_bookmarked">Favoritado</string>
+    <string name="action_filter_excluded_scanlators">Filtrar scanlators excluídos</string>
 </resources>

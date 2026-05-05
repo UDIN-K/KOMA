@@ -132,4 +132,9 @@
         <item quantity="many">Скапіяваць %1$d твораў?</item>
         <item quantity="other">Скапіяваць %1$d твораў?</item>
     </plurals>
+
+    <plurals name="notification_update_error">
+        <item quantity="one">Збой %1$d абнаўлення</item>
+        <item quantity="other">Збой %1$d абнаўленняў</item>
+    </plurals>
 </resources>

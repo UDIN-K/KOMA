@@ -911,4 +911,18 @@
     <string name="pref_download_concurrent_pages_summary">Число одновременных загрузок страниц с источника</string>
     <string name="action_filter_excluded_scanlators">Фильтровать исключенных переводчиков</string>
     <string name="download_bookmarked">В закладках</string>
+
+    <string name="theme_koma">Koma (Midnight Deep)</string>
+    <string name="label_repo_finder">Поиск репозиториев</string>
+    <string name="repo_finder_subtitle">Находите и добавляйте репозитории расширений одним нажатием.</string>
+    <string name="repo_finder_loading">Загрузка репозиториев…</string>
+    <string name="repo_finder_error">Не удалось загрузить репозитории</string>
+    <string name="repo_finder_empty">Нет доступных репозиториев</string>
+    <string name="repo_finder_added">Репозиторий успешно добавлен</string>
+    <string name="repo_finder_already_added">Уже добавлено</string>
+    <string name="repo_finder_type_manga">Манга</string>
+    <string name="repo_finder_type_anime">Аниме</string>
+    <string name="repo_finder_official">Официальный</string>
+    <string name="action_troubleshoot">Устранение неполадок</string>
+    <string name="action_add_repo_manual">Добавить вручную</string>
 </resources>

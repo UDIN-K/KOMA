@@ -911,4 +911,18 @@
     <string name="action_webview_close_tab">Zatvori karticu</string>
     <string name="action_filter_excluded_scanlators">Filtriraj isključene amaterske prevoditelje</string>
     <string name="download_bookmarked">Zabilježeno</string>
+
+    <string name="theme_koma">Koma (Midnight Deep)</string>
+    <string name="label_repo_finder">Tražilica repozitorija</string>
+    <string name="repo_finder_subtitle">Otkrijte i dodajte repozitorije proširenja jednim dodirom.</string>
+    <string name="repo_finder_loading">Učitavanje repozitorija…</string>
+    <string name="repo_finder_error">Neuspješno učitavanje repozitorija</string>
+    <string name="repo_finder_empty">Nema dostupnih repozitorija</string>
+    <string name="repo_finder_added">Repozitorij je uspješno dodan</string>
+    <string name="repo_finder_already_added">Već dodano</string>
+    <string name="repo_finder_type_manga">Manga</string>
+    <string name="repo_finder_type_anime">Anime</string>
+    <string name="repo_finder_official">Službeno</string>
+    <string name="action_troubleshoot">Rješavanje problema</string>
+    <string name="action_add_repo_manual">Dodaj ručno</string>
 </resources>
