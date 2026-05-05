@@ -81,3 +81,4 @@ koma-release.jks
 keystore.properties
 *.jks
 *.keystore
+bundletool.jar
