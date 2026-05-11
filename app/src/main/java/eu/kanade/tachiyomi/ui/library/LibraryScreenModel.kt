@@ -603,6 +603,7 @@ class LibraryScreenModel(
             libraryPreferences.downloadBadge.changes(),
             libraryPreferences.unreadBadge.changes(),
             libraryPreferences.localBadge.changes(),
+            libraryPreferences.sourceBadge.changes(),
             libraryPreferences.languageBadge.changes(),
             libraryPreferences.autoUpdateMangaRestrictions.changes(),
 
@@ -621,17 +622,18 @@ class LibraryScreenModel(
                 downloadBadge = it[0] as Boolean,
                 unreadBadge = it[1] as Boolean,
                 localBadge = it[2] as Boolean,
-                languageBadge = it[3] as Boolean,
-                skipOutsideReleasePeriod = LibraryPreferences.MANGA_OUTSIDE_RELEASE_PERIOD in (it[4] as Set<*>),
-                globalFilterDownloaded = it[5] as Boolean,
-                filterDownloaded = it[6] as TriState,
-                filterUnread = it[7] as TriState,
-                filterStarted = it[8] as TriState,
-                filterBookmarked = it[9] as TriState,
-                filterCompleted = it[10] as TriState,
-                filterIntervalCustom = it[11] as TriState,
+                sourceBadge = it[3] as Boolean,
+                languageBadge = it[4] as Boolean,
+                skipOutsideReleasePeriod = LibraryPreferences.MANGA_OUTSIDE_RELEASE_PERIOD in (it[5] as Set<*>),
+                globalFilterDownloaded = it[6] as Boolean,
+                filterDownloaded = it[7] as TriState,
+                filterUnread = it[8] as TriState,
+                filterStarted = it[9] as TriState,
+                filterBookmarked = it[10] as TriState,
+                filterCompleted = it[11] as TriState,
+                filterIntervalCustom = it[12] as TriState,
                 // SY -->
-                filterLewd = it[12] as TriState,
+                filterLewd = it[13] as TriState,
                 // SY <--
             )
         }
@@ -668,6 +670,11 @@ class LibraryScreenModel(
                         manga.manga.isLocal()
                     } else {
                         false
+                    },
+                    sourceName = if (preferences.sourceBadge) {
+                        sourceManager.getOrStub(manga.manga.source).name
+                    } else {
+                        ""
                     },
                     sourceLanguage = if (preferences.languageBadge) {
                         sourceManager.getOrStub(manga.manga.source).lang
@@ -1455,6 +1462,7 @@ class LibraryScreenModel(
         val downloadBadge: Boolean,
         val unreadBadge: Boolean,
         val localBadge: Boolean,
+        val sourceBadge: Boolean,
         val languageBadge: Boolean,
         val skipOutsideReleasePeriod: Boolean,
 

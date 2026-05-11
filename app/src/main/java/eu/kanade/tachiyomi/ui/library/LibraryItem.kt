@@ -11,6 +11,7 @@ data class LibraryItem(
     val downloadCount: Long = -1,
     val unreadCount: Long = -1,
     val isLocal: Boolean = false,
+    val sourceName: String = "",
     val sourceLanguage: String = "",
     private val sourceManager: SourceManager = Injekt.get(),
 ) {
@@ -23,7 +24,9 @@ data class LibraryItem(
      * @return true if the manga matches the query, false otherwise.
      */
     fun matches(constraint: String): Boolean {
-        val sourceName by lazy { sourceManager.getOrStub(libraryManga.manga.source).getNameForMangaInfo() }
+        val sourceNameForMatch by lazy {
+            sourceManager.getOrStub(libraryManga.manga.source).getNameForMangaInfo()
+        }
         if (constraint.startsWith("id:", true)) {
             return id == constraint.substringAfter("id:").toLongOrNull()
         }
@@ -33,7 +36,7 @@ data class LibraryItem(
             (libraryManga.manga.description?.contains(constraint, true) ?: false) ||
             constraint.split(",").map { it.trim() }.all { subconstraint ->
                 checkNegatableConstraint(subconstraint) {
-                    sourceName.contains(it, true) ||
+                    sourceNameForMatch.contains(it, true) ||
                         (libraryManga.manga.genre?.any { genre -> genre.equals(it, true) } ?: false)
                 }
             }

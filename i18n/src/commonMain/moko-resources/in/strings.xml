@@ -541,6 +541,7 @@
     <string name="pref_custom_color_filter">Filter warna kustom</string>
     <string name="pref_custom_brightness">Atur kecerahan</string>
     <string name="action_display_language_badge">Bahasa</string>
+    <string name="action_display_source_badge">Sumber</string>
     <string name="update_72hour">Tiap 3 hari</string>
     <string name="connected_to_wifi">Hanya pada Wi-FI</string>
     <string name="channel_app_updates">Pembaruan aplikasi</string>

@@ -28,6 +28,18 @@ internal fun UnreadBadge(count: Long) {
 }
 
 @Composable
+internal fun SourceBadge(sourceName: String) {
+    val trimmedName = sourceName.trim()
+    if (trimmedName.isNotEmpty()) {
+        Badge(
+            text = trimmedName,
+            color = MaterialTheme.colorScheme.tertiary,
+            textColor = MaterialTheme.colorScheme.onTertiary,
+        )
+    }
+}
+
+@Composable
 internal fun LanguageBadge(
     isLocal: Boolean,
     sourceLanguage: String,
@@ -54,6 +66,7 @@ private fun BadgePreview() {
         Column {
             DownloadsBadge(count = 10)
             UnreadBadge(count = 10)
+            SourceBadge(sourceName = "MangaDex")
             LanguageBadge(isLocal = true, sourceLanguage = "EN")
             LanguageBadge(isLocal = false, sourceLanguage = "EN")
         }

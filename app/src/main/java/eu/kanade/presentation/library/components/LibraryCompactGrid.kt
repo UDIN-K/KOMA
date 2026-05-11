@@ -1,10 +1,13 @@
 package eu.kanade.presentation.library.components
 
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
 import eu.kanade.tachiyomi.ui.library.LibraryItem
 import tachiyomi.domain.library.model.LibraryManga
 import tachiyomi.domain.manga.model.MangaCover
@@ -50,10 +53,13 @@ internal fun LibraryCompactGrid(
                     UnreadBadge(count = libraryItem.unreadCount)
                 },
                 coverBadgeEnd = {
-                    LanguageBadge(
-                        isLocal = libraryItem.isLocal,
-                        sourceLanguage = libraryItem.sourceLanguage,
-                    )
+                    Column(verticalArrangement = Arrangement.spacedBy(1.dp)) {
+                        SourceBadge(sourceName = libraryItem.sourceName)
+                        LanguageBadge(
+                            isLocal = libraryItem.isLocal,
+                            sourceLanguage = libraryItem.sourceLanguage,
+                        )
+                    }
                 },
                 onLongClick = { onLongClick(libraryItem.libraryManga) },
                 onClick = { onClick(libraryItem.libraryManga) },

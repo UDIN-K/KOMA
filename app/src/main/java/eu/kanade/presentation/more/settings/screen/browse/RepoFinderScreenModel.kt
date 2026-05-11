@@ -27,7 +27,7 @@ class RepoFinderScreenModel(
 ) : StateScreenModel<RepoFinderState>(RepoFinderState.Loading) {
 
     companion object {
-        private const val REPOS_URL = "https://udink.me/repos.json"
+        private const val REPOS_URL = "https://koma.udink.me/koma/repos.json"
     }
 
     init {
