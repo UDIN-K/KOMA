@@ -898,7 +898,7 @@
     <string name="remove_manga">You are about to remove \"%s\" from your library</string>
     <string name="exception_http">HTTP %d, check website in WebView</string>
     <string name="exception_offline">No Internet connection</string>
-    <string name="exception_unknown_host">Couldn\\'t reach %s</string>
+    <string name="exception_unknown_host">Couldn\'t reach %s</string>
     <string name="migrationConfigScreen.hideWithoutUpdatesTitle">Hide entries without newer chapters</string>
     <string name="migrationConfigScreen.hideWithoutUpdatesSubtitle">Only show entry if the match has additional chapters</string>
     <string name="migrationConfigScreen.enhancedOptionsWarning">These options are slow and dangerous and may lead to restrictions from sources</string>

@@ -819,7 +819,7 @@
     <string name="pref_hardware_bitmap_threshold">Custom hardware bitmap threshold</string>
     <string name="pref_hardware_bitmap_threshold_summary">If reader loads a blank image incrementally reduce the threshold.\nSelected: %s</string>
     <string name="pref_always_decode_long_strip_with_ssiv_2">Use legacy decoder for long strip reader</string>
-    <string name="pref_always_decode_long_strip_with_ssiv_summary">Affects performance. Only enable if reducing bitmap threshold doesn\\'t fix blank image issues</string>
+    <string name="pref_always_decode_long_strip_with_ssiv_summary">Affects performance. Only enable if reducing bitmap threshold doesn\'t fix blank image issues</string>
     <string name="pref_display_profile">Custom display profile</string>
     <string name="pref_webtoon_disable_zoom_out">Disable zoom out</string>
     <string name="no_location_set">No storage location set</string>
@@ -911,7 +911,7 @@
     <string name="migrationListScreen.latestChapterLabel">Latest: %1$s</string>
     <string name="migrationListScreen.unknownLatestChapter">Unknown</string>
     <string name="migrationListScreen.searchManuallyActionLabel">Search manually</string>
-    <string name="migrationListScreen.skipActionLabel">Don\\'t migrate</string>
+    <string name="migrationListScreen.skipActionLabel">Don\'t migrate</string>
     <string name="migrationListScreen.migrateNowActionLabel">Migrate now</string>
     <string name="migrationListScreen.copyNowActionLabel">Copy now</string>
     <string name="migrationListScreen.exitDialogTitle">Stop migrating?</string>

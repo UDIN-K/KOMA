@@ -681,7 +681,7 @@
     <string name="pref_hardware_bitmap_threshold">Custom hardware bitmap threshold</string>
     <string name="pref_hardware_bitmap_threshold_summary">If reader loads a blank image incrementally reduce the threshold.\nSelected: %s</string>
     <string name="pref_always_decode_long_strip_with_ssiv_2">Use legacy decoder for long strip reader</string>
-    <string name="pref_always_decode_long_strip_with_ssiv_summary">Affects performance. Only enable if reducing bitmap threshold doesn\\'t fix blank image issues</string>
+    <string name="pref_always_decode_long_strip_with_ssiv_summary">Affects performance. Only enable if reducing bitmap threshold doesn\'t fix blank image issues</string>
     <string name="pref_display_profile">Custom display profile</string>
     <string name="pref_grayscale">Grayscale</string>
     <string name="pref_hide_threshold">Sensitivity for hiding menu on scroll</string>
@@ -717,7 +717,7 @@
     <string name="backup_restore_content_full">You may need to install any missing extensions and log in to tracking services afterwards to use them.</string>
     <string name="private_settings">Include sensitive settings (e.g., tracker login tokens)</string>
     <string name="empty_backup_error">No library entries to back up</string>
-    <string name="create_backup_file_error">Couldn\\'t create a backup file</string>
+    <string name="create_backup_file_error">Couldn\'t create a backup file</string>
     <string name="restore_miui_warning">Backup/restore may not function properly if MIUI Optimization is disabled.</string>
     <string name="backup_info">You should keep copies of backups in other places as well. Backups may contain sensitive data including any stored passwords; be careful if sharing.</string>
     <string name="last_auto_backup_info">Last automatically backed up: %s</string>
@@ -744,7 +744,7 @@
     <string name="pref_reset_viewer_flags">Reset per-series reader settings</string>
     <string name="pref_reset_viewer_flags_summary">Resets reading mode and orientation of all series</string>
     <string name="pref_reset_viewer_flags_success">All reader settings reset</string>
-    <string name="pref_reset_viewer_flags_error">Couldn\\'t reset reader settings</string>
+    <string name="pref_reset_viewer_flags_error">Couldn\'t reset reader settings</string>
     <string name="label_background_activity">Background activity</string>
     <string name="about_dont_kill_my_app">Some manufacturers have additional app restrictions that kill background services. This website has more info on how to fix it.</string>
     <string name="pref_tablet_ui_mode">Tablet UI</string>
@@ -863,11 +863,11 @@
     <string name="information_no_manga_category">Category is empty</string>
     <string name="information_no_entries_found">No entries found in this category</string>
     <string name="getting_started_guide">Getting started guide</string>
-    <string name="information_empty_category_dialog">You don\\'t have any categories yet.</string>
+    <string name="information_empty_category_dialog">You don\'t have any categories yet.</string>
     <string name="information_cloudflare_help">Tap here for help with Cloudflare</string>
     <string name="information_required_plain">*required</string>
     <string name="download_notifier_split_page_not_found">Page %d not found while splitting</string>
-    <string name="download_notifier_split_page_path_not_found">Couldn\\'t find file path of page %d</string>
+    <string name="download_notifier_split_page_path_not_found">Couldn\'t find file path of page %d</string>
     <string name="download_notifier_cache_renewal">Checking downloads</string>
     <string name="channel_app_updates">App updates</string>
     <string name="appwidget_updates_description">See your recently updated library entries</string>
@@ -875,7 +875,7 @@
     <string name="remove_manga">You are about to remove \"%s\" from your library</string>
     <string name="exception_http">HTTP %d, check website in WebView</string>
     <string name="exception_offline">No Internet connection</string>
-    <string name="exception_unknown_host">Couldn\\'t reach %s</string>
+    <string name="exception_unknown_host">Couldn\'t reach %s</string>
     <string name="notes_placeholder">Enjoyed the part where…</string>
     <string name="migrationConfigScreen.selectedHeader">Selected</string>
     <string name="migrationConfigScreen.availableHeader">Available</string>
@@ -904,7 +904,7 @@
     <string name="migrationListScreen.latestChapterLabel">Latest: %1$s</string>
     <string name="migrationListScreen.unknownLatestChapter">Unknown</string>
     <string name="migrationListScreen.searchManuallyActionLabel">Search manually</string>
-    <string name="migrationListScreen.skipActionLabel">Don\\'t migrate</string>
+    <string name="migrationListScreen.skipActionLabel">Don\'t migrate</string>
     <string name="migrationListScreen.migrateNowActionLabel">Migrate now</string>
     <string name="migrationListScreen.copyNowActionLabel">Copy now</string>
     <string name="migrationListScreen.exitDialogTitle">Stop migrating?</string>

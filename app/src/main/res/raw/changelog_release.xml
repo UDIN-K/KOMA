@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog bulletedList="true">
-    <changelogversion versionName="1.0.7" changeDate="May 11,2026">
+    <changelogversion versionName="1.0.7" changeDate="May 12,2026">
         <changelogtext>[b]New: Library Source Badge[/b]</changelogtext>
         <changelogtext>Show the source name as a badge on library covers, with a new toggle in Library settings</changelogtext>
         <changelogtext>[b]Improved: Library Badges[/b]</changelogtext>
         <changelogtext>Source badge stacks above Language badge; Language badge now enabled by default for new installs</changelogtext>
         <changelogtext>[b]New: Language Support[/b]</changelogtext>
         <changelogtext>Added language support via Weblate</changelogtext>
+        <changelogtext>[b]Fixed: Translations[/b]</changelogtext>
+        <changelogtext>Corrected escape sequences in multiple locales to avoid resource parsing errors</changelogtext>
         <changelogtext>[b]Updated: Repo Finder URL[/b]</changelogtext>
         <changelogtext>Repo Finder now uses the hosted index at koma.udink.me/koma/repos.json</changelogtext>
     </changelogversion>
