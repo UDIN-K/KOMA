@@ -223,7 +223,7 @@
     <string name="action_add_anyway">Add anyway</string>
     <string name="pref_onboarding_guide">Onboarding guide</string>
     <string name="onboarding_heading">Welcome!</string>
-    <string name="onboarding_description">Let\\'s set some things up first. You can always change these in the settings later too.</string>
+    <string name="onboarding_description">Let\'s set some things up first. You can always change these in the settings later too.</string>
     <string name="onboarding_action_next">Next</string>
     <string name="onboarding_action_finish">Get started</string>
     <string name="onboarding_action_skip">Skip</string>
@@ -371,7 +371,7 @@
     <string name="pref_show_navigation_mode_summary">Briefly show when reader is opened</string>
     <string name="pref_dual_page_split">Split wide pages</string>
     <string name="pref_dual_page_invert">Invert split page placement</string>
-    <string name="pref_dual_page_invert_summary">If the placement of the split wide pages don\\'t match reading direction</string>
+    <string name="pref_dual_page_invert_summary">If the placement of the split wide pages don\'t match reading direction</string>
     <string name="pref_page_rotate">Rotate wide pages to fit</string>
     <string name="pref_page_rotate_invert">Flip orientation of rotated wide pages</string>
     <string name="pref_double_tap_zoom">Double tap to zoom</string>
@@ -394,7 +394,7 @@
     <string name="pref_hardware_bitmap_threshold_default">Default (%d)</string>
     <string name="pref_hardware_bitmap_threshold_summary">If reader loads a blank image incrementally reduce the threshold.\nSelected: %s</string>
     <string name="pref_always_decode_long_strip_with_ssiv_2">Use legacy decoder for long strip reader</string>
-    <string name="pref_always_decode_long_strip_with_ssiv_summary">Affects performance. Only enable if reducing bitmap threshold doesn\\'t fix blank image issues</string>
+    <string name="pref_always_decode_long_strip_with_ssiv_summary">Affects performance. Only enable if reducing bitmap threshold doesn\'t fix blank image issues</string>
     <string name="pref_display_profile">Custom display profile</string>
     <string name="pref_crop_borders">Crop borders</string>
     <string name="pref_custom_brightness">Custom brightness</string>
@@ -422,7 +422,7 @@
     <string name="pref_reader_actions">Actions</string>
     <string name="pref_read_with_long_tap">Show actions on long tap</string>
     <string name="pref_create_folder_per_manga">Save pages into separate folders</string>
-    <string name="pref_create_folder_per_manga_summary">Creates folders according to entries\\' title</string>
+    <string name="pref_create_folder_per_manga_summary">Creates folders according to entries\' title</string>
     <string name="pref_reader_theme">Background color</string>
     <string name="white_background">White</string>
     <string name="gray_background">Gray</string>
@@ -547,7 +547,7 @@
     <string name="creating_backup_error">Backup failed</string>
     <string name="missing_storage_permission">Storage permissions not granted</string>
     <string name="empty_backup_error">No library entries to back up</string>
-    <string name="create_backup_file_error">Couldn\\'t create a backup file</string>
+    <string name="create_backup_file_error">Couldn\'t create a backup file</string>
     <string name="restore_miui_warning">Backup/restore may not function properly if MIUI Optimization is disabled.</string>
     <string name="restore_in_progress">Restore is already in progress</string>
     <string name="restoring_backup">Restoring backup</string>
@@ -594,14 +594,14 @@
     <string name="pref_reset_viewer_flags">Reset per-series reader settings</string>
     <string name="pref_reset_viewer_flags_summary">Resets reading mode and orientation of all series</string>
     <string name="pref_reset_viewer_flags_success">All reader settings reset</string>
-    <string name="pref_reset_viewer_flags_error">Couldn\\'t reset reader settings</string>
+    <string name="pref_reset_viewer_flags_error">Couldn\'t reset reader settings</string>
     <string name="pref_dump_crash_logs">Share crash logs</string>
     <string name="pref_dump_crash_logs_summary">Saves error logs to a file for sharing with the developers</string>
     <string name="label_background_activity">Background activity</string>
     <string name="pref_disable_battery_optimization">Disable battery optimization</string>
     <string name="pref_disable_battery_optimization_summary">Helps with background library updates and backups</string>
     <string name="battery_optimization_disabled">Battery optimization is already disabled</string>
-    <string name="battery_optimization_setting_activity_not_found">Couldn\\'t open device settings</string>
+    <string name="battery_optimization_setting_activity_not_found">Couldn\'t open device settings</string>
     <string name="about_dont_kill_my_app">Some manufacturers have additional app restrictions that kill background services. This website has more info on how to fix it.</string>
     <string name="pref_tablet_ui_mode">Tablet UI</string>
     <string name="pref_verbose_logging">Verbose logging</string>
@@ -609,7 +609,7 @@
     <string name="pref_debug_info">Debug info</string>
     <string name="pref_update_library_manga_titles">Update library manga titles to match source</string>
     <string name="pref_update_library_manga_titles_summary">Warning: if a manga is renamed, it will be removed from the download queue (if present).</string>
-    <string name="whats_new">What\\'s new</string>
+    <string name="whats_new">What\'s new</string>
     <string name="help_translate">Help translate</string>
     <string name="licenses">Open source licenses</string>
     <string name="privacy_policy">Privacy policy</string>
@@ -754,7 +754,7 @@
     <string name="share_page_info">%1$s: %2$s, page %3$d</string>
     <string name="chapter_progress">Page: %1$d</string>
     <string name="no_next_chapter">Next chapter not found</string>
-    <string name="decode_image_error">The image couldn\\'t be loaded</string>
+    <string name="decode_image_error">The image couldn\'t be loaded</string>
     <string name="confirm_set_image_as_cover">Use this image as cover art?</string>
     <string name="pref_category_for_this_series">For this series</string>
     <string name="viewer">Reading mode</string>
@@ -762,8 +762,8 @@
     <string name="transition_current">Current:</string>
     <string name="transition_next">Next:</string>
     <string name="transition_previous">Previous:</string>
-    <string name="transition_no_next">There\\'s no next chapter</string>
-    <string name="transition_no_previous">There\\'s no previous chapter</string>
+    <string name="transition_no_next">There\'s no next chapter</string>
+    <string name="transition_no_previous">There\'s no previous chapter</string>
     <string name="transition_pages_loading">Loading pages…</string>
     <string name="transition_pages_error">Failed to load pages: %1$s</string>
     <string name="page_list_empty_error">No pages found</string>
@@ -811,8 +811,8 @@
     <string name="hour_short">%dh</string>
     <string name="minute_short">%dm</string>
     <string name="seconds_short">%ds</string>
-    <string name="download_queue_error">Couldn\\'t download chapters. You can try again in the downloads section</string>
-    <string name="download_insufficient_space">Couldn\\'t download chapters due to low storage space</string>
+    <string name="download_queue_error">Couldn\'t download chapters. You can try again in the downloads section</string>
+    <string name="download_insufficient_space">Couldn\'t download chapters due to low storage space</string>
     <string name="download_queue_size_warning">Warning: large bulk downloads may lead to sources becoming slower and/or blocking %s. Tap to learn more.</string>
     <string name="notification_updating_progress">Updating library… (%s)</string>
     <string name="notification_size_warning">Large updates harm sources and may lead to slower updates and also increased battery usage. Tap to learn more.</string>
@@ -845,7 +845,7 @@
     <string name="information_no_manga_category">Category is empty</string>
     <string name="information_no_entries_found">No entries found in this category</string>
     <string name="getting_started_guide">Getting started guide</string>
-    <string name="information_empty_category_dialog">You don\\'t have any categories yet.</string>
+    <string name="information_empty_category_dialog">You don\'t have any categories yet.</string>
     <string name="information_cloudflare_bypass_failure">Failed to bypass Cloudflare</string>
     <string name="information_cloudflare_help">Tap here for help with Cloudflare</string>
     <string name="information_required_plain">*required</string>
@@ -859,7 +859,7 @@
     <string name="download_notifier_no_network">No network connection available</string>
     <string name="download_notifier_download_paused">Downloads paused</string>
     <string name="download_notifier_split_page_not_found">Page %d not found while splitting</string>
-    <string name="download_notifier_split_page_path_not_found">Couldn\\'t find file path of page %d</string>
+    <string name="download_notifier_split_page_path_not_found">Couldn\'t find file path of page %d</string>
     <string name="download_notifier_cache_renewal">Checking downloads</string>
     <string name="channel_common">Common</string>
     <string name="channel_progress">Progress</string>
@@ -874,7 +874,7 @@
     <string name="remove_manga">You are about to remove \"%s\" from your library</string>
     <string name="exception_http">HTTP %d, check website in WebView</string>
     <string name="exception_offline">No Internet connection</string>
-    <string name="exception_unknown_host">Couldn\\'t reach %s</string>
+    <string name="exception_unknown_host">Couldn\'t reach %s</string>
     <string name="notes_placeholder">Enjoyed the part where…</string>
     <string name="migrationConfigScreen.selectedHeader">Selected</string>
     <string name="migrationConfigScreen.availableHeader">Available</string>
@@ -903,7 +903,7 @@
     <string name="migrationListScreen.latestChapterLabel">Latest: %1$s</string>
     <string name="migrationListScreen.unknownLatestChapter">Unknown</string>
     <string name="migrationListScreen.searchManuallyActionLabel">Search manually</string>
-    <string name="migrationListScreen.skipActionLabel">Don\\'t migrate</string>
+    <string name="migrationListScreen.skipActionLabel">Don\'t migrate</string>
     <string name="migrationListScreen.migrateNowActionLabel">Migrate now</string>
     <string name="migrationListScreen.copyNowActionLabel">Copy now</string>
     <string name="migrationListScreen.exitDialogTitle">Stop migrating?</string>

@@ -771,7 +771,7 @@
     <string name="repo_finder_official">Official</string>
     <string name="action_troubleshoot">Troubleshoot</string>
     <string name="action_add_repo_manual">Add manually</string>
-    <string name="pref_always_decode_long_strip_with_ssiv_summary">Affects performance. Only enable if reducing bitmap threshold doesn\\'t fix blank image issues</string>
+    <string name="pref_always_decode_long_strip_with_ssiv_summary">Affects performance. Only enable if reducing bitmap threshold doesn\'t fix blank image issues</string>
     <string name="pref_display_profile">Custom display profile</string>
     <string name="pref_skip_dupe_chapters">Skip duplicate chapters</string>
     <string name="pref_webtoon_disable_zoom_out">Disable zoom out</string>
@@ -797,7 +797,7 @@
     <string name="extensionRepo_settings">Extension repos</string>
     <string name="non_library_settings">All read entries</string>
     <string name="missing_storage_permission">Storage permissions not granted</string>
-    <string name="create_backup_file_error">Couldn\\'t create a backup file</string>
+    <string name="create_backup_file_error">Couldn\'t create a backup file</string>
     <string name="last_auto_backup_info">Last automatically backed up: %s</string>
     <string name="pref_storage_usage">Storage usage</string>
     <string name="available_disk_space_info">Available: %1$s / Total: %2$s</string>
@@ -883,7 +883,7 @@
     <string name="download_notifier_cache_renewal">Checking downloads</string>
     <string name="exception_http">HTTP %d, check website in WebView</string>
     <string name="exception_offline">No Internet connection</string>
-    <string name="exception_unknown_host">Couldn\\'t reach %s</string>
+    <string name="exception_unknown_host">Couldn\'t reach %s</string>
     <string name="notes_placeholder">Enjoyed the part where…</string>
     <string name="migrationConfigScreen.selectedHeader">Selected</string>
     <string name="migrationConfigScreen.availableHeader">Available</string>
@@ -912,7 +912,7 @@
     <string name="migrationListScreen.latestChapterLabel">Latest: %1$s</string>
     <string name="migrationListScreen.unknownLatestChapter">Unknown</string>
     <string name="migrationListScreen.searchManuallyActionLabel">Search manually</string>
-    <string name="migrationListScreen.skipActionLabel">Don\\'t migrate</string>
+    <string name="migrationListScreen.skipActionLabel">Don\'t migrate</string>
     <string name="migrationListScreen.migrateNowActionLabel">Migrate now</string>
     <string name="migrationListScreen.copyNowActionLabel">Copy now</string>
     <string name="migrationListScreen.exitDialogTitle">Stop migrating?</string>
