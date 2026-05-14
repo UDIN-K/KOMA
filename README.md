@@ -17,7 +17,7 @@
   </p>
 
   <p>
-    <a href="https://github.com/UDIN-K/KOMA/releases"><img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/UDIN-K/KOMA/badge-data/downloads.json&logo=github" alt="Downloads"></a>
+    <a href="https://github.com/UDIN-K/KOMA/releases"><img src="https://img.shields.io/github/downloads/UDIN-K/KOMA/total?style=flat-square&color=0D1B2A&labelColor=1B2838&logo=github" alt="Downloads"></a>
     <a href="https://github.com/UDIN-K/KOMA/blob/main/LICENSE"><img src="https://img.shields.io/github/license/udin-k/koma?style=flat-square&color=0D1B2A&labelColor=1B2838" alt="License"></a>
     <a href="https://github.com/UDIN-K/KOMA/releases"><img src="https://img.shields.io/github/v/release/UDIN-K/KOMA?style=flat-square&label=latest&color=0D1B2A&labelColor=1B2838" alt="Latest Release"></a>
   </p>
