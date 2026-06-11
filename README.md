@@ -32,32 +32,6 @@
 
 ---
 
-## Translations
-
-<div align="center">
-  <a href="https://hosted.weblate.org/engage/koma-manga-reader/" target="_blank" rel="noopener">
-    <img
-      class="only-light"
-      src="https://hosted.weblate.org/widget/koma-manga-reader/koma-app/287x66-grey.png"
-      alt="Translation stats - Weblate"
-      width="287"
-      height="66"
-      loading="lazy"
-      decoding="async"
-    />
-    <img
-      class="only-dark"
-      src="https://hosted.weblate.org/widget/koma-manga-reader/koma-app/horizontal-auto.svg"
-      alt="Translation progress - Weblate"
-      width="760"
-      height="200"
-      loading="lazy"
-      decoding="async"
-    />
-  </a>
-</div>
-
----
 
 ## Koma in one glance
 
