@@ -53,7 +53,8 @@
 ### Library control
 - Drag-and-drop categories with custom grouping
 - Edit covers, notes, and metadata
-- Batch operations: clean titles, merge duplicates, mass import
+- Quick actions: swipe up on the More tab for instant access to Settings, Downloads, Categories, Stats, Data & Storage, About, and Help
+- Batch actions: clean titles, merge duplicates, mass import
 - Quick actions for bookmark, download, and updates
 
 ### Discovery & tracking

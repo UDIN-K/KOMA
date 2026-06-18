@@ -61,6 +61,7 @@ fun MoreScreen(
     onClickHistory: () -> Unit,
     // Quick actions
     showQuickActions: Boolean = false,
+    onQuickActionsShow: () -> Unit = {},
     onQuickActionsDismiss: () -> Unit = {},
     isExhEnabled: Boolean = false,
 ) {
@@ -76,10 +77,10 @@ fun MoreScreen(
                         .fillMaxSize()
                         .pointerInput(Unit) {
                             detectVerticalDragGestures(
-                                onDragEnd = { yChange, _ ->
-                                    // Swipe up from bottom - threshold -100px
-                                    if (yChange < -100f) {
-                                        onQuickActionsDismiss()
+                                onVerticalDrag = { _, dragAmount ->
+                                    // Swipe up from bottom - threshold -20f for strong swipe
+                                    if (dragAmount < -20f) {
+                                        onQuickActionsShow()
                                     }
                                 },
                             )

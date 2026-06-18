@@ -7,6 +7,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.platform.LocalContext
 import cafe.adriel.voyager.core.model.ScreenModel
@@ -69,7 +70,7 @@ data object MoreTab : Tab {
         val downloadQueueState by screenModel.downloadQueueState.collectAsState()
 
         // Quick actions state
-        var showQuickActions by rememberScreenModel { mutableStateOf(false) }
+        var showQuickActions by remember { mutableStateOf(false) }
 
         MoreScreen(
             downloadQueueStateProvider = { downloadQueueState },
@@ -93,6 +94,7 @@ data object MoreTab : Tab {
             onClickHistory = { navigator.push(HistoryTab) },
             // Quick actions
             showQuickActions = showQuickActions,
+            onQuickActionsShow = { showQuickActions = true },
             onQuickActionsDismiss = { showQuickActions = false },
             isExhEnabled = screenModel.isExhEnabled,
         )

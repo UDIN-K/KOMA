@@ -10,6 +10,12 @@ java {
     targetCompatibility = JavaVersion.toVersion("17")
 }
 
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
+    compilerOptions {
+        jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17)
+    }
+}
+
 
 // Configuration should be synced with [/gradle/build-logic/src/main/kotlin/PluginSpotless.kt]
 val ktlintVersion = libs.ktlint.bom.get().version
