@@ -1,7 +1,10 @@
 package eu.kanade.presentation.more
 
 import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.gestures.detectVerticalDragGestures
 import androidx.compose.foundation.LocalOverscrollConfiguration
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.outlined.HelpOutline
 import androidx.compose.material.icons.automirrored.outlined.Label
@@ -17,9 +20,12 @@ import androidx.compose.material.icons.outlined.Storage
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.res.vectorResource
+import eu.kanade.presentation.more.components.QuickActionsBottomSheet
 import eu.kanade.presentation.more.settings.widget.SwitchPreferenceWidget
 import eu.kanade.presentation.more.settings.widget.TextPreferenceWidget
 import eu.kanade.tachiyomi.R
@@ -53,145 +59,178 @@ fun MoreScreen(
     onClickBatchAdd: () -> Unit,
     onClickUpdates: () -> Unit,
     onClickHistory: () -> Unit,
+    // Quick actions
+    showQuickActions: Boolean = false,
+    onQuickActionsDismiss: () -> Unit = {},
+    isExhEnabled: Boolean = false,
 ) {
     val uriHandler = LocalUriHandler.current
 
-    Scaffold { contentPadding ->
-        // Disable overscroll stretch effect to prevent touch target misalignment
-        // after overscrolling at top/bottom boundaries
-        CompositionLocalProvider(LocalOverscrollConfiguration provides null) {
-            ScrollbarLazyColumn(
-                contentPadding = contentPadding,
-            ) {
-            item {
-                LogoHeader()
-            }
-            item {
-                SwitchPreferenceWidget(
-                    title = stringResource(MR.strings.label_downloaded_only),
-                    subtitle = stringResource(MR.strings.downloaded_only_summary),
-                    icon = Icons.Outlined.CloudOff,
-                    checked = downloadedOnly,
-                    onCheckedChanged = onDownloadedOnlyChange,
-                )
-            }
-            item {
-                SwitchPreferenceWidget(
-                    title = stringResource(MR.strings.pref_incognito_mode),
-                    subtitle = stringResource(MR.strings.pref_incognito_mode_summary),
-                    icon = ImageVector.vectorResource(R.drawable.ic_glasses_24dp),
-                    checked = incognitoMode,
-                    onCheckedChanged = onIncognitoModeChange,
-                )
-            }
+    Box(modifier = Modifier.fillMaxSize()) {
+        Scaffold { contentPadding ->
+            // Disable overscroll stretch effect to prevent touch target misalignment
+            // after overscrolling at top/bottom boundaries
+            CompositionLocalProvider(LocalOverscrollConfiguration provides null) {
+                ScrollbarLazyColumn(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .pointerInput(Unit) {
+                            detectVerticalDragGestures(
+                                onDragEnd = { yChange, _ ->
+                                    // Swipe up from bottom - threshold -100px
+                                    if (yChange < -100f) {
+                                        onQuickActionsDismiss()
+                                    }
+                                },
+                            )
+                        },
+                    contentPadding = contentPadding,
+                ) {
+                    item {
+                        LogoHeader()
+                    }
+                    item {
+                        SwitchPreferenceWidget(
+                            title = stringResource(MR.strings.label_downloaded_only),
+                            subtitle = stringResource(MR.strings.downloaded_only_summary),
+                            icon = Icons.Outlined.CloudOff,
+                            checked = downloadedOnly,
+                            onCheckedChanged = onDownloadedOnlyChange,
+                        )
+                    }
+                    item {
+                        SwitchPreferenceWidget(
+                            title = stringResource(MR.strings.pref_incognito_mode),
+                            subtitle = stringResource(MR.strings.pref_incognito_mode_summary),
+                            icon = ImageVector.vectorResource(R.drawable.ic_glasses_24dp),
+                            checked = incognitoMode,
+                            onCheckedChanged = onIncognitoModeChange,
+                        )
+                    }
 
-            item { HorizontalDivider() }
+                    item { HorizontalDivider() }
 
-            // SY -->
-            if (!showNavUpdates) {
-                item {
-                    TextPreferenceWidget(
-                        title = stringResource(MR.strings.label_recent_updates),
-                        icon = Icons.Outlined.NewReleases,
-                        onPreferenceClick = onClickUpdates,
-                    )
-                }
-            }
-            if (!showNavHistory) {
-                item {
-                    TextPreferenceWidget(
-                        title = stringResource(MR.strings.label_recent_manga),
-                        icon = Icons.Outlined.History,
-                        onPreferenceClick = onClickHistory,
-                    )
-                }
-            }
-            // SY <--
-
-            item {
-                val downloadQueueState = downloadQueueStateProvider()
-                TextPreferenceWidget(
-                    title = stringResource(MR.strings.label_download_queue),
-                    subtitle = when (downloadQueueState) {
-                        DownloadQueueState.Stopped -> null
-                        is DownloadQueueState.Paused -> {
-                            val pending = downloadQueueState.pending
-                            if (pending == 0) {
-                                stringResource(MR.strings.paused)
-                            } else {
-                                "${stringResource(MR.strings.paused)} • ${
-                                    pluralStringResource(
-                                        MR.plurals.download_queue_summary,
-                                        count = pending,
-                                        pending,
-                                    )
-                                }"
-                            }
+                    // SY -->
+                    if (!showNavUpdates) {
+                        item {
+                            TextPreferenceWidget(
+                                title = stringResource(MR.strings.label_recent_updates),
+                                icon = Icons.Outlined.NewReleases,
+                                onPreferenceClick = onClickUpdates,
+                            )
                         }
-                        is DownloadQueueState.Downloading -> {
-                            val pending = downloadQueueState.pending
-                            pluralStringResource(MR.plurals.download_queue_summary, count = pending, pending)
+                    }
+                    if (!showNavHistory) {
+                        item {
+                            TextPreferenceWidget(
+                                title = stringResource(MR.strings.label_recent_manga),
+                                icon = Icons.Outlined.History,
+                                onPreferenceClick = onClickHistory,
+                            )
                         }
-                    },
-                    icon = Icons.Outlined.GetApp,
-                    onPreferenceClick = onClickDownloadQueue,
-                )
-            }
-            item {
-                TextPreferenceWidget(
-                    title = stringResource(MR.strings.categories),
-                    icon = Icons.AutoMirrored.Outlined.Label,
-                    onPreferenceClick = onClickCategories,
-                )
-            }
-            item {
-                TextPreferenceWidget(
-                    title = stringResource(MR.strings.label_stats),
-                    icon = Icons.Outlined.QueryStats,
-                    onPreferenceClick = onClickStats,
-                )
-            }
-            item {
-                TextPreferenceWidget(
-                    title = stringResource(MR.strings.label_data_storage),
-                    icon = Icons.Outlined.Storage,
-                    onPreferenceClick = onClickDataAndStorage,
-                )
-            }
-            // SY -->
-            item {
-                TextPreferenceWidget(
-                    title = stringResource(SYMR.strings.eh_batch_add),
-                    icon = Icons.AutoMirrored.Outlined.PlaylistAdd,
-                    onPreferenceClick = onClickBatchAdd,
-                )
-            }
-            // SY <--
+                    }
+                    // SY <--
 
-            item { HorizontalDivider() }
+                    item {
+                        val downloadQueueState = downloadQueueStateProvider()
+                        TextPreferenceWidget(
+                            title = stringResource(MR.strings.label_download_queue),
+                            subtitle = when (downloadQueueState) {
+                                is DownloadQueueState.Stopped -> null
+                                is DownloadQueueState.Paused -> {
+                                    val pending = downloadQueueState.pending
+                                    if (pending == 0) {
+                                        stringResource(MR.strings.paused)
+                                    } else {
+                                        "${stringResource(MR.strings.paused)} • ${
+                                            pluralStringResource(
+                                                MR.plurals.download_queue_summary,
+                                                count = pending,
+                                                pending,
+                                            )
+                                        }"
+                                    }
+                                }
+                                is DownloadQueueState.Downloading -> {
+                                    pluralStringResource(MR.plurals.download_queue_summary, count = downloadQueueState.pending, downloadQueueState.pending)
+                                }
+                            },
+                            icon = Icons.Outlined.GetApp,
+                            onPreferenceClick = onClickDownloadQueue,
+                        )
+                    }
+                    item {
+                        TextPreferenceWidget(
+                            title = stringResource(MR.strings.categories),
+                            icon = Icons.AutoMirrored.Outlined.Label,
+                            onPreferenceClick = onClickCategories,
+                        )
+                    }
+                    item {
+                        TextPreferenceWidget(
+                            title = stringResource(MR.strings.label_stats),
+                            icon = Icons.Outlined.QueryStats,
+                            onPreferenceClick = onClickStats,
+                        )
+                    }
+                    item {
+                        TextPreferenceWidget(
+                            title = stringResource(MR.strings.label_data_storage),
+                            icon = Icons.Outlined.Storage,
+                            onPreferenceClick = onClickDataAndStorage,
+                        )
+                    }
+                    // SY -->
+                    item {
+                        TextPreferenceWidget(
+                            title = stringResource(SYMR.strings.eh_batch_add),
+                            icon = Icons.AutoMirrored.Outlined.PlaylistAdd,
+                            onPreferenceClick = onClickBatchAdd,
+                        )
+                    }
+                    // SY <--
 
-            item {
-                TextPreferenceWidget(
-                    title = stringResource(MR.strings.label_settings),
-                    icon = Icons.Outlined.Settings,
-                    onPreferenceClick = onClickSettings,
-                )
-            }
-            item {
-                TextPreferenceWidget(
-                    title = stringResource(MR.strings.pref_category_about),
-                    icon = Icons.Outlined.Info,
-                    onPreferenceClick = onClickAbout,
-                )
-            }
-            item {
-                TextPreferenceWidget(
-                    title = stringResource(MR.strings.label_help),
-                    icon = Icons.AutoMirrored.Outlined.HelpOutline,
-                    onPreferenceClick = { uriHandler.openUri(Constants.URL_HELP) },
-                )
-            }
+                    item { HorizontalDivider() }
+
+                    item {
+                        TextPreferenceWidget(
+                            title = stringResource(MR.strings.label_settings),
+                            icon = Icons.Outlined.Settings,
+                            onPreferenceClick = onClickSettings,
+                        )
+                    }
+                    item {
+                        TextPreferenceWidget(
+                            title = stringResource(MR.strings.pref_category_about),
+                            icon = Icons.Outlined.Info,
+                            onPreferenceClick = onClickAbout,
+                        )
+                    }
+                    item {
+                        TextPreferenceWidget(
+                            title = stringResource(MR.strings.label_help),
+                            icon = Icons.AutoMirrored.Outlined.HelpOutline,
+                            onPreferenceClick = { uriHandler.openUri(Constants.URL_HELP) },
+                        )
+                    }
+                }
             }
         }
+
+        // Quick Actions Bottom Sheet
+        QuickActionsBottomSheet(
+            visible = showQuickActions,
+            onDismiss = onQuickActionsDismiss,
+            onClickSettings = onClickSettings,
+            onClickStats = onClickStats,
+            onClickCategories = onClickCategories,
+            onClickDownloads = onClickDownloadQueue,
+            onClickDataAndStorage = onClickDataAndStorage,
+            onClickAbout = onClickAbout,
+            onClickBatchAdd = onClickBatchAdd,
+            onClickHelp = { uriHandler.openUri(Constants.URL_HELP) },
+            downloadQueueState = downloadQueueStateProvider(),
+            isExhEnabled = isExhEnabled,
+        )
     }
 }
