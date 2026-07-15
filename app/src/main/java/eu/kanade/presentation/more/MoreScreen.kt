@@ -5,6 +5,10 @@ import androidx.compose.foundation.gestures.detectVerticalDragGestures
 import androidx.compose.foundation.LocalOverscrollConfiguration
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.ui.unit.dp
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.outlined.HelpOutline
 import androidx.compose.material.icons.automirrored.outlined.Label
@@ -72,21 +76,11 @@ fun MoreScreen(
             // Disable overscroll stretch effect to prevent touch target misalignment
             // after overscrolling at top/bottom boundaries
             CompositionLocalProvider(LocalOverscrollConfiguration provides null) {
-                ScrollbarLazyColumn(
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .pointerInput(Unit) {
-                            detectVerticalDragGestures(
-                                onVerticalDrag = { _, dragAmount ->
-                                    // Swipe up from bottom - threshold -20f for strong swipe
-                                    if (dragAmount < -20f) {
-                                        onQuickActionsShow()
-                                    }
-                                },
-                            )
-                        },
-                    contentPadding = contentPadding,
-                ) {
+                Box(modifier = Modifier.fillMaxSize()) {
+                    ScrollbarLazyColumn(
+                        modifier = Modifier.fillMaxSize(),
+                        contentPadding = contentPadding,
+                    ) {
                     item {
                         LogoHeader()
                     }
@@ -215,7 +209,26 @@ fun MoreScreen(
                         )
                     }
                 }
+
+                // Invisible gesture detector right above the navbar
+                Box(
+                    modifier = Modifier
+                        .align(androidx.compose.ui.Alignment.BottomCenter)
+                        .fillMaxWidth()
+                        .padding(bottom = contentPadding.calculateBottomPadding())
+                        .height(48.dp)
+                        .pointerInput(Unit) {
+                            detectVerticalDragGestures(
+                                onVerticalDrag = { _, dragAmount ->
+                                    if (dragAmount < -10f) { // swipe up
+                                        onQuickActionsShow()
+                                    }
+                                }
+                            )
+                        }
+                )
             }
+        }
         }
 
         // Quick Actions Bottom Sheet

@@ -82,3 +82,7 @@ keystore.properties
 *.jks
 *.keystore
 bundletool.jar
+
+
+#lbd
+brain/learn_by_doing.md
